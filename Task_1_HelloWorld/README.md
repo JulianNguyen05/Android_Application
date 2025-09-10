@@ -23,8 +23,10 @@ to press a button to **switch the greeting back and forth between English and Vi
 ---
 
 ## 📸 Screenshots
-![Screen 1](images/display_1.png)  
-![Screen 2](images/display_2.png)
+<p align="center">
+  <img src="images/display_1.png" alt="Screen 1" width="300"/>
+  <img src="images/display_2.png" alt="Screen 2" width="300"/>
+</p>
 
 ---
 

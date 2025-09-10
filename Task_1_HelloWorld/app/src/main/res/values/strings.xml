@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HelloAndroid</string>
+
+    <string name="hello">Hello Android!</string>
+    <string name="xin_chao">Xin chào Android!</string>
+
+    <string name="change_greeting_en">Change greeting</string>
+    <string name="change_greeting_vi">Đổi lời chào</string>
+</resources>

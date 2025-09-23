@@ -16,19 +16,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip"
-        android:layout_width="141dp"
-        android:layout_height="131dp"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="105dp" />
-
-    <Button
-        android:id="@+id/nutOk"
-        android:layout_width="150dp"
-        android:layout_height="101dp"
-        android:text="Ok"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="287dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

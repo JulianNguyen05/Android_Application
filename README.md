@@ -17,3 +17,7 @@ Each task is a small Android application built with **Java** to practice program
 
 ### 🔹 [Task 1 - Hello Android](./Task1_HelloWorld/README.md)
 A simple Android application that displays a greeting message and allows switching between **English** and **Vietnamese** greetings with a button.
+
+### 🔹 [Vi Du Layout 1](./ViDuLayOut1/README.md)
+- Display a screen with a **"Say Hi"** button
+- When the user presses the button, the application will display the text **"Xin chào"** on the screen

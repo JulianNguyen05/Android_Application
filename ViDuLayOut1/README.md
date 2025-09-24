@@ -9,7 +9,7 @@ This is a basic Android application written in **Java** and **Android Studio**, 
 
 ## 🚀 Features
 - Display a screen with a **"Say Hi"** button
-- When the user presses the button, the application will display the text **"Hello"** on the screen
+- When the user presses the button, the application will display the text **"Xin chào"** on the screen
 
 ---
 

@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btnCong.setOnClickListener(v -> phepToan = "+");
         btnTru.setOnClickListener(v -> phepToan = "-");
         btnNhan.setOnClickListener(v -> phepToan = "*");
-        btnTru.setOnClickListener(v -> phepToan = "/");
+        btnChia.setOnClickListener(v -> phepToan = "/");
 
         btnTinh.setOnClickListener(v -> {
             try {
@@ -50,28 +50,40 @@ public class MainActivity extends AppCompatActivity {
                 double b = Double.parseDouble(edtB.getText().toString());
                 double kq = 0;
 
-                switch (phepToan){
+                switch (phepToan) {
                     case "+":
-                        kq = a + b; break;
+                        kq = a + b;
+                        txtKetQua.setText(String.valueOf(kq));
+                        break;
                     case "-":
-                        kq = a - b; break;
+                        kq = a - b;
+                        txtKetQua.setText(String.valueOf(kq));
+                        break;
                     case "*":
-                        kq = a * b; break;
-                    case  "/":
-                        if(b == 0){
+                        kq = a * b;
+                        txtKetQua.setText(String.valueOf(kq));
+                        break;
+                    case "/":
+                        if (b == 0) {
                             Toast.makeText(this, "Không chia được cho 0", Toast.LENGTH_SHORT).show();
                             return;
                         }
                         kq = a / b;
+                        txtKetQua.setText(String.valueOf(kq));
                         break;
                     default:
                         Toast.makeText(this, "Vui lòng chọn phép toán!", Toast.LENGTH_SHORT).show();
                 }
 
-            } catch(Exception e){
+            } catch (Exception e) {
                 Toast.makeText(this, "Vui lòng nhập số hợp lệ!", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
+
+//    private void chonPhepToan(String pt, Button btnChon) {
+//
+//    }
+//
+//    }
 }

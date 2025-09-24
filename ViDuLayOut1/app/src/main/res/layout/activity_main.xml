@@ -40,7 +40,7 @@
             android:id="@+id/btnSayHi"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:backgroundTint="#BC941C"
+            android:backgroundTint="#FF5722"
             android:text="Say Hi"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

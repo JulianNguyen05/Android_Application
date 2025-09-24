@@ -1,5 +1,7 @@
 package th.NguyenHuuTrong.BasicGUI_SimpleMath;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -81,9 +83,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    private void chonPhepToan(String pt, Button btnChon) {
-//
-//    }
-//
-//    }
+    private void chonPhepToan(String pt, Button btnChon) {
+        phepToan = pt;
+
+        btnChon.setAlpha(1.0f);
+        btnChon.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FF9800")));
+    }
+
+    private void resetButtons(){
+        int defaultColor = Color.parseColor("2196F3");
+
+        btnCong.setAlpha(0.5f);
+        btnCong.setBackgroundTintList(ColorStateList.valueOf(defaultColor));
+
+        btnTru.setAlpha(0.5f);
+        btnTru.setBackgroundTintList(ColorStateList.valueOf(defaultColor));
+
+        btnNhan.setAlpha(0.5f);
+        btnNhan.setBackgroundTintList(ColorStateList.valueOf(defaultColor));
+
+        btnChia.setAlpha(0.5f);
+        btnChia.setBackgroundTintList(ColorStateList.valueOf(defaultColor));
+    }
+
 }

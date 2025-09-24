@@ -1,6 +1,8 @@
 package th.nguyenhuutrong.vidulayout1;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView txtSayHi;
+    Button btnSayHi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +23,13 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        txtSayHi = findViewById(R.id.edtSayHi);
+        btnSayHi = findViewById(R.id.btnSayHi);
+
+        btnSayHi.setOnClickListener(v -> {
+            txtSayHi.setText("Xin chào");
         });
     }
 }

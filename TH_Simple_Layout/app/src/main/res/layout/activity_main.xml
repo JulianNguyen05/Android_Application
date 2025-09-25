@@ -13,21 +13,11 @@
         android:layout_height="480dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conHead">
 
         <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="348dp"
-            android:layout_marginEnd="45dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="350dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
@@ -43,7 +33,7 @@
                 android:id="@+id/txtComPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/rubik"
+                android:fontFamily="@font/rubik_regular"
                 android:text="Confirm Password"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -52,30 +42,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5"
-                    app:srcCompat="@drawable/icon_lock" />
-
-                <EditText
-                    android:id="@+id/editTextText8"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
                     android:background="@null"
-                    android:ems="10"
-                    android:fontFamily="@font/rubik"
-                    android:inputType="text"
-                    android:text="Confirm your password"
-                    android:textColor="#BDBDBD"
-                    app:layout_constraintBottom_toTopOf="@+id/view"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5" />
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawableEnd="@drawable/ic_eye"
+                    android:fontFamily="@font/rubik_regular"
+                    android:hint="  I Confirm your password"
+                    android:textColor="#616161" />
 
                 <View
                     android:id="@+id/view"
@@ -105,7 +81,7 @@
                 android:id="@+id/txtPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/rubik"
+                android:fontFamily="@font/rubik_regular"
                 android:text="Password"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -114,30 +90,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5"
-                    app:srcCompat="@drawable/icon_lock" />
-
-                <EditText
-                    android:id="@+id/editTextText8"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
                     android:background="@null"
-                    android:ems="10"
-                    android:fontFamily="@font/rubik"
-                    android:inputType="text"
-                    android:text="enter your password"
-                    android:textColor="#BDBDBD"
-                    app:layout_constraintBottom_toTopOf="@+id/view"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5" />
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawableEnd="@drawable/ic_eye"
+                    android:fontFamily="@font/rubik_regular"
+                    android:hint="  I enter your password"
+                    android:textColor="#616161" />
 
                 <View
                     android:id="@+id/view"
@@ -168,7 +130,7 @@
                 android:id="@+id/txtPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/rubik"
+                android:fontFamily="@font/rubik_regular"
                 android:text="Phone no"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -177,30 +139,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5"
-                    app:srcCompat="@drawable/icon_phone" />
-
-                <EditText
-                    android:id="@+id/editTextText8"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
                     android:background="@null"
-                    android:ems="10"
-                    android:fontFamily="@font/rubik"
-                    android:inputType="text"
-                    android:text="0935918965"
-                    android:textColor="#616161"
-                    app:layout_constraintBottom_toTopOf="@+id/view"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5" />
+                    android:drawableStart="@drawable/ic_phone"
+                    android:fontFamily="@font/rubik_regular"
+                    android:hint="  I 0935918965"
+                    android:textColor="#616161" />
 
                 <View
                     android:id="@+id/view"
@@ -215,6 +162,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="350dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
@@ -228,39 +176,23 @@
                 android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/rubik"
+                android:fontFamily="@font/rubik_regular"
                 android:text="Email"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_email"
+                android:fontFamily="@font/rubik_regular"
+                android:hint="  I demo@gmail.com"
+                android:textColor="#616161" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5"
-                    app:srcCompat="@drawable/icon_email" />
-
-                <EditText
-                    android:id="@+id/editTextText8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@null"
-                    android:ems="10"
-                    android:fontFamily="@font/rubik"
-                    android:inputType="text"
-                    android:text="demo @email.com"
-                    android:textColor="#616161"
-                    app:layout_constraintBottom_toTopOf="@+id/view"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5" />
 
                 <View
                     android:id="@+id/view"
@@ -270,9 +202,73 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="2dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF8383"
+            android:fontFamily="@font/rubik_regular"
+            android:text="Create Account"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.313"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.845" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="409dp"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="1dp">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Already have an Acount!"
+                android:textColor="#9E9E9E"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.292"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Login"
+                android:textColor="#FF8383"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.69"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -280,9 +276,12 @@
         android:layout_width="0dp"
         android:layout_height="250dp"
         android:background="@mipmap/back_round"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002">
 
         <TextView
             android:id="@+id/txtSignUp"
@@ -290,7 +289,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="28dp"
-            android:fontFamily="@font/rubik"
+            android:fontFamily="@font/rubik_regular"
             android:text="Sign up"
             android:textAlignment="center"
             android:textSize="38dp"

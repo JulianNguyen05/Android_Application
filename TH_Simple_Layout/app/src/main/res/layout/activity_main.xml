@@ -17,6 +17,53 @@
         app:layout_constraintTop_toBottomOf="@+id/conHead">
 
         <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="45dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Phone no"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:fontFamily="@font/rubik_regular"
+                    android:hint="  I 0935918965"
+                    android:textColor="#616161" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#FF8383"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="350dp"
             android:layout_height="80dp"
@@ -118,7 +165,6 @@
             android:layout_width="350dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="84dp"
             android:layout_marginEnd="45dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +177,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_regular"
-                android:text="Phone no"
+                android:text="Email"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -146,7 +192,7 @@
                     android:background="@null"
                     android:drawableStart="@drawable/ic_phone"
                     android:fontFamily="@font/rubik_regular"
-                    android:hint="  I 0935918965"
+                    android:hint="  I exemple@gmail.com"
                     android:textColor="#616161" />
 
                 <View
@@ -159,58 +205,6 @@
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="350dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="45dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/txtEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/rubik_regular"
-                android:text="Email"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:drawableStart="@drawable/ic_email"
-                android:fontFamily="@font/rubik_regular"
-                android:hint="  I demo@gmail.com"
-                android:textColor="#616161" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:background="#FF8383"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="348dp"
-                    android:layout_height="wrap_content"
-                    tools:layout_editor_absoluteX="2dp"
-                    tools:layout_editor_absoluteY="0dp">
-
-                </com.google.android.material.textfield.TextInputLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
         <Button

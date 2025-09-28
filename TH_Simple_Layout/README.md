@@ -1,4 +1,4 @@
-# 📱 Simple Layout UI
+# 📱 TH Simple Layout UI
 
 This is an Android application built with **Java** in **Android Studio**, showcasing a single-page **Sign Up UI** faithfully recreated from the original [Figma design](https://www.figma.com/design/OfwHhZbvlj9otXUpt6lRnA/Simple-Login-%E2%9C%A8--Community-?node-id=92-209&t=2ElsI3S8WSVqebHb-0).  
 The project focuses entirely on **interface design**, without any backend or business logic.

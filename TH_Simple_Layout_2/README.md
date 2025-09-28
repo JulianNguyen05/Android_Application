@@ -1,4 +1,4 @@
-# 📱 Profile Layout UI
+# 📱 TH Simple Layout UI 2
 
 This is an Android application built with **Java** in **Android Studio**, showcasing a **Profile screen UI** designed with **ConstraintLayout** and **Material Components**.  
 The project focuses entirely on **interface design**, without backend or business logic.  

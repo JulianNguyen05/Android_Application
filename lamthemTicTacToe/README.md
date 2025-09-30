@@ -15,7 +15,7 @@ The design focuses on a **cosmic blue theme**, providing a stylish and engaging 
 ## 📸 Demo Screenshot  
 | Add Players Screen |  
 |---------------------|  
-| <img src="./app/src/main/res/drawable/demo.png" alt="Demo" width="300"/> |  
+| <img src=".//////demo.png" alt="Demo" width="300"/> |  
 
 **Description:**  
 - 🎨 Sleek design with a **cosmic blue color palette**  

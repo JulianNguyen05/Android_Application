@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="@drawable/backg"
     android:orientation="vertical"
     tools:context=".AddPlayers">
 
@@ -20,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/txt_border"
+            android:background="@drawable/cosmic_blue_border"
             android:orientation="vertical"
             android:padding="24dp">
 
@@ -38,7 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/txt_border"
+                android:background="@drawable/cosmic_blue_border"
+                android:drawableLeft="@drawable/ic_x"
                 android:drawablePadding="10dp"
                 android:hint="Enter player one name"
                 android:maxLines="1"
@@ -51,7 +53,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/txt_border"
+                android:background="@drawable/cosmic_blue_border"
+                android:drawableLeft="@drawable/ic_o"
                 android:drawablePadding="10dp"
                 android:hint="Enter player two name"
                 android:maxLines="1"
@@ -62,12 +65,12 @@
             <Button
                 android:id="@+id/startGameBottom"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="70dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/cosmic_blue"
                 android:text="Start the Game"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                app:cornerRadius="20dp" />
 
         </LinearLayout>
 

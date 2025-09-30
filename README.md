@@ -30,7 +30,7 @@ Original design: [Figma – Simple Login (Community)](https://www.figma.com/desi
 An Android project demonstrating a **Profile / User Settings UI**, including avatar, user details, stats, gallery, and bottom navigation bar.  
 Original design: [Figma – User Profile / Settings Screen (Community)](https://www.figma.com/design/g1rrN0CfyUw2hso9TwsF2V/User-profile---Settings-screen--Community-?node-id=11-2369&t=GbthtR7QklAYM5gL-0)
 
-### 🔹 [LamThem Tic Tac Toe](./LamThemTicTacToe/README.md)
+### 🔹 [LamThem Tic Tac Toe](./LamThemTicTacToe//README.md)
 An Android project featuring a **Tic Tac Toe UI prototype** with a modern **cosmic blue theme**.  
 - Includes an **Add Players screen** with input fields for Player One and Player Two.  
 - A **Start Game** button is provided (UI only, no logic yet).  

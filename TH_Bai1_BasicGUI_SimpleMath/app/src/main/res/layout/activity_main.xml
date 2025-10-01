@@ -5,24 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_linear_cosmic_blue"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="600dp"
+        android:layout_width="400dp"
+        android:layout_height="650dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/bg_linear_white"
+        android:background="@drawable/bg_border_edt"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/txt_nameApp"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:text="TRONGDEPZAI"
@@ -32,7 +31,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -56,6 +57,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -78,8 +81,9 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="20dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -89,46 +93,23 @@
 
                 <Button
                     android:id="@+id/btn_cong"
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
-                    android:backgroundTint="#2196F3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/cosmic_blue"
                     android:text="+"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/btn_tru"
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
-                    android:backgroundTint="#2196F3"
-                    android:text="-"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:textSize="50sp" />
 
                 <Button
                     android:id="@+id/btn_nhan"
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
-                    android:backgroundTint="#2196F3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/cosmic_blue"
+                    android:layout_margin="5dp"
                     android:text="*"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/btn_chia"
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
-                    android:backgroundTint="#2196F3"
-                    android:text="/"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    android:gravity="center"
+                    android:textSize="50sp" />
 
             </LinearLayout>
 
@@ -138,18 +119,52 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btnReset"
+                    android:id="@+id/btn_tru"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/cosmic_blue"
+                    android:layout_margin="5dp"
+                    android:text="-"
+                    android:gravity="center"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:id="@+id/btn_chia"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/cosmic_blue"
+                    android:layout_margin="5dp"
+                    android:text="/"
+                    android:gravity="center"
+                    android:textSize="50sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_reset"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/golden_olive"
+                    android:textColor="@color/cosmic_blue"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
                     android:text="Reset" />
 
                 <Button
                     android:id="@+id/btn_tinh"
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:backgroundTint="#673AB7"
-                    android:text="Tính"
-                    android:textSize="34sp"
+                    android:layout_width="120dp"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_height="120dp"
+                    android:textColor="@color/cosmic_blue"
+                    android:backgroundTint="@color/golden_olive"
+                    android:text="="
+                    android:textSize="50sp"
                     tools:layout_editor_absoluteX="235dp"
                     tools:layout_editor_absoluteY="591dp" />
 
@@ -158,8 +173,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:padding="10dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_edt"
             android:orientation="horizontal">
 
             <TextView
@@ -167,11 +185,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kết quả"
-                android:textSize="24sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/txt_ketQua"
-                android:layout_width="260dp"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/cosmic_blue"
                 android:layout_height="50dp"
                 android:textSize="34sp" />
         </LinearLayout>

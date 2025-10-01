@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="cosmic_blue">#2E2D88</color>
+    <color name="indigo">#3F51B5</color>
+    <color name="golden_olive">#D2BD77</color>
 </resources>

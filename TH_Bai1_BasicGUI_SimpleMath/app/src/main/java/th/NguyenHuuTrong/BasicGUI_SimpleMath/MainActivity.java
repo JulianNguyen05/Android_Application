@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     EditText edtA, edtB;
-    Button btnCong, btnTru, btnNhan, btnChia, btnTinh;
+    Button btnCong, btnTru, btnNhan, btnChia, btnTinh, btnReset;
     TextView txtKetQua;
     String phepToan = "";
 
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         btnNhan = findViewById(R.id.btn_nhan);
         btnChia = findViewById(R.id.btn_chia);
         btnTinh = findViewById(R.id.btn_tinh);
+        btnReset = findViewById(R.id.btn_reset);
         txtKetQua = findViewById(R.id.txt_ketQua);
 
         btnCong.setOnClickListener(v -> phepToan = "+");
@@ -81,13 +82,16 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Vui lòng nhập số hợp lệ!", Toast.LENGTH_SHORT).show();
             }
         });
-    }
 
-    private void chonPhepToan(String pt, Button btnChon) {
-        phepToan = pt;
+        btnReset.setOnClickListener(v -> {
 
-        btnChon.setAlpha(1.0f);
-        btnChon.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FF9800")));
+
+            edtA.setText("");
+            edtB.setText("");
+            txtKetQua.setText("");
+            phepToan = "";
+            resetButtons();
+        });
     }
 
     private void resetButtons(){

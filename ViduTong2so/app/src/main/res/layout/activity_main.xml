@@ -40,12 +40,14 @@
                 android:layout_height="match_parent"
                 android:gravity="center|left"
                 android:text="NumA "
+                android:textColor="@color/black"
                 android:textSize="20sp"></TextView>
 
             <EditText
                 android:id="@+id/edt_numa"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></EditText>
+                android:layout_height="match_parent"
+                android:textColor="@color/black"></EditText>
 
         </LinearLayout>
 
@@ -62,31 +64,43 @@
                 android:layout_height="match_parent"
                 android:gravity="center|left"
                 android:text="NumB"
+                android:textColor="@color/black"
                 android:textSize="20sp"></TextView>
 
             <EditText
                 android:id="@+id/edt_numb"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></EditText>
+                android:layout_height="match_parent"
+                android:textColor="@color/black"></EditText>
         </LinearLayout>
 
         <Button
             android:id="@+id/btn_calculate"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_border_tv"
+            android:backgroundTint="#2196F3"
+            android:elevation="6dp"
             android:onClick="HamTinhTong"
-            android:text="Calculate">
+            android:text="Calculate"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        </Button>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_border_edt"
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="120dp"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
                 android:text="Result: "
                 android:textColor="@color/black"
                 android:textSize="30sp"
@@ -97,7 +111,10 @@
             <TextView
                 android:id="@+id/result"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="40sp">
 
             </TextView>
         </LinearLayout>

@@ -84,30 +84,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnReset.setOnClickListener(v -> {
-
-
             edtA.setText("");
             edtB.setText("");
             txtKetQua.setText("");
             phepToan = "";
-            resetButtons();
         });
     }
-
-    private void resetButtons(){
-        int defaultColor = Color.parseColor("2196F3");
-
-        btnCong.setAlpha(0.5f);
-        btnCong.setBackgroundTintList(ColorStateList.valueOf(defaultColor));
-
-        btnTru.setAlpha(0.5f);
-        btnTru.setBackgroundTintList(ColorStateList.valueOf(defaultColor));
-
-        btnNhan.setAlpha(0.5f);
-        btnNhan.setBackgroundTintList(ColorStateList.valueOf(defaultColor));
-
-        btnChia.setAlpha(0.5f);
-        btnChia.setBackgroundTintList(ColorStateList.valueOf(defaultColor));
-    }
-
 }

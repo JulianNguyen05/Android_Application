@@ -1,6 +1,10 @@
 package th.nguyenhuutrong.th_quizzapp_total;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +13,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView txtCauHoi;
+    Button[] buttons = new Button[4];
+    CauHoi cauHoiHienTai;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +28,34 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        txtCauHoi = findViewById(R.id.txtCauHoi);
+        buttons[0] = findViewById(R.id.btn1);
+        buttons[1] = findViewById(R.id.btn2);
+        buttons[2] = findViewById(R.id.btn3);
+        buttons[3] = findViewById(R.id.btn4);
+    }
+
+    private void loadCauHoiMoi(){
+        cauHoiHienTai = new CauHoi();
+        txtCauHoi.setText(cauHoiHienTai.getCauHoiText());
+
+        for (int i = 0; i < 4; i++){
+            buttons[i].setText(String.valueOf(cauHoiHienTai.dapAnSais.get(i)));
+            buttons[i].setBackgroundResource(R.drawable.btn_bg);
+            int finalI = i;
+            buttons[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int dapAnChon = cauHoiHienTai.dapAnSais.get(finalI);
+                    if (dapAnChon == cauHoiHienTai.dapAnDung){
+                        buttons[finalI].setBackgroundColor(Color.parseColor("#4CAF50"));
+                        buttons[finalI].postDelayed(() -> loadCauHoiMoi(), 1000);
+                    } else {
+                        buttons[finalI].setBackgroundColor(Color.parseColor("#F44336"));
+                    }
+                }
+            });
+        }
     }
 }

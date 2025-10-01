@@ -22,7 +22,7 @@
             android:layout_height="130dp"
             android:gravity="center"
             android:text="Chào mừng"
-            android:textColor="#E91E51"
+            android:textColor="#FFF200"
             android:background="@drawable/rounded_bg"
             android:textSize="40sp" />
 

@@ -30,15 +30,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#EF6C00"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_border_edt"
+            android:padding="20dp"
             android:gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:gravity="center|left"
                 android:text="NumA "
-                android:textSize="18sp"></TextView>
+                android:textSize="20sp"></TextView>
 
             <EditText
                 android:id="@+id/edt_numa"
@@ -50,14 +52,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_edt"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
             android:gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:gravity="center|left"
                 android:text="NumB"
-                android:textSize="18sp"></TextView>
+                android:textSize="20sp"></TextView>
 
             <EditText
                 android:id="@+id/edt_numb"

@@ -7,6 +7,15 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm: 0"
+        android:textSize="20sp"
+        android:textColor="#3F51B5"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
         android:id="@+id/txtCauHoi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

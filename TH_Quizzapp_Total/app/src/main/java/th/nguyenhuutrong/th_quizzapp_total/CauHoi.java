@@ -9,30 +9,32 @@ import java.util.Random;
 public class CauHoi {
     public int a, b;
     public int dapAnDung;
-    public ArrayList<Integer> dapAnSais;
+    public ArrayList<Integer> dapAnList;
 
-    public CauHoi(){
+    public CauHoi() {
         Random rd = new Random();
         a = rd.nextInt(50) + 1;
         b = rd.nextInt(50) + 1;
-        while (a + b >= 100){
+        while (a + b >= 100) {
             a = rd.nextInt(50) + 1;
             b = rd.nextInt(50) + 1;
         }
-        dapAnDung = a + b;
-        dapAnSais = new ArrayList<>();
 
-        while (dapAnSais.size() < 4){
+        dapAnDung = a + b;
+        dapAnList = new ArrayList<>();
+        dapAnList.add(dapAnDung);
+
+        while (dapAnList.size() < 4) {
             int sai = dapAnDung + (rd.nextInt(20) - 10);
-            if(sai > 0 && sai < 100 && !dapAnSais.contains(sai)){
-                dapAnSais.add(sai);
+            if (sai > 0 && sai < 100 && !dapAnList.contains(sai)) {
+                dapAnList.add(sai);
             }
         }
 
-        Collections.shuffle(dapAnSais);
+        Collections.shuffle(dapAnList);
     }
 
-    public String getCauHoiText(){
+    public String getCauHoiText() {
         return a + " + " + b + " = ?";
     }
 }

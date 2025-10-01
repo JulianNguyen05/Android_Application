@@ -1,19 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:id="@+id/mainlayout"
+    android:background="#FFF">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="#B7CC39"
+        android:text="Tổng 2 số"
+        android:textColor="@color/white"
+        android:textSize="30sp">
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="10sp"
+        android:background="#EF6C00"
+        android:gravity="center">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="First number: ">
+        </TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/edt_numa"
+            android:layout_height="match_parent">
+        </EditText>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:background="#EF6C00"
+        android:gravity="center">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="Second number: ">
+        </TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/edt_numb"
+            android:layout_height="match_parent">
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Calculate"
+        android:onClick="HamTinhTong">
+
+    </Button>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Result: "
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/result">
+
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

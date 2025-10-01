@@ -80,7 +80,7 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#2767B0"
+            android:backgroundTint="@color/cosmic_blue"
             android:elevation="6dp"
             android:onClick="HamTinhTong"
             android:text="Calculate"

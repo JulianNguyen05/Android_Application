@@ -5,165 +5,177 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_linear_cosmic_blue"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_chia"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#2196F3"
-        android:text="/"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cong" />
-
-    <Button
-        android:id="@+id/btn_nhan"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#2196F3"
-        android:text="*"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_chia"
-        app:layout_constraintStart_toEndOf="@+id/btn_chia"
-        app:layout_constraintTop_toTopOf="@+id/btn_chia" />
-
-    <EditText
-        android:id="@+id/edt_a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintBottom_toBottomOf="@+id/txtV_nhapA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtV_nhapA"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <EditText
-        android:id="@+id/edt_b"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintBottom_toBottomOf="@+id/txtV_nhapB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtV_nhapB"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/txtV_nhapA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Nhập số A"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
-
-    <Button
-        android:id="@+id/btn_cong"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="#2196F3"
-        android:text="+"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtV_nhapB" />
-
-    <Button
-        android:id="@+id/btn_tru"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#2196F3"
-        android:text="-"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_cong"
-        app:layout_constraintStart_toEndOf="@+id/btn_cong"
-        app:layout_constraintTop_toTopOf="@+id/btn_cong" />
-
-    <TextView
-        android:id="@+id/txtV_nhapB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Nhập số B"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/edt_b"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtV_nhapA" />
-
-    <Button
-        android:id="@+id/btn_tinh"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginEnd="48dp"
-        android:backgroundTint="#673AB7"
-        android:text="Tính"
-        android:textSize="34sp"
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.675" />
-
-    <TextView
-        android:id="@+id/txtV_ketQua"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kết quả"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        android:background="@drawable/bg_linear_white"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/txt_ketQua"
-        android:layout_width="260dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="28dp"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txtV_ketQua"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854" />
+        <TextView
+            android:id="@+id/txt_nameApp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="TRONGDEPZAI"
+            android:textColor="@color/cosmic_blue"
+            android:textSize="34sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_nameApp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="TRONGDEPZAI"
-        android:textColor="#2196F3"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtV_nhapA"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|start"
+                android:text="Nhập số A"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/edt_a"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="numberSigned" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtV_nhapB"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|start"
+                android:text="Nhập số B"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/edt_b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:layout_marginStart="10dp"
+                android:inputType="numberSigned" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_cong"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#2196F3"
+                    android:text="+"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btn_tru"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#2196F3"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_nhan"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#2196F3"
+                    android:text="*"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btn_chia"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#2196F3"
+                    android:text="/"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reset" />
+
+                <Button
+                    android:id="@+id/btn_tinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:backgroundTint="#673AB7"
+                    android:text="Tính"
+                    android:textSize="34sp"
+                    tools:layout_editor_absoluteX="235dp"
+                    tools:layout_editor_absoluteY="591dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtV_ketQua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kết quả"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_ketQua"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

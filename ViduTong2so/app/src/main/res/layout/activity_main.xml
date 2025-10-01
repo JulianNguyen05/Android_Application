@@ -1,90 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/mainlayout"
     android:background="#FFF">
 
-    <TextView
-        android:layout_width="409dp"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:background="#B7CC39"
-        android:text="Tổng 2 số"
-        android:textColor="@color/white"
-        android:textSize="30sp">
-    </TextView>
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:background="#EF6C00"
-        android:gravity="center">
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:text="First number: ">
-        </TextView>
-        <EditText
             android:layout_width="match_parent"
-            android:id="@+id/edt_numa"
-            android:layout_height="match_parent">
-        </EditText>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:background="#EF6C00"
-        android:gravity="center">
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="30dp"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_border_tv"
+            android:gravity="center"
+            android:text="Tổng 2 số"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:text="Second number: ">
-        </TextView>
-        <EditText
+            android:textSize="30sp"></TextView>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:id="@+id/edt_numb"
-            android:layout_height="match_parent">
-        </EditText>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:background="#EF6C00"
+            android:gravity="center">
 
-    <Button
-        android:id="@+id/btn_calculate"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:text="Calculate"
-        android:onClick="HamTinhTong">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="NumA "
+                android:textSize="18sp"></TextView>
 
-    </Button>
+            <EditText
+                android:id="@+id/edt_numa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></EditText>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
+        </LinearLayout>
 
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="NumB"
+                android:textSize="18sp"></TextView>
+
+            <EditText
+                android:id="@+id/edt_numb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></EditText>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_calculate"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:text="Result: "
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@color/black">
+            android:layout_gravity="center"
+            android:onClick="HamTinhTong"
+            android:text="Calculate">
 
-        </TextView>
-        <TextView
+        </Button>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/result">
+            android:layout_height="50dp">
 
-        </TextView>
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="Result: "
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TextView>
+        </LinearLayout>
+
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

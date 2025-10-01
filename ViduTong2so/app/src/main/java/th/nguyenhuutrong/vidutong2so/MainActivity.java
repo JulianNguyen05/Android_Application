@@ -42,6 +42,6 @@ public class MainActivity extends AppCompatActivity {
         int Tong = soA + soB;
         String strResult = String.valueOf(Tong);
 
-
+        result.setText(strResult);
     }
 }

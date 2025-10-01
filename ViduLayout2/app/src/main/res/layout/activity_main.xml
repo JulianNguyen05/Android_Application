@@ -23,17 +23,21 @@
             android:gravity="center"
             android:text="Chào mừng"
             android:textColor="#E91E51"
+            android:background="@drawable/rounded_bg"
             android:textSize="40sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg_btn"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:text="Button"
                 android:textSize="18sp" />
@@ -42,7 +46,7 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginStart="10dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:text="Button"
                 android:textSize="18sp" />
@@ -51,21 +55,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg_btn"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:text="Button"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/button4"
+                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginStart="10dp"
                 android:layout_weight="1"
                 android:text="Button"
                 android:textSize="18sp" />

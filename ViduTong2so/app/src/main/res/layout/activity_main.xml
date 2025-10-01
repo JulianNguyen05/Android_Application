@@ -120,13 +120,4 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00BCD4"
-        android:text="Button"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="12dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

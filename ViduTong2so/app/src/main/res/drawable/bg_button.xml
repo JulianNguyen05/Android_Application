@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Khi nhấn -->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
             <corners android:radius="10dp" />
 
-            <solid android:color="#2A5298" />
+            <!-- Nền cosmic blue đậm hơn khi nhấn -->
+            <solid android:color="#262574" />
 
+            <!-- Viền khi nhấn -->
             <stroke
                 android:width="3dp"
-                android:color="#1E3C72" />
+                android:color="#1C1A5A" />
         </shape>
     </item>
 
+    <!-- Trạng thái bình thường -->
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="10dp" />
 
-            <solid android:color="#3F51B5" />
+            <!-- Nền cosmic blue -->
+            <solid android:color="#2E2D88" />
 
+            <!-- Viền -->
             <stroke
                 android:width="3dp"
-                android:color="#303F9F" />
+                android:color="#1C1A5A" />
         </shape>
     </item>
 </selector>

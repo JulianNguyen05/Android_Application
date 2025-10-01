@@ -80,8 +80,7 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/bg_border_tv"
-            android:backgroundTint="#2196F3"
+            android:backgroundTint="#2767B0"
             android:elevation="6dp"
             android:onClick="HamTinhTong"
             android:text="Calculate"
@@ -120,5 +119,14 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00BCD4"
+        android:text="Button"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="12dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

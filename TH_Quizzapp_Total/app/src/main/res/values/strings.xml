@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TH_Quizzapp_Total</string>
+    <string name="answer_button_desc">Đáp án</string>
 </resources>

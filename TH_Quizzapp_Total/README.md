@@ -92,14 +92,16 @@ app/src/main/res/values/
 This is the main quiz interface.  
 The app displays a math question at the top, the current score, and four multiple-choice answers.  
 
-![Quiz Screen](assets/demo_img.jpg)
+![Quiz Screen]
+<img src="assets/demo_img.jpg" alt="Quiz Screen" width="300"/>
 
 ---
 
 ### 2️⃣ Correct Answer State
 When the user selects the correct answer, the container of that option turns **green** and blinks shortly before moving to the next question.  
 
-![Correct Answer](assets/demo_correct_img.jpg)
+![Correct Answer]
+<img src="assets/demo_correct_img.jpg" alt="Quiz Screen" width="300"/>
 
 ---
 
@@ -107,7 +109,8 @@ When the user selects the correct answer, the container of that option turns **g
 When the user selects the wrong answer, that option turns **red** and becomes disabled.  
 The user can still try the remaining options, but the score resets to zero.  
 
-![Wrong Answer](assets/demo_wrong_immg.jpg)
+![Wrong Answer]
+<img src="assets/demo_wrong_img.jpg" alt="Quiz Screen" width="300"/>
 
 ---
 

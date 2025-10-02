@@ -22,11 +22,10 @@
             android:id="@+id/txtScore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:text="Điểm: 0"
             android:textColor="@color/white"
             android:layout_margin="10dp"
-            android:textSize="40sp" />
+            android:textSize="60sp" />
 
         <TextView
             android:id="@+id/txtCauHoi"
@@ -35,10 +34,10 @@
             android:layout_marginBottom="30dp"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:text="Câu hỏi"
             android:textColor="@color/white"
-            android:textSize="50sp"
+            android:textSize="70sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -48,7 +47,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:weightSum="2"
                 android:orientation="horizontal">
 
@@ -58,6 +57,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/bg_layout_btn"
+                    android:layout_margin="5dp"
                     android:orientation="horizontal">
 
                     <Button
@@ -68,7 +68,7 @@
                         android:background="@drawable/bg_btn"
                         android:contentDescription="@string/answer_button_desc"
                         android:textColor="@color/cosmic_blue6"
-                        android:textSize="40sp" />
+                        android:textSize="60sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -77,6 +77,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/bg_layout_btn"
+                    android:layout_margin="5dp"
                     android:orientation="horizontal">
 
                     <Button
@@ -87,13 +88,13 @@
                         android:background="@drawable/bg_btn"
                         android:contentDescription="@string/answer_button_desc"
                         android:textColor="@color/cosmic_blue6"
-                        android:textSize="40sp" />
+                        android:textSize="60sp" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:weightSum="2"
                 android:orientation="horizontal">
 
@@ -101,6 +102,7 @@
                     android:layout_width="0dp"
                     android:id="@+id/layoutBtn3"
                     android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_layout_btn"
                     android:orientation="horizontal">
@@ -113,7 +115,7 @@
                         android:background="@drawable/bg_btn"
                         android:contentDescription="@string/answer_button_desc"
                         android:textColor="@color/cosmic_blue6"
-                        android:textSize="40sp" />
+                        android:textSize="60sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -121,6 +123,7 @@
                     android:id="@+id/layoutBtn4"
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_layout_btn"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
@@ -132,7 +135,7 @@
                         android:background="@drawable/bg_btn"
                         android:contentDescription="@string/answer_button_desc"
                         android:textColor="@color/cosmic_blue6"
-                        android:textSize="40sp" />
+                        android:textSize="60sp" />
                 </LinearLayout>
             </LinearLayout>
 

@@ -1,6 +1,6 @@
 # 🎥 Demo Video
 
-https://github.com/JulianNguyen05/Android_Application/issues/1#issue-3477742237
+https://github.com/user-attachments/assets/0a21d693-cf8e-418a-97e1-b31e465d7670
 
 # LamThem Quiz App Total
 

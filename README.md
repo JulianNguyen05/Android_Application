@@ -35,3 +35,10 @@ An Android project featuring a **Tic Tac Toe UI prototype** with a modern **cosm
 - Includes an **Add Players screen** with input fields for Player One and Player Two.  
 - A **Start Game** button is provided (UI only, no logic yet).  
 - Future updates will add the **game board**, **result screen**, and core **gameplay logic**.
+
+### 🔹 [LamThem Quizz App Total](./TH_Quizzapp_Total/README.md)
+An interactive **Math Quiz Game** built with **Java** and **Android Studio**.  
+- Displays random math questions with **score tracking**.  
+- Supports **correct/wrong answer highlighting** (green/red).  
+- Includes **animations**: blinking effect for correct answers, fade in/out transitions.  
+- Demonstrates **event handling** and **UI/UX design** in Android.  

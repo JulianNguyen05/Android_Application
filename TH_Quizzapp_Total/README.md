@@ -1,8 +1,9 @@
+# 🎥 Demo Video
+
+https://github.com/JulianNguyen05/Android_Application/issues/1#issue-3477742237
+
 # LamThem Quiz App Total
 
-<video src="assets/demo.mp4" controls autoplay loop muted style="max-width:100%; border-radius:12px;">
-  Sorry, your browser doesn't support embedded videos.
-</video>
 A simple interactive quiz application built with **Java** and **Android Studio**.
 This project was developed as a learning exercise to practice Android UI design, activity lifecycle, and basic event handling.
 
@@ -87,6 +88,26 @@ app/src/main/res/values/
 
 ## 📸 Screenshots
 
+### 1️⃣ Main Quiz Screen
+This is the main quiz interface.  
+The app displays a math question at the top, the current score, and four multiple-choice answers.  
+
+![Quiz Screen](assets/demo_img.jpg)
+
+---
+
+### 2️⃣ Correct Answer State
+When the user selects the correct answer, the container of that option turns **green** and blinks shortly before moving to the next question.  
+
+![Correct Answer](assets/demo_correct_img.jpg)
+
+---
+
+### 3️⃣ Wrong Answer State
+When the user selects the wrong answer, that option turns **red** and becomes disabled.  
+The user can still try the remaining options, but the score resets to zero.  
+
+![Wrong Answer](assets/demo_wrong_immg.jpg)
 
 ---
 

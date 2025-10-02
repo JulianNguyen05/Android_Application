@@ -1,6 +1,5 @@
 package th.nguyenhuutrong.th_quizzapp_total;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -11,7 +10,6 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -60,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
             buttons[i].setEnabled(true);
             buttons[i].setText(String.valueOf(cauHoiHienTai.dapAnList.get(i)));
             buttons[i].setBackgroundResource(R.drawable.bg_btn);
+
+            layoutButtons[i].setBackgroundResource(R.drawable.bg_layout_btn);
+
             int finalI = i;
             buttons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,42 +69,57 @@ public class MainActivity extends AppCompatActivity {
                     if (dapAnChon == cauHoiHienTai.dapAnDung) {
                         score++;
                         capNhatScore();
-                        layoutButtons[finalI].setBackgroundColor(
-                                ContextCompat.getColor(MainActivity.this, R.color.green)
-                        );
+
+                        layoutButtons[finalI].setBackgroundResource(R.drawable.bg_layout_btn_green);
 
                         for (Button b : buttons) {
                             b.setEnabled(false);
                         }
 
-                        AlphaAnimation fadeOut = new AlphaAnimation(1.0f, 0.0f);
-                        fadeOut.setDuration(500);
-                        fadeOut.setFillAfter(true);
+                        // Nhấp nháy nhẹ (không bắt buộc, bạn có thể bỏ)
+                        AlphaAnimation blink = new AlphaAnimation(0.0f, 1.0f);
+                        blink.setDuration(500); // 0.5s / lần
+                        blink.setRepeatMode(AlphaAnimation.REVERSE);
+                        blink.setRepeatCount(2);
+                        layoutButtons[finalI].startAnimation(blink);
 
-                        txtCauHoi.startAnimation(fadeOut);
-                        for (Button b : buttons) {
-                            b.startAnimation(fadeOut);
-                        }
-
+                        //load câu hỏi mới
                         buttons[finalI].postDelayed(() -> {
-                            loadCauHoiMoi();
+                            // Fade out
+                            AlphaAnimation fadeOut = new AlphaAnimation(1.0f, 0.0f);
+                            fadeOut.setDuration(300); // mượt hơn
+                            fadeOut.setFillAfter(true);
 
-                            AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
-                            fadeIn.setDuration(500);
-                            fadeIn.setFillAfter(true);
-
-                            txtCauHoi.startAnimation(fadeIn);
+                            txtCauHoi.startAnimation(fadeOut);
                             for (Button b : buttons) {
-                                b.startAnimation(fadeIn);
+                                b.startAnimation(fadeOut);
                             }
 
-                        }, 1000);
+                            // Sau khi fadeOut xong -> load câu hỏi mới
+                            buttons[finalI].postDelayed(() -> {
+                                loadCauHoiMoi();
+
+                                // Fade in lại
+                                AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
+                                fadeIn.setDuration(300);
+                                fadeIn.setFillAfter(true);
+
+                                txtCauHoi.startAnimation(fadeIn);
+                                for (Button b : buttons) {
+                                    b.startAnimation(fadeIn);
+                                }
+
+                            }, 300); // đợi đúng bằng fadeOut
+                        }, 2000);
+
                     } else {
                         score = 0;
                         capNhatScore();
-                        layoutButtons[finalI].setBackgroundColor(
-                                ContextCompat.getColor(MainActivity.this, R.color.red)
-                        );
+
+                        layoutButtons[finalI].setBackgroundResource(R.drawable.bg_layout_btn_red);
+
+                        buttons[finalI].setEnabled(false);
+
                         Toast.makeText(MainActivity.this, "Sai rồi! Điểm reset về 0", Toast.LENGTH_SHORT).show();
                     }
                 }

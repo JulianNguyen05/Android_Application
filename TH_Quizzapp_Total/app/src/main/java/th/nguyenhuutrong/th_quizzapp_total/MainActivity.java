@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txtCauHoi, txtScore;
     Button[] buttons = new Button[4];
+    LinearLayout[] layoutButtons = new LinearLayout[4];
     CauHoi cauHoiHienTai;
     int score = 0;
 
@@ -40,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         buttons[2] = findViewById(R.id.btn3);
         buttons[3] = findViewById(R.id.btn4);
 
+        layoutButtons[0] = findViewById(R.id.layoutBtn1);
+        layoutButtons[1] = findViewById(R.id.layoutBtn2);
+        layoutButtons[2] = findViewById(R.id.layoutBtn3);
+        layoutButtons[3] = findViewById(R.id.layoutBtn4);
+
         capNhatScore();
         loadCauHoiMoi();
     }
@@ -51,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             buttons[i].setEnabled(true);
             buttons[i].setText(String.valueOf(cauHoiHienTai.dapAnList.get(i)));
-            buttons[i].setBackgroundResource(R.drawable.btn_bg);
+            buttons[i].setBackgroundResource(R.drawable.bg_btn);
             int finalI = i;
             buttons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -60,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
                     if (dapAnChon == cauHoiHienTai.dapAnDung) {
                         score++;
                         capNhatScore();
-                        buttons[finalI].setBackgroundColor(Color.parseColor("#4CAF50"));
+                        layoutButtons[finalI].setBackgroundColor(
+                                ContextCompat.getColor(MainActivity.this, R.color.green)
+                        );
 
                         for (Button b : buttons) {
                             b.setEnabled(false);
@@ -91,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         score = 0;
                         capNhatScore();
-                        buttons[finalI].setBackgroundColor(Color.parseColor("#F44336"));
+                        layoutButtons[finalI].setBackgroundColor(
+                                ContextCompat.getColor(MainActivity.this, R.color.red)
+                        );
                         Toast.makeText(MainActivity.this, "Sai rồi! Điểm reset về 0", Toast.LENGTH_SHORT).show();
                     }
                 }

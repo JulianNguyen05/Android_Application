@@ -10,4 +10,6 @@
     <color name="cosmic_blue6">#5D69FF</color>
     <color name="cosmic_blue7">#7F84FF</color>
     <color name="cosmic_blue8">#B9BCFF</color>
+    <color name="red">#FF5D69</color>
+    <color name="green">#69FF5D</color>
 </resources>

@@ -3,8 +3,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.LamthemTicTacToe" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color -->
-        <item name="colorPrimary">@color/pink</item>
-        <item name="colorPrimaryVariant">@color/pink</item>
+        <item name="colorPrimary">@color/cosmic_blue</item>
+        <item name="colorPrimaryVariant">@color/cosmic_blue</item>
         <item name="colorOnPrimary">@color/white</item>
 
         <!-- Secondary brand color -->

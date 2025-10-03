@@ -4,11 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -178,10 +174,10 @@ public class MainActivity extends AppCompatActivity {
         playerTurn = currentPlayerTurn;
 
         if (playerTurn == 1){
-            binding.playerOneLayout.setBackgroundResource(R.drawable.black_border);
+            binding.playerOneLayout.setBackgroundResource(R.drawable.cosmic_blue_border_2);
             binding.playerTwoLayout.setBackgroundResource(R.drawable.white_box);
         }else{
-            binding.playerTwoLayout.setBackgroundResource(R.drawable.black_border);
+            binding.playerTwoLayout.setBackgroundResource(R.drawable.cosmic_blue_border_2);
             binding.playerOneLayout.setBackgroundResource(R.drawable.white_box);
         }
     }

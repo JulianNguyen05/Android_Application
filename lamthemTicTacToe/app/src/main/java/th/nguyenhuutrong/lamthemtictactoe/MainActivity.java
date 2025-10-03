@@ -174,10 +174,10 @@ public class MainActivity extends AppCompatActivity {
         playerTurn = currentPlayerTurn;
 
         if (playerTurn == 1){
-            binding.playerOneLayout.setBackgroundResource(R.drawable.cosmic_blue_border_2);
+            binding.playerOneLayout.setBackgroundResource(R.drawable.tear_200_border);
             binding.playerTwoLayout.setBackgroundResource(R.drawable.white_box);
         }else{
-            binding.playerTwoLayout.setBackgroundResource(R.drawable.cosmic_blue_border_2);
+            binding.playerTwoLayout.setBackgroundResource(R.drawable.tear_200_border);
             binding.playerOneLayout.setBackgroundResource(R.drawable.white_box);
         }
     }

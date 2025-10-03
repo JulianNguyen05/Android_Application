@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         boxPositions[selectedBoxPosition] = playerTurn;
 
         if (playerTurn == 1){
-            imageView.setImageResource(R.drawable.ximage);
+            imageView.setImageResource(R.drawable.img_x);
 
             if (checkResults()){
                 ResultDialog resultDialog = new ResultDialog(MainActivity.this, binding.playerOneName.getText().toString()
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 totalSelectedBoxes++;
             }
         } else{
-            imageView.setImageResource(R.drawable.oimage);
+            imageView.setImageResource(R.drawable.img_o);
             if (checkResults()){
                 ResultDialog resultDialog = new ResultDialog(MainActivity.this, binding.playerTwoName.getText().toString()
                         + " is a Winner!", MainActivity.this);

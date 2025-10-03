@@ -7,6 +7,8 @@
         android:width="2dp"
         android:color="@color/cosmic_blue" />
 
+    <solid android:color="@color/white" />
+
     <corners android:radius="30dp" />
 
 </shape>

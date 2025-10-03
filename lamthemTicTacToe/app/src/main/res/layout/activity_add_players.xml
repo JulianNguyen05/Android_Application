@@ -43,6 +43,7 @@
                 android:drawableLeft="@drawable/ic_x"
                 android:drawablePadding="10dp"
                 android:hint="Enter player one name"
+                android:textColorHint="@color/light_gray_hint"
                 android:maxLines="1"
                 android:padding="15dp"
                 android:textColor="@color/cosmic_blue"
@@ -60,6 +61,7 @@
                 android:maxLines="1"
                 android:padding="15dp"
                 android:textColor="@color/cosmic_blue"
+                android:textColorHint="@color/light_gray_hint"
                 android:textStyle="italic" />
 
             <Button
@@ -69,6 +71,7 @@
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/cosmic_blue"
                 android:text="Start the Game"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
 

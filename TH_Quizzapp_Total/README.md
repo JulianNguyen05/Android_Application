@@ -66,7 +66,7 @@ app/src/main/res/values/
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/android-quiz-app.git
+   git clone git@github.com:JulianNguyen05/Android_Application.git
    ```
 2. Open the project in **Android Studio**.
 3. Let Gradle sync and build the project.

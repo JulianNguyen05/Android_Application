@@ -21,7 +21,7 @@ public class ResultDialog extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.result);
+        setContentView(R.layout.activity_result_dialog);
 
         // Khởi tạo UI
         TextView messageText = findViewById(R.id.messageText);

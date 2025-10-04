@@ -168,8 +168,6 @@ Here are some screenshots of the **LamThem TicTacToe** game in action:
   - Announces the **winner** with their name and symbol.  
 <p align="center">
   <img src="./assets/demo_img6_1.jpg" alt="Demo Img6_1" width="300"/>
-</p>
-<p align="center">
   <img src="./assets/demo_img6_2.jpg" alt="Demo Img6_2" width="300"/>
 </p>
 

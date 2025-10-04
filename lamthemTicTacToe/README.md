@@ -85,7 +85,31 @@ Most Android Studio templates already include this by default, but make sure the
 
   - By extending `AppCompatActivity`, it can later integrate menus, toolbars, fragments, or themes consistently.
 
+---
 
+## 🔹 Why AppCompatActivity?
+
+  * ✅ **Backward Compatibility**: Works seamlessly on older Android versions.
+
+  * ✅ **Lifecycle Support**: Manages `onCreate`, `onStart`, `onResume`, etc.
+
+  * ✅ **UI Consistency**: Ensures Material Design works the same across devices.
+
+  * ✅ **Fragment Support**: Simplifies integration with `FragmentManager`.
+
+  * ✅ **Theme & Styling**: Works with `Theme.MaterialComponents` and custom styles.
+
+---
+
+## 🔹 Summary
+
+  * In this project:
+
+  * Both `MainActivity` and `AddPlayers` extend `AppCompatActivity`.
+
+  * The library provides **activity lifecycle management, UI compatibility**, and **modern Android features**.
+
+  * By enabling **ViewBinding** and importing **AppCompat**, the project gains clean code, stable performance, and long-term support.
 
 
 

@@ -6,6 +6,89 @@ It demonstrates **event-driven programming**, **UI handling**, and **activity li
 
 ---
 
+## Design Language
+
+🎨 **Primary Color**: `cosmic_blue`
+
+  ```java
+  <color name="cosmic_blue">#1E3A8A</color>
+  ```
+
+  - **Hex Code**: `#1E3A8A`
+
+  - **Style**: A deep cosmic navy blue.
+
+  - **Purpose**:
+
+    * Used as the **primary theme color** across activities and UI components.
+
+    * Creates a **modern**, **elegant**, and **immersive** atmosphere for the game.
+
+    * Enhances **readability** and **contrast** when combined with white or accent icons (X, O).
+
+This color represents **focus**, **stability**, and **clarity**, aligning with the minimalistic yet competitive nature of Tic-Tac-Toe.
+
+---
+
+## Features
+
+  - 🧑‍🤝‍🧑 **Add Players Screen** → Collects player names before starting.
+
+  - 🎲 **Game Board UI** → Interactive X/O grid with click-based logic.
+
+  - 🏆 **Result Dialog** → Displays the winner or draw result.
+
+  - 🎨 **Custom UI Components** → Borders, shapes, and drawable icons for X and O.
+
+  - 📱 **Material Design** with `AppCompatActivity` for lifecycle and compatibility.
+
+---
+
+## Technical Stack
+
+  - **Language**: Java
+
+  - **IDE**: Android Studio
+
+  - **Build System**: Gradle (Kotlin DSL)
+
+  - **UI Framework**: AndroidX with ViewBinding
+
+  - **Libraries**:
+
+    * `androidx.appcompat:appcompat` → Core for `AppCompatActivity`.
+
+    * Custom XML drawables (`cosmic_blue_border.xml`, `tear_200_border.xml`, etc.).
+
+---
+
+## Project Structure
+
+📂 **File Tree**
+
+```java
+lamthemTicTacToe
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/th/nguyenhuutrong/lamthemtictactoe/
+│   │   │   │   ├── AddPlayers.java
+│   │   │   │   ├── MainActivity.java
+│   │   │   │   └── ResultDialog.java
+│   │   │   ├── res/
+│   │   │   │   ├── drawable/      # custom borders, icons (X, O)
+│   │   │   │   ├── layout/        # activity XML layouts
+│   │   │   │   ├── mipmap/        # launcher icons
+│   │   │   │   ├── values/        # colors, strings, themes
+│   │   │   │   └── values-night/  # night mode themes
+│   │   │   └── AndroidManifest.xml
+│   │   └── test/ & androidTest/   # unit and instrumented tests
+├── gradle/                        # gradle wrapper and configs
+├── build.gradle.kts               # project build script
+└── README.md                      # project documentation
+
+```
+
 # 📚 Core Library: AppCompatActivity
 
 ## 🔹 Introduction
@@ -110,6 +193,8 @@ Most Android Studio templates already include this by default, but make sure the
   * The library provides **activity lifecycle management, UI compatibility**, and **modern Android features**.
 
   * By enabling **ViewBinding** and importing **AppCompat**, the project gains clean code, stable performance, and long-term support.
+
+---
 
 
 

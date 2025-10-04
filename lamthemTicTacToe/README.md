@@ -89,6 +89,102 @@ lamthemTicTacToe
 
 ```
 
+---
+
+## Getting Started
+
+**Prerequisites**
+
+  - **Android Studio** (latest version)
+  - **Java 8+**
+  - **Android SDK 24+**
+
+**Installation**
+This project is part of a larger repository: 
+
+```git
+git clone https://github.com/JulianNguyen05/Android_Application.git
+cd Android_Application
+```
+
+---
+
+## 🎮 Demo
+
+Here are some screenshots of the **LamThem TicTacToe** game in action:
+
+---
+
+### 🖼️ Image 1 – Add Players Screen  
+- Players enter their names before starting the game.  
+- Example: "Trọng" and "Julian".  
+- The UI uses **custom borders** (`cosmic_blue_border.xml`) and the **primary cosmic blue color**.  
+<p align="center">
+  <img src="./assets/demo_img1.jpg" alt="Demo Img1" width="300"/>
+</p>
+
+---
+
+### 🖼️ Image 2 – Post Player Setup  
+- After adding players, their names and assigned symbols (X or O) are displayed.  
+- Player order is initialized here.  
+<p align="center">
+  <img src="./assets/demo_img2.jpg" alt="Demo Img2" width="300"/>
+</p>
+
+---
+
+### 🖼️ Image 3 – TicTacToe Game Board  
+- The 3x3 grid is displayed with rounded white boxes.  
+- Players take turns tapping on empty cells.  
+- Each symbol (X or O) is rendered using **drawable vector resources** (`ic_x.xml`, `ic_o.xml`).  
+<p align="center">
+  <img src="./assets/demo_img3.jpg" alt="Demo Img3" width="300"/>
+</p>
+
+---
+
+### 🖼️ Image 4 – Player X Starts (Your Uploaded Example)  
+- **Player X ("Trọng")** has made the first move.  
+- A **highlight border** shows that it is now **Player O ("Julian")**’s turn.  
+<p align="center">
+  <img src="./assets/demo_img4.jpg" alt="Demo Img4" width="300"/>
+</p>
+
+---
+
+### 🖼️ Image 5 – Turn Switching to Player X  
+- After Player O plays, the border highlight switches back to Player X.  
+- This alternates until the game ends.  
+<p align="center">
+  <img src="./assets/demo_img5.jpg" alt="Demo Img5" width="300"/>
+</p>
+
+---
+
+### 🖼️ Image 6 – Victory Announcement  
+- When a player completes a row, column, or diagonal:  
+  - A **Result Dialog** (`ResultDialog.java`) pops up.  
+  - Announces the **winner** with their name and symbol.  
+<p align="center">
+  <img src="./assets/demo_img6_1.jpg" alt="Demo Img6_1" width="300"/>
+</p>
+<p align="center">
+  <img src="./assets/demo_img6_2.jpg" alt="Demo Img6_2" width="300"/>
+</p>
+
+---
+
+### 🖼️ Image 7 – Draw Announcement  
+- If all 9 cells are filled without a winner:  
+  - The **Result Dialog** shows a **draw message**.  
+  - Players can choose to restart or exit the game.  
+<p align="center">
+  <img src="./assets/demo_img7.jpg" alt="Demo Img7" width="300"/>
+</p>
+
+---
+
 # 📚 Core Library: AppCompatActivity
 
 ## 🔹 Introduction

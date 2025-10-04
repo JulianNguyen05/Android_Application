@@ -29,6 +29,15 @@ In your `build.gradle (Module: app)` file, enable ViewBinding to simplify UI ele
     }
   ```
 
+  ```java
+    android {
+      ...
+      buildFeatures {
+          viewBinding true
+      }
+    }
+  ```
+
 
 Before using AppCompatActivity, you need to ensure your project is set up correctly:
 

@@ -20,26 +20,95 @@ Before using `AppCompatActivity`, you need to ensure your project is set up corr
 
 ### Step 1: Enable ViewBinding (optional but recommended)
 In your `build.gradle (Module: app)` file, enable ViewBinding to simplify UI element references:
-  ```
-    android {
-      ...
-      buildFeatures {
-          viewBinding true
-      }
-    }
-  ```
 
   ```java
-    android {
-      ...
-      buildFeatures {
-          viewBinding true
-      }
+  android {
+    ...
+    buildFeatures {
+         viewBinding true
     }
+  }
+  ```
+### Step 2: Add AndroidX AppCompat dependency
+Most Android Studio templates already include this by default, but make sure the dependency is available:
+
+  ```java
+  dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+  }
+  ```
+### Step 3: Import in your Activity
+
+  ```java
+  import androidx.appcompat.app.AppCompatActivity;
+  ```
+---
+
+## 🔹 Usage in This Project
+🔹 **MainActivity.java**
+
+  ```java
+  public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+  }
   ```
 
+  - **Extended** `AppCompatActivity` → allows the activity to integrate with the Android lifecycle.
 
-Before using AppCompatActivity, you need to ensure your project is set up correctly:
+  - `onCreate()` **override** → initializes the UI using `setContentView`.
+
+  - Provides **backward compatibility** for UI rendering across Android versions.
+
+  - Enables access to modern Material Design components while running smoothly on older Android devices.
+
+ 🔹 **AddPlayers.java**
+
+  ```java
+  public class AddPlayers extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_add_players);
+    }
+  }
+  ```
+
+  - Just like `MainActivity`, it inherits `AppCompatActivity`.
+
+  - Provides a dedicated **Activity screen for adding players**.
+
+  - Uses **the same lifecycle management** (via `onCreate`).
+
+  - By extending `AppCompatActivity`, it can later integrate menus, toolbars, fragments, or themes consistently.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  - Before using AppCompatActivity, you need to ensure your project is set up correctly:
 
 ## 🔹 Purpose of AppCompatActivity
 - Ensures **compatibility** with older Android versions while supporting the latest APIs.  

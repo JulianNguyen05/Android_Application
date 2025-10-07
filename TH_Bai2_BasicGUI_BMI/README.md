@@ -1,6 +1,6 @@
 # 🎥 Demo Video
 
-https://github.com/user-attachments/assets/0a21d693-cf8e-418a-97e1-b31e465d7670
+https://github.com/user-attachments/assets/f1f47c0e-b16e-4da3-9f29-ef4b71b01dd5
 
 # LamThem TH_Bai2_BasicGUI_BMI
 

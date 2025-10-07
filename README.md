@@ -52,3 +52,19 @@ An interactive **Math Quiz Game** built with **Java** and **Android Studio**.
 - Supports **correct/wrong answer highlighting** (green/red).  
 - Includes **animations**: blinking effect for correct answers, fade in/out transitions.  
 - Demonstrates **event handling** and **UI/UX design** in Android.  
+
+---
+
+### 🔹 [LamThem TH_Bai2_BasicGUI_BMI](./TH_Bai2_BasicGUI_BMI/README.md)
+A modern Android application built with **Java** and **Android Studio** that calculates the **Body Mass Index (BMI)** and classifies results based on **Global** or **Asian** standards.  
+- ⚙️ **Height & Weight input fields** with real-time validation.  
+- 🌏 **Switch for Asian Standard** – toggle between WHO and Asian BMI categories.  
+- 🎨 **Dynamic result colors**:
+  - 🩵 Underweight → Blue  
+  - 🟢 Normal → Green  
+  - 🟠 Overweight → Orange  
+  - 🔴 Obese → Red  
+- 📊 Supports **custom fonts**, **ConstraintLayout UI**, and **color-coded feedback**.  
+- 🧠 Demonstrates **logic-based condition handling** and **user interaction design** in Android.  
+
+---

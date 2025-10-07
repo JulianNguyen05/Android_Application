@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
-
-    <!-- Tiêu đề -->
-
-    <!-- Chiều cao -->
-
-    <!-- Cân nặng -->
-
-    <!-- Chọn Châu Á -->
-
-    <!-- Nút tính BMI -->
-
-    <!-- Hiển thị kết quả -->
+    android:padding="20dp"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,61 +15,6 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="312dp"
-            android:text="@string/title_bmi"
-            android:textColor="#0A81AB"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnCalculate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="TÍNH BMI" />
-
-        <EditText
-            android:id="@+id/edtHeight"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:hint="Nhập chiều cao (m)"
-            android:inputType="numberDecimal" />
-
-        <Switch
-            android:id="@+id/switchAsian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:checked="false"
-            android:text="Là người Châu Á" />
-
-        <EditText
-            android:id="@+id/edtWeight"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Nhập cân nặng (kg)"
-            android:inputType="numberDecimal" />
-
-        <TextView
-            android:id="@+id/tvResult"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Kết quả sẽ hiển thị tại đây"
-            android:textAlignment="center"
-            android:textColor="#333333"
-            android:textSize="16sp" />
-    </LinearLayout>
-
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

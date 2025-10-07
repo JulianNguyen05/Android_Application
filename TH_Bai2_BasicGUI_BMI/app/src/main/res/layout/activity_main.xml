@@ -150,7 +150,6 @@
                 android:gravity="center"
                 android:fontFamily="@font/poppins_extra_bold"
                 android:textSize="30sp"
-                android:textColor="@color/charcoal_gray"
                 android:background="@drawable/bg_layout_result"
                 android:padding="10dp"/>
 

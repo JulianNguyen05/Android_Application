@@ -17,4 +17,9 @@
     <color name="light_gray">#ECEFF1</color>
     <color name="off_white">#F5F5F5</color>
 
+    <color name="under_weight">#2196F3</color>
+    <color name="normal_weight">#4CAF50</color>
+    <color name="over_weight">#FF9800</color>
+    <color name="obese">#F44336</color>
+
 </resources>

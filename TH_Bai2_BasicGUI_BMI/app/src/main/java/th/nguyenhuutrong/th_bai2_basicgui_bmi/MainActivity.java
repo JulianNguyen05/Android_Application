@@ -1,6 +1,12 @@
 package th.nguyenhuutrong.th_bai2_basicgui_bmi;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +15,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText edtWeight, edtHeight;
+    Switch switchAsia;
+    Button btnCaculate;
+    TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +31,59 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        edtHeight = findViewById(R.id.edtHeight);
+        edtWeight = findViewById(R.id.edtWeight);
+        switchAsia = findViewById(R.id.switchAsian);
+        btnCaculate = findViewById(R.id.btnCalculate);
+        tvResult = findViewById(R.id.tvResult);
+
     }
+
+    public void CaculateBMI(){
+        try{
+            String heighStr = edtHeight.getText().toString().trim();
+            String weightSTr = edtWeight.getText().toString().trim();
+
+            if(heighStr.isEmpty() || weightSTr.isEmpty()){
+                Toast.makeText(this,"Vui lòng nhập đầy đủ chiều cao và cân nặng!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            double height = Double.parseDouble(heighStr);
+            double weight = Double.parseDouble(weightSTr);
+
+            if(height <= 0 || weight <= 0){
+                Toast.makeText(this, "Chiều cao và cân nặng phải lớn hơn 0!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            double bmi = weight / (height * height);
+            boolean isAsian = switchAsia.isChecked();
+
+            String resultCategory = classifyBMI(bmi, isAsian);
+
+            String resultText = String.format("BMI: %1.f\n%s", bmi, resultCategory);
+            tvResult.setText(resultText);
+
+        } catch (NumberFormatException e){
+            Toast.makeText(this, "Dữ liệu nhập không hợp lệ!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public String classifyBMI(double bmi, boolean isAsian){
+        if(isAsian){
+            if(bmi < 17.5) return "Thiếu cân (Chuẩn Châu Á)";
+            else if(bmi < 23) return "Bình thường (Chuẩn Châu Á)";
+            else if(bmi < 28) return "Thừa cân (Chuẩn Châu Á)";
+            else return "Béo phì (Chuẩn Châu Á)";
+        }else{
+            if(bmi < 18.5) return "Thiếu cân";
+            else if(bmi < 25) return "Bình thường";
+            else if(bmi < 30) return "Thừa cân";
+            else return "Béo phì";
+        }
+    }
+
+
 }

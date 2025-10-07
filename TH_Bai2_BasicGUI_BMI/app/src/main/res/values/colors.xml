@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="neon_pink">#D96990</color>
+    <color name="neon_pink_dark">#C2185B</color>
     <color name="pastel_pink">#F2BDB2</color>
     <color name="light_pink">#F2C9E0</color>
     <color name="teal">#89C2D9</color>

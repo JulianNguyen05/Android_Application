@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TH_Bai2_BasicGUI_BMI</string>
+    <string name="title_bmi">TÍNH CHỈ SỐ BMI</string>
 </resources>

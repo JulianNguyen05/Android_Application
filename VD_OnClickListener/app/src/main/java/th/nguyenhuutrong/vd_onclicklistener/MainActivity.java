@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity{
             return insets;
         });
 
-        Button btnC1 = (Button)findViewById(R.id.btnC1);
+        btnC1 = (Button)findViewById(R.id.btnC1);
         btnC1.setOnClickListener(buttonClickListener);
 
-        Button btnC2 = (Button)findViewById(R.id.btnC2);
+        btnC2 = (Button)findViewById(R.id.btnC2);
         btnC2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

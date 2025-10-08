@@ -17,7 +17,7 @@ public class CustomSpinnerAdapter extends ArrayAdapter<CurrencyItem> {
 
     private final LayoutInflater inflater;
 
-    public CustomSpinnerAdapter(Context context, List<CurrencyItem> items){
+    public CustomSpinnerAdapter(Context context, List<CurrencyItem> items) {
         super(context, 0, items);
         inflater = LayoutInflater.from(context);
     }
@@ -27,9 +27,13 @@ public class CustomSpinnerAdapter extends ArrayAdapter<CurrencyItem> {
         return createView(position, convertView, parent);
     }
 
+    @Override
+    public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        return createView(position, convertView, parent);
+    }
 
-    private View createView(int position, View convertView, ViewGroup parent){
-        if(convertView == null){
+    private View createView(int position, View convertView, ViewGroup parent) {
+        if (convertView == null) {
             convertView = inflater.inflate(R.layout.spinner_item, parent, false);
         }
 
@@ -37,7 +41,7 @@ public class CustomSpinnerAdapter extends ArrayAdapter<CurrencyItem> {
         ImageView imgFlag = convertView.findViewById(R.id.imgFlag);
         TextView txtCurrency = convertView.findViewById(R.id.txtCurrency);
 
-        if(item != null){
+        if (item != null) {
             imgFlag.setImageResource(item.getFlagResId());
             txtCurrency.setText(item.getCode());
         }

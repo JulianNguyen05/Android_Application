@@ -46,7 +46,7 @@
 
                     <Spinner
                         android:id="@+id/spinnerFrom"
-                        android:layout_width="200dp"
+                        android:layout_width="220dp"
                         android:layout_height="100dp"
                         android:gravity="center"
                         android:background="@drawable/bg_layout_result"
@@ -61,8 +61,9 @@
                         android:gravity="center"
                         android:textSize="30sp"
                         android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:inputType="numberDecimal"
                         android:ems="10"
-                        android:inputType="text"
                         android:hint="Nhập số tiền" />
                 </LinearLayout>
 
@@ -75,7 +76,7 @@
 
                     <Spinner
                         android:id="@+id/spinnerTo"
-                        android:layout_width="200dp"
+                        android:layout_width="220dp"
                         android:layout_height="100dp"
                         android:background="@drawable/bg_layout_result"
                         android:gravity="center"
@@ -89,9 +90,10 @@
                         android:layout_marginStart="10dp"
                         android:gravity="center"
                         android:layout_weight="1"
+                        android:textColor="@color/black"
                         android:textSize="30sp"
                         android:ems="10"
-                        android:inputType="text"
+                        android:inputType="none"
                         android:hint="Kết quả" />
                 </LinearLayout>
             </LinearLayout>

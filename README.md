@@ -111,3 +111,24 @@ https://github.com/user-attachments/assets/f1f47c0e-b16e-4da3-9f29-ef4b71b01dd5
 > *(Click the title to see the detailed README with more screenshots and a video demo)*
 
 ---
+
+### 🔹 [TH Currency Converter](./TH_Currency_Converter/README.md)
+
+A modern and intuitive **Currency Converter** app built with **Java** and **Android Studio**.
+
+  - **✨ Custom UI**: Displays country flags in spinners for easy currency identification.
+  - **📈 Dynamic Exchange Rate**: Automatically calculates and shows the live exchange rate.
+  - **🔢 High-Precision Formatting**: Accurately handles very small decimal values without rounding to zero (e.g., VND to USD).
+  - **✍️ Auto-Formatting Input**: Adds thousands separators as the user types for better readability.
+  - **🔄 Swap Functionality**: Allows users to quickly swap "From" and "To" currencies with a single tap.
+
+<div style="display: flex; gap: 10px;">
+  <img src="./TH_Currency_Converter/assets/demo_main_1.jpg" alt="Currency Converter Demo" width="300"/>
+  <img src="./TH_Currency_Converter/assets/demo_usd_to_vnd.jpg" alt="Currency Converter Demo2" width="300"/>
+</div>
+
+https://github.com/user-attachments/assets/11811c32-6f84-479f-91cd-6e31fd98a6bf
+
+> *(Click the title to see the detailed README with more screenshots and a video demo)*
+
+-----

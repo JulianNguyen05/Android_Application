@@ -23,4 +23,6 @@
     <color name="over_weight">#FF9800</color>
     <color name="obese">#F44336</color>
 
+    <color name="spinner_dropdown_background">#E8EAF6</color>
+
 </resources>

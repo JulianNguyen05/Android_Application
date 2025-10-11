@@ -32,6 +32,8 @@
         app:boxCornerRadiusBottomStart="16dp"
         app:boxCornerRadiusTopEnd="16dp"
         app:boxCornerRadiusTopStart="16dp"
+        app:hintTextColor="@color/comic_blue_dark"
+        app:boxStrokeColor="@color/input_box_stroke_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle">
@@ -42,6 +44,8 @@
             android:layout_height="wrap_content"
             android:hint="Nhập số tiền"
             android:inputType="numberDecimal"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -53,8 +57,9 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/bg_spinner"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:popupBackground="@color/spinner_dropdown_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ivSwap"
         app:layout_constraintTop_toBottomOf="@id/tilAmount" />
@@ -77,8 +82,9 @@
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/bg_spinner"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:popupBackground="@color/spinner_dropdown_background"
         app:layout_constraintStart_toEndOf="@id/ivSwap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/spinnerFrom" />
@@ -123,6 +129,7 @@
         android:textSize="18sp"
         android:backgroundTint="@color/comic_blue"
         app:cornerRadius="16dp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

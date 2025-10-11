@@ -66,8 +66,8 @@
 
     <ImageView
         android:id="@+id/ivSwap"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:src="@drawable/ic_swap"
         android:background="@drawable/bg_swap_icon"
         android:padding="8dp"

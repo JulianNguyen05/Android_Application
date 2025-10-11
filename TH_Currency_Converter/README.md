@@ -1,9 +1,3 @@
-Chắc chắn rồi\! Dưới đây là tệp `README.md` hoàn chỉnh của bạn, đã được cập nhật với phần mô tả và tên tệp cho từng hình ảnh bạn cung cấp.
-
-**Lưu ý quan trọng:** Bạn hãy đổi tên các tệp ảnh của mình thành các tên mới mà tôi đã đề xuất dưới đây (ví dụ: `screenshot-initial-state.jpg`) và đặt chúng vào một thư mục trong dự án của bạn (ví dụ: một thư mục mới tên là `screenshots`). Sau đó, hãy cập nhật đường dẫn trong tệp README cho chính xác.
-
------
-
 # Currency Converter Application
 
 A native Android application built with Java that provides a fast, accurate, and user-friendly currency conversion tool. The app features a modern interface focused on a smooth user experience with smart features like automatic number formatting and dynamic exchange rate display.

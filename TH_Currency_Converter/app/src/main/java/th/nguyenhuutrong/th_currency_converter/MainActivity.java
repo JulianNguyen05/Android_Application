@@ -1,99 +1,135 @@
 package th.nguyenhuutrong.th_currency_converter;
-
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
+import com.google.android.material.textfield.TextInputEditText;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Khai báo các thành phần UI
+    private TextInputEditText inputAmount;
     private Spinner spinnerFrom, spinnerTo;
-    private EditText inputAmount;
+    private ImageView ivSwap;
     private TextView outputAmount;
     private Button btnConvert;
 
-    // Bảng tỷ giá cố định
-    private final Map<String, Double> rateToUSD = new HashMap<>();
+    private ArrayList<CurrencyItem> currencyList;
+    private CurrencyAdapter adapter;
+
+    // TODO: Trong ứng dụng thực tế, tỷ giá này nên được lấy từ API
+    private Map<String, Double> exchangeRates = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
-        // Ánh xạ view
+        // Ánh xạ UI
+        inputAmount = findViewById(R.id.inputAmount);
         spinnerFrom = findViewById(R.id.spinnerFrom);
         spinnerTo = findViewById(R.id.spinnerTo);
-        inputAmount = findViewById(R.id.inputAmount);
+        ivSwap = findViewById(R.id.ivSwap);
         outputAmount = findViewById(R.id.outputAmount);
         btnConvert = findViewById(R.id.btnConvert);
 
-        // Danh sách quốc gia
-        ArrayList<CurrencyItem> list = new ArrayList<>();
-        list.add(new CurrencyItem("USD", R.drawable.flag_us));
-        list.add(new CurrencyItem("VND", R.drawable.flag_vn));
-        list.add(new CurrencyItem("JPY", R.drawable.flag_jp));
-        list.add(new CurrencyItem("EUR", R.drawable.flag_eu));
-        list.add(new CurrencyItem("INR", R.drawable.flag_in));
+        // Khởi tạo danh sách tiền tệ
+        initCurrencyList();
 
-        // Adapter tùy chỉnh
-        CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(this, list);
+        // Khởi tạo tỷ giá hối đoái giả
+        initExchangeRates();
+
+        // Thiết lập Adapter cho cả hai Spinner
+        adapter = new CurrencyAdapter(this, currencyList);
         spinnerFrom.setAdapter(adapter);
         spinnerTo.setAdapter(adapter);
 
-        // --- Khởi tạo tỷ giá giả định (so với USD)
-        rateToUSD.put("USD", 1.0);
-        rateToUSD.put("VND", 1.0 / 25000.0); // 1 VND = 0.00004 USD
-        rateToUSD.put("JPY", 1.0 / 150.0);   // 1 JPY = 0.0067 USD
-        rateToUSD.put("EUR", 1.0 / 0.93);    // 1 EUR = 1.075 USD
-        rateToUSD.put("INR", 1.0 / 83.0);    // 1 INR = 0.012 USD
+        // Cài đặt giá trị mặc định cho Spinner
+        spinnerFrom.setSelection(3); // Mặc định là VND
+        spinnerTo.setSelection(0);   // Mặc định là USD
 
-        // Xử lý khi nhấn nút chuyển đổi
-        btnConvert.setOnClickListener(v -> {
-            String from = ((CurrencyItem) spinnerFrom.getSelectedItem()).getCode();
-            String to = ((CurrencyItem) spinnerTo.getSelectedItem()).getCode();
-            String amountStr = inputAmount.getText().toString().trim();
-
-            if (amountStr.isEmpty()) {
-                Toast.makeText(this, "Vui lòng nhập số tiền", Toast.LENGTH_SHORT).show();
-                return;
+        // Thiết lập sự kiện click cho nút chuyển đổi
+        btnConvert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                convertCurrency();
             }
+        });
 
-            try {
-                double amount = Double.parseDouble(amountStr);
-                double result = convertCurrency(from, to, amount);
-                outputAmount.setText(String.format("%.2f", result));
-            } catch (NumberFormatException e) {
-                Toast.makeText(this, "Số tiền không hợp lệ", Toast.LENGTH_SHORT).show();
+        // Thiết lập sự kiện click cho icon hoán đổi
+        ivSwap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                swapCurrencies();
             }
         });
     }
 
-    // Hàm chuyển đổi nội bộ (không cần API)
-    private double convertCurrency(String from, String to, double amount) {
-        if (!rateToUSD.containsKey(from) || !rateToUSD.containsKey(to)) {
-            Toast.makeText(this, "Không có dữ liệu tỷ giá", Toast.LENGTH_SHORT).show();
-            return 0;
+    private void initCurrencyList() {
+        currencyList = new ArrayList<>();
+        currencyList.add(new CurrencyItem("USD", R.drawable.flag_us));
+        currencyList.add(new CurrencyItem("EUR", R.drawable.flag_eu));
+        currencyList.add(new CurrencyItem("JPY", R.drawable.flag_jp));
+        currencyList.add(new CurrencyItem("VND", R.drawable.flag_vn));
+        currencyList.add(new CurrencyItem("GBP", R.drawable.flag_gb));
+    }
+
+    private void initExchangeRates() {
+        // Tỷ giá dựa trên 1 USD
+        exchangeRates.put("USD", 1.0);
+        exchangeRates.put("VND", 25450.0);
+        exchangeRates.put("EUR", 0.92);
+        exchangeRates.put("JPY", 148.5);
+        exchangeRates.put("GBP", 0.81);
+    }
+
+    private void convertCurrency() {
+        String amountStr = inputAmount.getText().toString();
+        if (amountStr.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập số tiền", Toast.LENGTH_SHORT).show();
+            return;
         }
-        double usdAmount = amount * rateToUSD.get(from); // Quy đổi từ tiền gốc sang USD
-        return usdAmount / rateToUSD.get(to);             // Từ USD sang tiền đích
+
+        try {
+            double amountToConvert = Double.parseDouble(amountStr);
+
+            CurrencyItem fromCurrency = (CurrencyItem) spinnerFrom.getSelectedItem();
+            CurrencyItem toCurrency = (CurrencyItem) spinnerTo.getSelectedItem();
+
+            String fromCurrencyName = fromCurrency.getCurrencyName();
+            String toCurrencyName = toCurrency.getCurrencyName();
+
+            // Lấy tỷ giá
+            double rateFrom = exchangeRates.get(fromCurrencyName);
+            double rateTo = exchangeRates.get(toCurrencyName);
+
+            // Công thức chuyển đổi qua USD làm trung gian
+            double amountInUSD = amountToConvert / rateFrom;
+            double convertedAmount = amountInUSD * rateTo;
+
+            // Định dạng kết quả
+            DecimalFormat formatter = new DecimalFormat("#,##0.00");
+            outputAmount.setText(formatter.format(convertedAmount));
+
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Số tiền nhập không hợp lệ", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void swapCurrencies() {
+        int fromPosition = spinnerFrom.getSelectedItemPosition();
+        int toPosition = spinnerTo.getSelectedItemPosition();
+
+        spinnerFrom.setSelection(toPosition);
+        spinnerTo.setSelection(fromPosition);
     }
 }

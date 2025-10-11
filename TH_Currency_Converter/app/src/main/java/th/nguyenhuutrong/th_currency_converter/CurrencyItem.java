@@ -1,19 +1,19 @@
 package th.nguyenhuutrong.th_currency_converter;
 
 public class CurrencyItem {
-    private final String code;
-    private final int flagResId;
+    private String currencyName;
+    private int flagImage;
 
-    public CurrencyItem(String code, int flagResId) {
-        this.code = code;
-        this.flagResId = flagResId;
+    public CurrencyItem(String currencyName, int flagImage) {
+        this.currencyName = currencyName;
+        this.flagImage = flagImage;
     }
 
-    public String getCode(){
-        return code;
+    public String getCurrencyName() {
+        return currencyName;
     }
 
-    public int getFlagResId() {
-        return flagResId;
+    public int getFlagImage() {
+        return flagImage;
     }
 }

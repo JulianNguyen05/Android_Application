@@ -14,7 +14,7 @@ A native Android application built with Java that provides a fast, accurate, and
 
 The main user interface of the application, displaying the default currency pair selected on launch.
 
-\<img src="assets/demo_main_1.jpg" alt="Main Screen Default" width="300"/\>
+<img src="assets/demo_main_1.jpg" alt="Main Screen Default" width="300"/>
 
 -----
 
@@ -22,7 +22,7 @@ The main user interface of the application, displaying the default currency pair
 
 The exchange rate is automatically updated and displayed based on the currency pair selected by the user.
 
-\<img src="assets/demo_main_2.jpg" alt="Dynamic Exchange Rate" width="300"/\>
+<img src="assets/demo_main_2.jpg" alt="Dynamic Exchange Rate" width="300"/>
 
 -----
 
@@ -30,7 +30,7 @@ The exchange rate is automatically updated and displayed based on the currency p
 
 The custom dropdown menu for selecting the "From" currency, featuring country flags for quick and intuitive identification.
 
-\<img src="assets/demo_currency_selection_1.jpg" alt="From Currency Selection" width="300"/\>
+<img src="assets/demo_currency_selection_1.jpg" alt="From Currency Selection" width="300"/>
 
 -----
 
@@ -38,7 +38,7 @@ The custom dropdown menu for selecting the "From" currency, featuring country fl
 
 The custom dropdown menu for selecting the "To" currency, providing a consistent and smooth user experience.
 
-\<img src="assets/demo_currency_selection_2.jpg" alt="To Currency Selection" width="300"/\>
+<img src="assets/demo_currency_selection_2.jpg" alt="To Currency Selection" width="300"/>
 
 -----
 
@@ -46,7 +46,7 @@ The custom dropdown menu for selecting the "To" currency, providing a consistent
 
 An example of a conversion from US Dollar to Vietnamese Dong, with the result automatically formatted with thousands separators.
 
-<img src="assets/demo_usd_to_vnd.jpg" alt="USD to VND Conversion" width="300"/\>
+<img src="assets/demo_usd_to_vnd.jpg" alt="USD to VND Conversion" width="300"/>
 
 -----
 

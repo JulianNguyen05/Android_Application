@@ -100,8 +100,10 @@ A modern Android application built with **Java** and **Android Studio** that cal
 
 <div style="display: flex; gap: 10px;">
   <img src="./TH_Bai2_BasicGUI_BMI/assets/demo_normalWeight.jpg" alt="normalWeight" width="300">
-  https://github.com/user-attachments/assets/f1f47c0e-b16e-4da3-9f29-ef4b71b01dd5
+  
 </div>
+
+https://github.com/user-attachments/assets/f1f47c0e-b16e-4da3-9f29-ef4b71b01dd5
 
 > *(Click the title to see the detailed README with more screenshots and a video demo)*
 

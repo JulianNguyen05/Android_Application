@@ -68,6 +68,7 @@ A **Tic Tac Toe (X-O) game project** built with **Java** and **Android Studio**,
 - 🎲 Upcoming features: interactive **game board**, **result dialog**, and full **gameplay logic**.  
 
 <img src="./LamThem_TicTacToe/assets/demo_main.jpg" alt="Tic Tac Toe Demo" width="300"/>
+https://github.com/user-attachments/assets/831358b3-edac-458b-acb5-bd94efe85b77
 
 > *(Click the title to see the detailed README with more screenshots and a video demo)*
 
@@ -81,6 +82,7 @@ An interactive **Math Quiz Game** built with **Java** and **Android Studio**.
 - Demonstrates **event handling** and **UI/UX design** in Android.
 
 <img src="./TH_Quizzapp_Total/assets/demo_main.jpg" alt="Math Quiz App Demo" width="300"/>
+https://github.com/user-attachments/assets/0a21d693-cf8e-418a-97e1-b31e465d7670
 
 > *(Click the title to see the detailed README with more screenshots and a video demo)*
 
@@ -100,7 +102,6 @@ A modern Android application built with **Java** and **Android Studio** that cal
 
 <div style="display: flex; gap: 10px;">
   <img src="./TH_Bai2_BasicGUI_BMI/assets/demo_normalWeight.jpg" alt="normalWeight" width="300">
-  
 </div>
 
 https://github.com/user-attachments/assets/f1f47c0e-b16e-4da3-9f29-ef4b71b01dd5

@@ -10,23 +10,63 @@ A native Android application built with Java that provides a fast, accurate, and
 
 ## 📸 Screenshots
 
-| Initial State & Currency Selection |
-| :---: |
-|  |
-| **`screenshot-initial-state.jpg`**: The initial state of the application, with default currencies (USD to VND) selected and the result at 0.00. |
-|  |
-| **`screenshot-currency-selection.jpg`**: The custom currency selection dropdown, which clearly displays each country's flag next to the currency code. |
+### 1️⃣ Main Interface (Default)
 
-| Conversion Examples |
-| :---: |
-|  |
-| **`screenshot-usd-to-vnd.jpg`**: Converting 1 USD to VND. The result correctly shows "25 450,00" with appropriate thousands separators. |
-|  |
-| **`screenshot-swapped-rate.jpg`**: After swapping currencies, the app displays the high-precision exchange rate for 1 VND in USD. |
-|  |
-| **`screenshot-vnd-to-usd.jpg`**: Converting 25,450 VND back to USD, demonstrating the accurate handling of very small exchange rates to get a result of "1,00". |
-|  |
-| **`screenshot-eur-to-usd.jpg`**: Another conversion example from EUR to USD, showcasing the automatic number formatting of the input value "25 450". |
+The main user interface of the application, displaying the default currency pair selected on launch.
+
+\<img src="assets/demo\_main\_1.jpg" alt="Main Screen Default" width="300"/\>
+
+-----
+
+### 2️⃣ Dynamic Exchange Rate Display
+
+The exchange rate is automatically updated and displayed based on the currency pair selected by the user.
+
+\<img src="assets/demo\_main\_2.jpg" alt="Dynamic Exchange Rate" width="300"/\>
+
+-----
+
+### 3️⃣ "From" Currency Selection
+
+The custom dropdown menu for selecting the "From" currency, featuring country flags for quick and intuitive identification.
+
+\<img src="assets/demo\_currency\_selection\_1.jpg" alt="From Currency Selection" width="300"/\>
+
+-----
+
+### 4️⃣ "To" Currency Selection
+
+The custom dropdown menu for selecting the "To" currency, providing a consistent and smooth user experience.
+
+\<img src="assets/demo\_currency\_selection\_2.jpg" alt="To Currency Selection" width="300"/\>
+
+-----
+
+### 5️⃣ USD to VND Conversion
+
+An example of a conversion from US Dollar to Vietnamese Dong, with the result automatically formatted with thousands separators.
+
+\<img src="assets/demo\_usd\_to\_vnd.jpg" alt="USD to VND Conversion" width="300"/\>
+
+-----
+
+### 6️⃣ VND to USD High-Precision Conversion
+
+Showcases the high-precision feature, accurately converting from Vietnamese Dong to US Dollar without rounding small decimals to zero.
+
+\<img src="assets/demo\_vnd\_to\_usd.jpg" alt="VND to USD High-Precision Conversion" width="300"/\>
+
+-----
+
+### 7️⃣ EUR to USD Conversion
+
+Another conversion example from Euro to US Dollar, demonstrating the real-time calculation and result display.
+
+\<img src="assets/demo\_eu\_to\_usd.jpg" alt="EUR to USD Conversion" width="300"/\>
+
+-----
+
+
 
 ## ✨ Key Features
 

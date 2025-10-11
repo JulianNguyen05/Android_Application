@@ -46,7 +46,7 @@ The custom dropdown menu for selecting the "To" currency, providing a consistent
 
 An example of a conversion from US Dollar to Vietnamese Dong, with the result automatically formatted with thousands separators.
 
-\<img src="assets/demo_usd_to_vnd.jpg" alt="USD to VND Conversion" width="300"/\>
+<img src="assets/demo_usd_to_vnd.jpg" alt="USD to VND Conversion" width="300"/\>
 
 -----
 

@@ -4,7 +4,7 @@ A native Android application built with Java that provides a fast, accurate, and
 
 ## 🎬 Demo
 
-*(This is where you can place a video or GIF demonstrating the app. You can record your screen, upload it to YouTube/Imgur, and paste the link here.)*
+https://github.com/user-attachments/assets/11811c32-6f84-479f-91cd-6e31fd98a6bf
 
 **[Your Demo Video Link Here]**
 
@@ -54,7 +54,7 @@ An example of a conversion from US Dollar to Vietnamese Dong, with the result au
 
 Showcases the high-precision feature, accurately converting from Vietnamese Dong to US Dollar without rounding small decimals to zero.
 
-\<img src="assets/demo_vnd_to_usd.jpg" alt="VND to USD High-Precision Conversion" width="300"/\>
+<img src="assets/demo_vnd_to_usd.jpg" alt="VND to USD High-Precision Conversion" width="300"/>
 
 -----
 
@@ -62,7 +62,7 @@ Showcases the high-precision feature, accurately converting from Vietnamese Dong
 
 Another conversion example from Euro to US Dollar, demonstrating the real-time calculation and result display.
 
-\<img src="assets/demo_eu_to_usd.jpg" alt="EUR to USD Conversion" width="300"/\>
+<img src="assets/demo_eu_to_usd.jpg" alt="EUR to USD Conversion" width="300"/>
 
 -----
 

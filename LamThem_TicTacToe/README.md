@@ -126,7 +126,7 @@ Here are some screenshots of the **LamThem TicTacToe** game in action:
 - Example: "Trọng" and "Julian".  
 - The UI uses **custom borders** (`cosmic_blue_border.xml`) and the **primary cosmic blue color**.  
 <p align="center">
-  <img src="./assets/demo_img1.jpg" alt="Demo Img1" width="300"/>
+  <img src="./assets/demo_main.jpg" alt="Demo Img1" width="300"/>
 </p>
 
 ---

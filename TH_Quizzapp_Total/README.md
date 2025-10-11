@@ -92,7 +92,7 @@ app/src/main/res/values/
 This is the main quiz interface.  
 The app displays a math question at the top, the current score, and four multiple-choice answers.  
 
-<img src="assets/demo_img.jpg" alt="Quiz Screen" width="300"/>
+<img src="assets/demo_main.jpg" alt="Quiz Screen" width="300"/>
 
 ---
 

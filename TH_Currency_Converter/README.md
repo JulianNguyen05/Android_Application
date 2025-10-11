@@ -1,10 +1,38 @@
+Chắc chắn rồi\! Dưới đây là tệp `README.md` hoàn chỉnh của bạn, đã được cập nhật với phần mô tả và tên tệp cho từng hình ảnh bạn cung cấp.
+
+**Lưu ý quan trọng:** Bạn hãy đổi tên các tệp ảnh của mình thành các tên mới mà tôi đã đề xuất dưới đây (ví dụ: `screenshot-initial-state.jpg`) và đặt chúng vào một thư mục trong dự án của bạn (ví dụ: một thư mục mới tên là `screenshots`). Sau đó, hãy cập nhật đường dẫn trong tệp README cho chính xác.
+
+-----
+
 # Currency Converter Application
 
 A native Android application built with Java that provides a fast, accurate, and user-friendly currency conversion tool. The app features a modern interface focused on a smooth user experience with smart features like automatic number formatting and dynamic exchange rate display.
 
 ## 🎬 Demo
 
+*(This is where you can place a video or GIF demonstrating the app. You can record your screen, upload it to YouTube/Imgur, and paste the link here.)*
+
+**[Your Demo Video Link Here]**
+
 ## 📸 Screenshots
+
+| Initial State & Currency Selection |
+| :---: |
+|  |
+| **`screenshot-initial-state.jpg`**: The initial state of the application, with default currencies (USD to VND) selected and the result at 0.00. |
+|  |
+| **`screenshot-currency-selection.jpg`**: The custom currency selection dropdown, which clearly displays each country's flag next to the currency code. |
+
+| Conversion Examples |
+| :---: |
+|  |
+| **`screenshot-usd-to-vnd.jpg`**: Converting 1 USD to VND. The result correctly shows "25 450,00" with appropriate thousands separators. |
+|  |
+| **`screenshot-swapped-rate.jpg`**: After swapping currencies, the app displays the high-precision exchange rate for 1 VND in USD. |
+|  |
+| **`screenshot-vnd-to-usd.jpg`**: Converting 25,450 VND back to USD, demonstrating the accurate handling of very small exchange rates to get a result of "1,00". |
+|  |
+| **`screenshot-eur-to-usd.jpg`**: Another conversion example from EUR to USD, showcasing the automatic number formatting of the input value "25 450". |
 
 ## ✨ Key Features
 
@@ -39,14 +67,17 @@ To get this project up and running on your local machine, follow these steps.
 
 ### Installation
 
-1. Clone this repository:
+1.  Clone this repository:
 
-   ```bash
-   git clone git@github.com:JulianNguyen05/Android_Application.git
-   ```
-2. Open the project in **Android Studio**.
-3. Let Gradle sync and build the project.
-4. Run the app on an emulator or physical device.
+    ```bash
+    git clone git@github.com:JulianNguyen05/Android_Application.git
+    ```
+
+2.  Open the project in **Android Studio**.
+
+3.  Let Gradle sync and build the project.
+
+4.  Run the app on an emulator or physical device.
 
 #### Key Components
 
@@ -152,7 +183,7 @@ public class CurrencyAdapter extends ArrayAdapter<CurrencyItem> {
 
 ## 🧑‍💻 Author
 
-* **Nguyễn Hữu Trọng (Julian)**
-  *Learning Android Development with Java*
+  * **Nguyễn Hữu Trọng (Julian)**
+    *Learning Android Development with Java*
 
----
+-----

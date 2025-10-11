@@ -38,9 +38,11 @@ public class MainActivity extends AppCompatActivity {
     private CurrencyAdapter adapter;
     private Map<String, Double> exchangeRates = new HashMap<>();
 
-    private DecimalFormat mainFormatter;
-    private DecimalFormat normalRateFormatter;
-    private DecimalFormat preciseRateFormatter;
+    // CẬP NHẬT: Đổi tên và thêm bộ định dạng mới
+    private DecimalFormat inputFormatter;       // Dùng cho ô nhập liệu (linh hoạt)
+    private DecimalFormat outputFormatter;      // Dùng cho ô kết quả (nghiêm ngặt)
+    private DecimalFormat normalRateFormatter;  // Dùng cho tỷ giá thông thường
+    private DecimalFormat preciseRateFormatter; // Dùng cho tỷ giá rất nhỏ
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +82,8 @@ public class MainActivity extends AppCompatActivity {
         spinnerTo.setOnItemSelectedListener(itemSelectedListener);
         updateExchangeRateDisplay();
 
-        inputAmount.addTextChangedListener(new NumberTextWatcher(inputAmount, mainFormatter));
+        // CẬP NHẬT: Sử dụng inputFormatter cho TextWatcher
+        inputAmount.addTextChangedListener(new NumberTextWatcher(inputAmount, inputFormatter));
         btnConvert.setOnClickListener(v -> convertCurrency());
         ivSwap.setOnClickListener(v -> swapCurrencies());
     }
@@ -88,9 +91,17 @@ public class MainActivity extends AppCompatActivity {
     private void setupFormatters() {
         DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.getDefault());
         symbols.setGroupingSeparator(' ');
+        // CẬP NHẬT: Sử dụng dấu phẩy cho phần thập phân để nhất quán
+        symbols.setDecimalSeparator(',');
 
-        String mainPattern = "#,##0.00";
-        mainFormatter = new DecimalFormat(mainPattern, symbols);
+        // MỚI: Formatter cho ô nhập liệu (chỉ thêm dấu cách, không ép buộc số lẻ)
+        String inputPattern = "#,###.##";
+        inputFormatter = new DecimalFormat(inputPattern, symbols);
+        inputFormatter.setDecimalSeparatorAlwaysShown(false);
+
+        // CẬP NHẬT: Formatter cho ô kết quả (luôn hiển thị 2 số lẻ)
+        String outputPattern = "#,##0.00";
+        outputFormatter = new DecimalFormat(outputPattern, symbols);
 
         String normalRatePattern = "#,##0.####";
         normalRateFormatter = new DecimalFormat(normalRatePattern, symbols);
@@ -99,6 +110,37 @@ public class MainActivity extends AppCompatActivity {
         preciseRateFormatter = new DecimalFormat(preciseRatePattern, symbols);
     }
 
+    private void convertCurrency() {
+        String amountStr = inputAmount.getText().toString();
+        if (amountStr.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập số tiền", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        try {
+            // CẬP NHẬT: Dùng inputFormatter để đọc số từ ô nhập liệu
+            Number number = inputFormatter.parse(amountStr);
+            double amountToConvert = number.doubleValue();
+
+            CurrencyItem fromCurrency = (CurrencyItem) spinnerFrom.getSelectedItem();
+            CurrencyItem toCurrency = (CurrencyItem) spinnerTo.getSelectedItem();
+
+            String fromCurrencyName = fromCurrency.getCurrencyName();
+            String toCurrencyName = toCurrency.getCurrencyName();
+
+            double rateFrom = exchangeRates.get(fromCurrencyName);
+            double rateTo = exchangeRates.get(toCurrencyName);
+
+            double amountInUSD = amountToConvert / rateFrom;
+            double convertedAmount = amountInUSD * rateTo;
+
+            // CẬP NHẬT: Dùng outputFormatter để hiển thị kết quả cuối cùng
+            outputAmount.setText(outputFormatter.format(convertedAmount));
+        } catch (ParseException e) {
+            Toast.makeText(this, "Số tiền nhập không hợp lệ", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // --- Các hàm không thay đổi ---
     private void updateExchangeRateDisplay() {
         CurrencyItem fromCurrency = (CurrencyItem) spinnerFrom.getSelectedItem();
         CurrencyItem toCurrency = (CurrencyItem) spinnerTo.getSelectedItem();
@@ -120,34 +162,6 @@ public class MainActivity extends AppCompatActivity {
 
         String rateText = "Tỷ giá: 1 " + fromCode + " = " + formattedRate + " " + toCode;
         tvExchangeRate.setText(rateText);
-    }
-
-    private void convertCurrency() {
-        String amountStr = inputAmount.getText().toString();
-        if (amountStr.isEmpty()) {
-            Toast.makeText(this, "Vui lòng nhập số tiền", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        try {
-            Number number = mainFormatter.parse(amountStr);
-            double amountToConvert = number.doubleValue();
-
-            CurrencyItem fromCurrency = (CurrencyItem) spinnerFrom.getSelectedItem();
-            CurrencyItem toCurrency = (CurrencyItem) spinnerTo.getSelectedItem();
-
-            String fromCurrencyName = fromCurrency.getCurrencyName();
-            String toCurrencyName = toCurrency.getCurrencyName();
-
-            double rateFrom = exchangeRates.get(fromCurrencyName);
-            double rateTo = exchangeRates.get(toCurrencyName);
-
-            double amountInUSD = amountToConvert / rateFrom;
-            double convertedAmount = amountInUSD * rateTo;
-
-            outputAmount.setText(mainFormatter.format(convertedAmount));
-        } catch (ParseException e) {
-            Toast.makeText(this, "Số tiền nhập không hợp lệ", Toast.LENGTH_SHORT).show();
-        }
     }
 
     private void initCurrencyList() {
@@ -174,9 +188,11 @@ public class MainActivity extends AppCompatActivity {
         spinnerTo.setSelection(fromPosition);
     }
 
+    // CẬP NHẬT: logic của NumberTextWatcher để xử lý tốt hơn
     private static class NumberTextWatcher implements TextWatcher {
         private final EditText editText;
         private final DecimalFormat df;
+        private String current = "";
 
         public NumberTextWatcher(EditText editText, DecimalFormat df) {
             this.editText = editText;
@@ -186,22 +202,48 @@ public class MainActivity extends AppCompatActivity {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
         @Override
         public void afterTextChanged(Editable s) {
+            if (s.toString().equals(current)) {
+                return;
+            }
+
             editText.removeTextChangedListener(this);
+
             try {
-                String originalString = s.toString();
-                if (originalString.isEmpty() || originalString.equals(".")) {
+                String cleanString = s.toString().replaceAll("[^\\d" + df.getDecimalFormatSymbols().getDecimalSeparator() + "]", "");
+
+                if (cleanString.isEmpty()){
+                    current = "";
+                    editText.setText("");
                     editText.addTextChangedListener(this);
                     return;
                 }
-                Number number = df.parse(originalString);
-                String formattedString = df.format(number);
-                editText.setText(formattedString);
-                editText.setSelection(formattedString.length());
+
+                Number number;
+                // Xử lý trường hợp người dùng nhập dấu phẩy ở cuối
+                if (cleanString.endsWith(String.valueOf(df.getDecimalFormatSymbols().getDecimalSeparator()))) {
+                    number = df.parse(cleanString.substring(0, cleanString.length() - 1));
+                } else {
+                    number = df.parse(cleanString);
+                }
+
+                String formatted = df.format(number);
+
+                // Thêm lại dấu phẩy nếu người dùng đang nhập dở
+                if (cleanString.endsWith(String.valueOf(df.getDecimalFormatSymbols().getDecimalSeparator()))) {
+                    formatted += df.getDecimalFormatSymbols().getDecimalSeparator();
+                }
+
+                current = formatted;
+                editText.setText(formatted);
+                editText.setSelection(formatted.length());
+
             } catch (ParseException e) {
                 // Ignore
             }
+
             editText.addTextChangedListener(this);
         }
     }

@@ -3,10 +3,13 @@ package th.nguyenhuutrong.th_bai3_chuyenmanhinh_fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,18 +50,31 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        Button btnGoToSecond = view.findViewById(R.id.btnGoToSecond);
+        btnGoToSecond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Tạo một đối tượng Fragment mới
+                SecondFragment secondFragment = new SecondFragment();
+
+                // Lấy FragmentManager và bắt đầu một giao dịch
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                // Thay thế Fragment hiện tại bằng Fragment mới
+                fragmentTransaction.replace(R.id.fragment_container_view, secondFragment);
+                // Thêm vào back stack để người dùng có thể quay lại bằng nút Back
+                fragmentTransaction.addToBackStack(null);
+                // Thực hiện giao dịch
+                fragmentTransaction.commit();
+            }
+        });
+
+        return view;
     }
 }

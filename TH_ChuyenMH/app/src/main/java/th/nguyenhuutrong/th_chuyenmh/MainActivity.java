@@ -1,4 +1,4 @@
-package th.nguyenhuutrong.th_bai3_chuyenmanhinh_fragment;
+package th.nguyenhuutrong.th_chuyenmh;
 
 import android.os.Bundle;
 
@@ -7,8 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,13 +20,5 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        if (savedInstanceState == null) {
-            HomeFragment homeFragment = new HomeFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.fragment_container_view, homeFragment);
-            fragmentTransaction.commit();
-        }
     }
 }

@@ -7,8 +7,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    LandScapeAdapter landScapeAdapter;
+    ArrayList<LandScape> recycleViewDatas;
+    RecyclerView recyclerViewLandscape;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +29,27 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // 3
+        recycleViewDatas = getDataForRecycleView();
+        // 4
+        recyclerViewLandscape = findViewById(R.id.recyLand);
+        // 5
+        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
+        recyclerViewLandscape.setLayoutManager(layoutLinear);
+        // 6
+        landScapeAdapter = new LandScapeAdapter(this, recycleViewDatas);
+        // 7
+        recyclerViewLandscape.setAdapter(landScapeAdapter);
+    }
 
+    ArrayList<LandScape> getDataForRecycleView() {
+        ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
+        LandScape landScape1 = new LandScape("flat_tower_of_HaNoi", "Cột cờ HN");
+        dsDuLieu.add(landScape1);
+        dsDuLieu.add(new LandScape("effel", "Tháp Effel"));
+        dsDuLieu.add(new LandScape("buckingham", "Cung đện Buckingham"));
+        dsDuLieu.add(new LandScape("buckingham1", "Cung đện Buckingham"));
 
+        return dsDuLieu;
     }
 }

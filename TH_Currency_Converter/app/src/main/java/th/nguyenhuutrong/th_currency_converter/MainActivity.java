@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerFrom.setSelection(3); // VND
         spinnerTo.setSelection(0);   // USD
 
-        AdapterView.OnItemSelectedListener itemSelectedListener = new AdapterView.OnItemSelectedListener() {
+        AdapterView. SelectedListener itemSelectedListener = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 updateExchangeRateDisplay();

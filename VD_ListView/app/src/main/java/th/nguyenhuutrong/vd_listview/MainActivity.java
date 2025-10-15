@@ -73,8 +73,12 @@ public class MainActivity extends AppCompatActivity {
         // Code ở đây
         // Bài này, ta hard-code, ta fake dữ liệu tại đây cho nhanh
         dsTam.add("Tiểu Vy");
-        dsTam.add("Lâm Tâm Như");
+        dsTam.add("Liễu Như Yên");
+        dsTam.add("Tống Ngọc");
+        dsTam.add("Tần Tâm Từ");
+        dsTam.add("Nhan Như Ngọc");
         dsTam.add("Yassuo");
+        dsTam.add("Galaxt Slayer Zed");
         return dsTam;
     }
 

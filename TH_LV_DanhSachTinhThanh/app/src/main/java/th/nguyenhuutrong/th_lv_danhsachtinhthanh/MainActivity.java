@@ -1,8 +1,11 @@
 package th.nguyenhuutrong.th_lv_danhsachtinhthanh;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    ArrayList<String> dsTenTT;      // Khai báo
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         //  ?? từ đâu có: từ cơ sở dữ liệu (SQL, noSQL, XML,..)
         // ở bài này, chúng ta hard-code dữ liệu trực tiếp
         // Cần biến phù hợp để chứa dữ liệu
-        ArrayList<String> dsTenTT;      // Khai báo
         dsTenTT = new ArrayList<String>();    // Khởi tạo
 
             // Thêm dữ liệu ở đây (đúng ra, ta phải đọc từ 1 nguồn)
@@ -51,8 +55,23 @@ public class MainActivity extends AppCompatActivity {
         // 3.2 Gắn
         lvTenTT.setAdapter(adapterTT);
         // 3.3 Lắng nghe và xử lý sự kiện user tương tác
-        // để sau
-
-
+        // gắn bộ lắng nghe vào
+        lvTenTT.setOnItemClickListener(BoLangNghevaXL);
     }
+
+    // Tạo bộ lắng nghe và xử lý sự kiện OnItemClick, đặt vào 1 biến
+    // Vd: BoLangNghevaXL
+    AdapterView.OnItemClickListener BoLangNghevaXL = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            // Code xử lý ở đây
+            // position là vị trí phần tử vừa được click
+            // ví dụ xử lý ở đây, là hiện lên màn hình một thông báo nhanh về vị trí của phần tử vừa chọn
+            Toast.makeText(MainActivity.this, "Bạn vừa chọn: " + String.valueOf(position), Toast.LENGTH_SHORT).show();
+
+            // ViDu khác: lấy giá trị của phần tử thứ i
+            String strTT = dsTenTT.get(position);
+            Toast.makeText(MainActivity.this, "Bạn vừa chọn: " + strTT, Toast.LENGTH_SHORT).show();
+        }
+    };
 }

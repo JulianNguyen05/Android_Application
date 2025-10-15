@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="smoke">#E0E0E0</color>
+
+    <color name="neon_pink">#D96990</color>
+    <color name="neon_pink_dark">#C2185B</color>
+    <color name="pastel_pink">#F2BDB2</color>
+    <color name="light_pink">#F2C9E0</color>
+    <color name="teal">#89C2D9</color>
+    <color name="baby_blue">#B8EBF2</color>
+
+    <color name="comic_blue">#0081B0</color>
+    <color name="comic_blue_dark">#005270</color>
+
+    <color name="charcoal_gray">#263238</color>
+    <color name="light_gray">#ECEFF1</color>
+    <color name="off_white">#F5F5F5</color>
+
+    <color name="under_weight">#2196F3</color>
+    <color name="normal_weight">#4CAF50</color>
+    <color name="over_weight">#FF9800</color>
+    <color name="obese">#F44336</color>
+
+    <color name="spinner_dropdown_background">#E8EAF6</color>
+
+</resources>

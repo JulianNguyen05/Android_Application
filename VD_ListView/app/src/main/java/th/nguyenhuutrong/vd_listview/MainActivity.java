@@ -40,7 +40,12 @@ public class MainActivity extends AppCompatActivity {
         lstNYC = getData();
         //--- Tạo adapter
         ArrayAdapter<String> nycAdapter;
+        nycAdapter = new ArrayAdapter<String>(this,
+                                                android.R.layout.simple_list_item_1,
+                                                lstNYC);
 
+        // Gắn adapter
+        lvNYC.setAdapter(nycAdapter);
     }
 
     ArrayList<String> getData(){

@@ -1,6 +1,7 @@
 package th.nguyenhuutrong.th_using_recyclerview;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class landScapeAdapter extends RecyclerView.Adapter<landScapeAdapter.ItemLandHolder> {
+public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.ItemLandHolder> {
 
     Context context;
     ArrayList<LandScape> lstData;
 
-    public landScapeAdapter(Context context, ArrayList<LandScape> lstData) {
+    public LandScapeAdapter(Context context, ArrayList<LandScape> lstData) {
         this.context = context;
         this.lstData = lstData;
     }
@@ -47,7 +48,6 @@ public class landScapeAdapter extends RecyclerView.Adapter<landScapeAdapter.Item
         String packageName = holder.itemView.getContext().getPackageName();
         int imgID = holder.itemView.getResources().getIdentifier(tenFileAnh, "mipmap", packageName);
         holder.ivLandScape.setImageResource(imgID);
-
     }
 
     @Override

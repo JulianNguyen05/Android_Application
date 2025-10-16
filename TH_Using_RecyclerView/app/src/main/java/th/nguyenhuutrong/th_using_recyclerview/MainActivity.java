@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<LandScape> getDataForRecycleView() {
         ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
-        LandScape landScape1 = new LandScape("flat_tower_of_HaNoi", "Cột cờ HN");
+        LandScape landScape1 = new LandScape("effel", "Cột cờ HN");
         dsDuLieu.add(landScape1);
         dsDuLieu.add(new LandScape("effel", "Tháp Effel"));
         dsDuLieu.add(new LandScape("buckingham", "Cung đện Buckingham"));
-        dsDuLieu.add(new LandScape("buckingham1", "Cung đện Buckingham"));
+        dsDuLieu.add(new LandScape("buckingham", "Cung đện Buckingham"));
 
         return dsDuLieu;
     }

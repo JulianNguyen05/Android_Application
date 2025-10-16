@@ -38,7 +38,7 @@
         android:text="Ví dụ: ..."
         android:textSize="14sp"
         android:textColor="#777777"
-        android:italic="true"
+        android:textStyle="italic"
         android:paddingTop="4dp" />
 
 </LinearLayout>

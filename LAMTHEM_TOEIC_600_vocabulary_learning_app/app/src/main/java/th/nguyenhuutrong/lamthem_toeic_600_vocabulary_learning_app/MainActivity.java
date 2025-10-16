@@ -1,77 +1,55 @@
 package th.nguyenhuutrong.lamthem_toeic_600_vocabulary_learning_app;
 
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
-import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private ViewPager2 viewPager;
-    private ArrayList<Topic> topics = new ArrayList<>();
-
+    RecyclerView recyclerView;
+    WordAdapter adapter;
+    List<Word> wordList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        viewPager = findViewById(R.id.viewPager);
-        loadDataFromJSON();
-
-
-        TopicPagerAdapter adapter = new TopicPagerAdapter(this, topics);
-        viewPager.setAdapter(adapter);
+        loadDataFromJson();
+        adapter = new WordAdapter(wordList);
+        recyclerView.setAdapter(adapter);
     }
 
-
-    private void loadDataFromJSON() {
+    private void loadDataFromJson() {
         try {
             InputStream inputStream = getAssets().open("vocab_data.json");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-            StringBuilder builder = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                builder.append(line);
-            }
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+            inputStream.close();
 
-
-            JSONArray jsonArray = new JSONArray(builder.toString());
-
+            String json = new String(buffer, "UTF-8");
+            JSONArray jsonArray = new JSONArray(json);
 
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject topicObj = jsonArray.getJSONObject(i);
-                String topicName = topicObj.getString("topic");
-                JSONArray wordsArray = topicObj.getJSONArray("words");
-
-
-                ArrayList<Word> wordList = new ArrayList<>();
-                for (int j = 0; j < wordsArray.length(); j++) {
-                    JSONObject w = wordsArray.getJSONObject(j);
-                    String word = w.getString("word");
-                    String meaning = w.getString("meaning");
-                    String example = w.getString("example");
-                    String type = w.getString("type");
-                    wordList.add(new Word(word, meaning, example, type));
-                }
-                topics.add(new Topic(topicName, wordList));
+                JSONObject obj = jsonArray.getJSONObject(i);
+                String word = obj.getString("word");
+                String meaning = obj.getString("meaning");
+                String example = obj.getString("example");
+                String type = obj.getString("type");
+                wordList.add(new Word(word, meaning, example, type));
             }
-
-
-        } catch (IOException | JSONException e) {
-            Log.e("MainActivity", "Error reading JSON", e);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

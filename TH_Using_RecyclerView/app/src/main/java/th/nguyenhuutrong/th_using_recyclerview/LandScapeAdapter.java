@@ -1,16 +1,13 @@
 package th.nguyenhuutrong.th_using_recyclerview;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.ItemLandHolder> {
@@ -26,36 +23,30 @@ public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.Item
     @NonNull
     @Override
     public ItemLandHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        LayoutInflater cai_bom = LayoutInflater.from(context);
-        View vItem = cai_bom.inflate(R.layout.item_land, parent, false);
-        ItemLandHolder holderCreated = new ItemLandHolder(vItem);
-
-        return null;
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View vItem = inflater.inflate(R.layout.item_land, parent, false);
+        return new ItemLandHolder(vItem);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ItemLandHolder holder, int position) {
-
-        // Lấy đối tượng hiển thị
         LandScape landScapeHienThi = lstData.get(position);
-        // Trích thông tin
         String caption = landScapeHienThi.getLandCation();
         String tenFileAnh = landScapeHienThi.getLandImageFileName();
-        // Đặt vào các trường thôn tin của holder
+
         holder.tvCaption.setText(caption);
-            // đặt ảnh
         String packageName = holder.itemView.getContext().getPackageName();
         int imgID = holder.itemView.getResources().getIdentifier(tenFileAnh, "mipmap", packageName);
-        holder.ivLandScape.setImageResource(imgID);
+        if (imgID != 0)
+            holder.ivLandScape.setImageResource(imgID);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lstData.size();
     }
 
-    class ItemLandHolder extends RecyclerView.ViewHolder{
+    static class ItemLandHolder extends RecyclerView.ViewHolder {
         TextView tvCaption;
         ImageView ivLandScape;
 
@@ -65,5 +56,4 @@ public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.Item
             ivLandScape = itemView.findViewById(R.id.imgLand);
         }
     }
-
 }

@@ -1,8 +1,6 @@
 package th.nguyenhuutrong.lamthem_toeic_600_vocabulary_learning_app;
 
-import java.io.Serializable;
-
-public class Word implements Serializable {
+public class Word {
     private String word, meaning, example, type;
 
     public Word(String word, String meaning, String example, String type) {

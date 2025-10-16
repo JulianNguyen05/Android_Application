@@ -2,8 +2,7 @@ package th.nguyenhuutrong.lamthem_toeic_600_vocabulary_learning_app;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.InputStream;
@@ -12,8 +11,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
-    WordAdapter adapter;
+    ViewPager2 viewPager;
+    WordCardAdapter adapter;
     List<Word> wordList = new ArrayList<>();
 
     @Override
@@ -21,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        viewPager = findViewById(R.id.word_viewpager);
 
         loadDataFromJson();
-        adapter = new WordAdapter(wordList);
-        recyclerView.setAdapter(adapter);
+        adapter = new WordCardAdapter(this, wordList);
+        viewPager.setAdapter(adapter);
     }
 
+    // Phương thức loadDataFromJson() giữ nguyên như cũ
     private void loadDataFromJson() {
         try {
             InputStream inputStream = getAssets().open("vocab_data.json");

@@ -113,8 +113,8 @@ cardContainer.setOnClickListener(v -> {
 ## 📸 Screenshots
 
 <div style="display: flex; gap: 10px;">
-  <img src="./assets/demo\_word.jpg" alt="Word Demo" width="300"/>
-  <img src="./assets/demo\_wordInfo.jpg" alt="Word Info Demo2" width="300"/>
+  <img src="./assets/demo_word.jpg" alt="Word Demo" width="300"/>
+  <img src="./assets/demo_wordInfo.jpg" alt="Word Info Demo2" width="300"/>
 </div>
 
   * **Left – Initial Fragment State:** The `WordCardFragment` is first displayed with only the primary data visible.

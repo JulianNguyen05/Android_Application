@@ -24,7 +24,7 @@
             android:text="Word"
             android:textSize="34sp"
             android:textStyle="bold"
-            android:textColor="#0D47A1"
+            android:textColor="@color/comic_blue_dark"
             android:paddingBottom="12dp" />
 
         <TextView
@@ -54,7 +54,7 @@
             android:text="Example: ..."
             android:textAlignment="center"
             android:textSize="18sp"
-            android:textColor="#607D8B"
+            android:textColor="@color/comic_blue"
             android:textStyle="italic"
             android:visibility="gone"
             android:layout_marginTop="20dp" />

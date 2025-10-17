@@ -3,12 +3,576 @@
     "word": "abandon",
     "type": "verb",
     "meaning": "từ bỏ, ruồng bỏ",
-    "example": "He abandoned his family."
+    "example": "He abandoned his family and moved to another country."
   },
   {
     "word": "ability",
     "type": "noun",
     "meaning": "khả năng, năng lực",
-    "example": "She has the ability to manage a large team."
+    "example": "She has the ability to solve complex problems quickly."
+  },
+  {
+    "word": "abroad",
+    "type": "adverb",
+    "meaning": "ở nước ngoài",
+    "example": "Many students dream of studying abroad."
+  },
+  {
+    "word": "absence",
+    "type": "noun",
+    "meaning": "sự vắng mặt",
+    "example": "Her absence from the meeting was noted by everyone."
+  },
+  {
+    "word": "accept",
+    "type": "verb",
+    "meaning": "chấp nhận",
+    "example": "Please accept our sincere apologies for the delay."
+  },
+  {
+    "word": "access",
+    "type": "noun/verb",
+    "meaning": "truy cập, sự tiếp cận",
+    "example": "You need a password to get access to the system."
+  },
+  {
+    "word": "accompany",
+    "type": "verb",
+    "meaning": "đi cùng, hộ tống",
+    "example": "Children under 12 must be accompanied by an adult."
+  },
+  {
+    "word": "achieve",
+    "type": "verb",
+    "meaning": "đạt được, giành được",
+    "example": "With hard work, you can achieve your goals."
+  },
+  {
+    "word": "acquaintance",
+    "type": "noun",
+    "meaning": "người quen",
+    "example": "He's not a close friend, just a business acquaintance."
+  },
+  {
+    "word": "acquire",
+    "type": "verb",
+    "meaning": "có được, thu được",
+    "example": "The company plans to acquire several smaller firms."
+  },
+  {
+    "word": "additional",
+    "type": "adjective",
+    "meaning": "thêm vào, bổ sung",
+    "example": "There will be an additional charge for home delivery."
+  },
+  {
+    "word": "address",
+    "type": "noun/verb",
+    "meaning": "địa chỉ / giải quyết",
+    "example": "We need to address the issue of rising costs."
+  },
+  {
+    "word": "adequate",
+    "type": "adjective",
+    "meaning": "đầy đủ, tương xứng",
+    "example": "The current facilities are not adequate for our needs."
+  },
+  {
+    "word": "adjust",
+    "type": "verb",
+    "meaning": "điều chỉnh",
+    "example": "You may need to adjust the settings for better performance."
+  },
+  {
+    "word": "administration",
+    "type": "noun",
+    "meaning": "sự quản lý, ban quản trị",
+    "example": "The hospital administration decided to cut costs."
+  },
+  {
+    "word": "admire",
+    "type": "verb",
+    "meaning": "ngưỡng mộ, khâm phục",
+    "example": "I admire her dedication to her work."
+  },
+  {
+    "word": "admit",
+    "type": "verb",
+    "meaning": "thừa nhận, cho vào",
+    "example": "He admitted making a mistake."
+  },
+  {
+    "word": "advance",
+    "type": "noun/verb",
+    "meaning": "sự tiến bộ / tạm ứng",
+    "example": "Technological advances have changed our lives."
+  },
+  {
+    "word": "advantage",
+    "type": "noun",
+    "meaning": "lợi thế, ưu điểm",
+    "example": "Her experience gave her an advantage over other candidates."
+  },
+  {
+    "word": "advertise",
+    "type": "verb",
+    "meaning": "quảng cáo",
+    "example": "The company will advertise its new product on television."
+  },
+  {
+    "word": "advice",
+    "type": "noun",
+    "meaning": "lời khuyên",
+    "example": "He gave me some useful advice on finding a job."
+  },
+  {
+    "word": "advise",
+    "type": "verb",
+    "meaning": "khuyên bảo",
+    "example": "I would advise you to book your tickets in advance."
+  },
+  {
+    "word": "affair",
+    "type": "noun",
+    "meaning": "vấn đề, công việc",
+    "example": "The company's financial affairs are in order."
+  },
+  {
+    "word": "affect",
+    "type": "verb",
+    "meaning": "ảnh hưởng đến",
+    "example": "The new law will affect many people."
+  },
+  {
+    "word": "afford",
+    "type": "verb",
+    "meaning": "có đủ khả năng (tài chính)",
+    "example": "We can't afford to buy a new car right now."
+  },
+  {
+    "word": "agency",
+    "type": "noun",
+    "meaning": "đại lý, cơ quan",
+    "example": "She works for a famous advertising agency."
+  },
+  {
+    "word": "agenda",
+    "type": "noun",
+    "meaning": "chương trình nghị sự",
+    "example": "The first item on the agenda is the budget."
+  },
+  {
+    "word": "agree",
+    "type": "verb",
+    "meaning": "đồng ý",
+    "example": "I agree with you on this point."
+  },
+  {
+    "word": "agreement",
+    "type": "noun",
+    "meaning": "hợp đồng, sự thỏa thuận",
+    "example": "Both sides have signed the agreement."
+  },
+  {
+    "word": "ahead",
+    "type": "adverb",
+    "meaning": "phía trước",
+    "example": "Go straight ahead for about a mile."
+  },
+  {
+    "word": "aim",
+    "type": "noun/verb",
+    "meaning": "mục tiêu / nhắm tới",
+    "example": "The aim of the project is to increase sales."
+  },
+  {
+    "word": "allow",
+    "type": "verb",
+    "meaning": "cho phép",
+    "example": "Smoking is not allowed in this building."
+  },
+  {
+    "word": "alternative",
+    "type": "noun/adjective",
+    "meaning": "sự lựa chọn thay thế / khác",
+    "example": "Is there an alternative route we can take?"
+  },
+  {
+    "word": "although",
+    "type": "conjunction",
+    "meaning": "mặc dù",
+    "example": "Although it was raining, we went for a walk."
+  },
+  {
+    "word": "analyze",
+    "type": "verb",
+    "meaning": "phân tích",
+    "example": "We need to analyze the data carefully."
+  },
+  {
+    "word": "announce",
+    "type": "verb",
+    "meaning": "thông báo",
+    "example": "The company will announce its quarterly earnings tomorrow."
+  },
+  {
+    "word": "annual",
+    "type": "adjective",
+    "meaning": "hàng năm",
+    "example": "The company holds an annual conference in May."
+  },
+  {
+    "word": "apologize",
+    "type": "verb",
+    "meaning": "xin lỗi",
+    "example": "You should apologize for your rude behavior."
+  },
+  {
+    "word": "apparent",
+    "type": "adjective",
+    "meaning": "rõ ràng, hiển nhiên",
+    "example": "It was apparent that he was not telling the truth."
+  },
+  {
+    "word": "appeal",
+    "type": "noun/verb",
+    "meaning": "sự hấp dẫn / kêu gọi",
+    "example": "The campaign has a wide appeal to young people."
+  },
+  {
+    "word": "appear",
+    "type": "verb",
+    "meaning": "xuất hiện, có vẻ như",
+    "example": "He appears to be a reliable person."
+  },
+  {
+    "word": "application",
+    "type": "noun",
+    "meaning": "đơn xin, ứng dụng",
+    "example": "Please fill out this application form."
+  },
+  {
+    "word": "apply",
+    "type": "verb",
+    "meaning": "nộp đơn, áp dụng",
+    "example": "He decided to apply for the manager position."
+  },
+  {
+    "word": "appoint",
+    "type": "verb",
+    "meaning": "bổ nhiệm",
+    "example": "The board appointed a new CEO."
+  },
+  {
+    "word": "appreciate",
+    "type": "verb",
+    "meaning": "cảm kích, đánh giá cao",
+    "example": "I really appreciate your help."
+  },
+  {
+    "word": "approach",
+    "type": "noun/verb",
+    "meaning": "sự tiếp cận / lại gần",
+    "example": "We need a new approach to solve this problem."
+  },
+  {
+    "word": "appropriate",
+    "type": "adjective",
+    "meaning": "thích hợp, phù hợp",
+    "example": "Please wear appropriate attire for the interview."
+  },
+  {
+    "word": "approve",
+    "type": "verb",
+    "meaning": "phê duyệt, tán thành",
+    "example": "The manager has to approve all expenses."
+  },
+  {
+    "word": "approximately",
+    "type": "adverb",
+    "meaning": "khoảng, xấp xỉ",
+    "example": "The journey will take approximately two hours."
+  },
+  {
+    "word": "argue",
+    "type": "verb",
+    "meaning": "tranh cãi",
+    "example": "They were arguing about which movie to watch."
+  },
+  {
+    "word": "arrange",
+    "type": "verb",
+    "meaning": "sắp xếp, thu xếp",
+    "example": "Can you arrange a meeting for next Monday?"
+  },
+  {
+    "word": "arrival",
+    "type": "noun",
+    "meaning": "sự đến nơi",
+    "example": "Please wait in the lobby until the arrival of the guest."
+  },
+  {
+    "word": "article",
+    "type": "noun",
+    "meaning": "bài báo, điều khoản",
+    "example": "I read an interesting article in the newspaper today."
+  },
+  {
+    "word": "aspect",
+    "type": "noun",
+    "meaning": "khía cạnh, phương diện",
+    "example": "We must consider every aspect of the problem."
+  },
+  {
+    "word": "assemble",
+    "type": "verb",
+    "meaning": "lắp ráp, tập hợp",
+    "example": "It took hours to assemble the new furniture."
+  },
+  {
+    "word": "assess",
+    "type": "verb",
+    "meaning": "đánh giá",
+    "example": "The committee will assess the candidates' qualifications."
+  },
+  {
+    "word": "assign",
+    "type": "verb",
+    "meaning": "phân công, giao nhiệm vụ",
+    "example": "The teacher will assign homework at the end of the class."
+  },
+  {
+    "word": "assist",
+    "type": "verb",
+    "meaning": "hỗ trợ, giúp đỡ",
+    "example": "He was hired to assist the project manager."
+  },
+  {
+    "word": "associate",
+    "type": "verb/noun",
+    "meaning": "liên kết / đồng nghiệp",
+    "example": "I associate the smell of cinnamon with Christmas."
+  },
+  {
+    "word": "assume",
+    "type": "verb",
+    "meaning": "cho rằng, giả sử",
+    "example": "I assume everyone has read the report."
+  },
+  {
+    "word": "assure",
+    "type": "verb",
+    "meaning": "đảm bảo, cam đoan",
+    "example": "I can assure you that you will be satisfied with our service."
+  },
+  {
+    "word": "attach",
+    "type": "verb",
+    "meaning": "đính kèm",
+    "example": "Please find the report attached to this email."
+  },
+  {
+    "word": "attend",
+    "type": "verb",
+    "meaning": "tham dự",
+    "example": "All employees are required to attend the training session."
+  },
+  {
+    "word": "attention",
+    "type": "noun",
+    "meaning": "sự chú ý",
+    "example": "May I have your attention, please?"
+  },
+  {
+    "word": "attitude",
+    "type": "noun",
+    "meaning": "thái độ",
+    "example": "A positive attitude is essential for success."
+  },
+  {
+    "word": "attract",
+    "type": "verb",
+    "meaning": "thu hút, hấp dẫn",
+    "example": "The city attracts tourists from all over the world."
+  },
+  {
+    "word": "audience",
+    "type": "noun",
+    "meaning": "khán giả",
+    "example": "The audience applauded loudly at the end of the performance."
+  },
+  {
+    "word": "authority",
+    "type": "noun",
+    "meaning": "chính quyền, quyền lực",
+    "example": "Only the manager has the authority to approve this."
+  },
+  {
+    "word": "available",
+    "type": "adjective",
+    "meaning": "có sẵn, rảnh",
+    "example": "This product is available in all sizes."
+  },
+  {
+    "word": "average",
+    "type": "noun/adjective",
+    "meaning": "trung bình",
+    "example": "The average age of the employees is 35."
+  },
+  {
+    "word": "avoid",
+    "type": "verb",
+    "meaning": "tránh",
+    "example": "You should avoid eating fatty foods."
+  },
+  {
+    "word": "award",
+    "type": "noun/verb",
+    "meaning": "phần thưởng / trao thưởng",
+    "example": "She won an award for her outstanding performance."
+  },
+  {
+    "word": "aware",
+    "type": "adjective",
+    "meaning": "nhận thức, biết",
+    "example": "Are you aware of the risks involved?"
+  },
+  {
+    "word": "balance",
+    "type": "noun/verb",
+    "meaning": "sự cân bằng, số dư / làm cân bằng",
+    "example": "It's important to find a balance between work and life."
+  },
+  {
+    "word": "ban",
+    "type": "verb/noun",
+    "meaning": "cấm / lệnh cấm",
+    "example": "The city has imposed a ban on smoking in public places."
+  },
+  {
+    "word": "base",
+    "type": "noun/verb",
+    "meaning": "nền tảng / dựa trên",
+    "example": "The movie is based on a true story."
+  },
+  {
+    "word": "basic",
+    "type": "adjective",
+    "meaning": "cơ bản",
+    "example": "The course provides a basic understanding of computers."
+  },
+  {
+    "word": "basis",
+    "type": "noun",
+    "meaning": "nền tảng, cơ sở",
+    "example": "Decisions are made on a case-by-case basis."
+  },
+  {
+    "word": "behavior",
+    "type": "noun",
+    "meaning": "hành vi, cách cư xử",
+    "example": "His behavior at the party was unacceptable."
+  },
+  {
+    "word": "believe",
+    "type": "verb",
+    "meaning": "tin tưởng",
+    "example": "I believe we can win this contract."
+  },
+  {
+    "word": "belong",
+    "type": "verb",
+    "meaning": "thuộc về",
+    "example": "This book belongs to the library."
+  },
+  {
+    "word": "benefit",
+    "type": "noun/verb",
+    "meaning": "lợi ích / hưởng lợi",
+    "example": "The new system will be of great benefit to the company."
+  },
+  {
+    "word": "beverage",
+    "type": "noun",
+    "meaning": "đồ uống",
+    "example": "The price includes meals, but not beverages."
+  },
+  {
+    "word": "bill",
+    "type": "noun",
+    "meaning": "hóa đơn",
+    "example": "Have you paid the electricity bill yet?"
+  },
+  {
+    "word": "blame",
+    "type": "verb/noun",
+    "meaning": "đổ lỗi / sự khiển trách",
+    "example": "Don't blame me for your mistakes."
+  },
+  {
+    "word": "board",
+    "type": "noun/verb",
+    "meaning": "hội đồng, cái bảng / lên tàu, xe",
+    "example": "The board of directors will meet next week."
+  },
+  {
+    "word": "book",
+    "type": "noun/verb",
+    "meaning": "quyển sách / đặt chỗ",
+    "example": "I would like to book a table for two."
+  },
+  {
+    "word": "borrow",
+    "type": "verb",
+    "meaning": "vay, mượn",
+    "example": "Can I borrow your pen for a moment?"
+  },
+  {
+    "word": "branch",
+    "type": "noun",
+    "meaning": "chi nhánh",
+    "example": "The bank has branches all over the country."
+  },
+  {
+    "word": "brand",
+    "type": "noun",
+    "meaning": "thương hiệu",
+    "example": "Which brand of toothpaste do you use?"
+  },
+  {
+    "word": "brief",
+    "type": "adjective/verb",
+    "meaning": "ngắn gọn / tóm tắt",
+    "example": "Please give a brief summary of the report."
+  },
+  {
+    "word": "budget",
+    "type": "noun",
+    "meaning": "ngân sách",
+    "example": "We have a limited budget for this project."
+  },
+  {
+    "word": "calculate",
+    "type": "verb",
+    "meaning": "tính toán",
+    "example": "Can you calculate the total cost for me?"
+  },
+  {
+    "word": "cancel",
+    "type": "verb",
+    "meaning": "hủy bỏ",
+    "example": "The flight was canceled due to bad weather."
+  },
+  {
+    "word": "candidate",
+    "type": "noun",
+    "meaning": "ứng cử viên",
+    "example": "There are three candidates for the position."
+  },
+  {
+    "word": "capacity",
+    "type": "noun",
+    "meaning": "sức chứa, công suất",
+    "example": "The conference room has a seating capacity of 200."
   }
 ]

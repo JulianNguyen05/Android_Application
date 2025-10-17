@@ -132,3 +132,27 @@ https://github.com/user-attachments/assets/11811c32-6f84-479f-91cd-6e31fd98a6bf
 > *(Click the title to see the detailed README with more screenshots and a video demo)*
 
 -----
+
+Yes, here is a summary of your TOEIC vocabulary app, formatted to fit perfectly into your main `README.md` file.
+
+You can paste this code at the very end of your main README, right after the "Currency Converter" section.
+
+-----
+
+### 🔹 [LamThem TOEIC 600 Vocabulary Learning](./LamThem_TOEIC_600_Vocabulary_Learning/README.md)
+
+A modern flashcard application for learning essential **TOEIC vocabulary**, built to demonstrate the power and efficiency of **`ViewPager2`** and **`FragmentStateAdapter`**.
+
+  - 💳 **Interactive Flashcards**: Swipe through words using a smooth, page-based interface.
+  - ✨ **Tap-to-Reveal**: Tap a card to reveal the definition, type, and example sentence, enhancing active recall.
+  - ⚙️ **Efficient Performance**: Leverages the `RecyclerView` engine for memory-efficient handling of hundreds of vocabulary cards.
+  - 🧠 **Modular Design**: Each flashcard is a self-contained `Fragment`, making the code clean and scalable.
+
+<div style="display: flex; gap: 10px;"\>
+  <img src="./LamThem_TOEIC_600_Vocabulary_Learning/assets/demo_word.jpg" alt="Word Demo" width="300"/>
+  <img src="./LamThem_TOEIC_600_Vocabulary_Learning/assets/demo_wordInfo.jpg" alt="Word Info Demo" width="300"/>
+</div>
+
+https://github.com/user-attachments/assets/25321032-edc7-45f7-89c3-0efb8d9a70ab
+
+> *(Click the title to see the detailed README with a full technical breakdown and code snippets)*

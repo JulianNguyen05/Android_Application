@@ -67,7 +67,12 @@ A **Tic Tac Toe (X-O) game project** built with **Java** and **Android Studio**,
 - ▶️ **Start Game button** to begin the match.  
 - 🎲 Upcoming features: interactive **game board**, **result dialog**, and full **gameplay logic**.  
 
-<img src="./LamThem_TicTacToe/assets/demo_main.jpg" alt="Tic Tac Toe Demo" width="300"/>
+<div style="display: flex; gap: 10px;">
+  <img src="./LamThem_TicTacToe/assets/demo_main.jpg" alt="Tic Tac Toe Demo" width="300"/>
+  <img src="./LamThem_TicTacToe/assets/demo_img5.jpg" alt="Tic Tac Toe Demo" width="300"/>
+  <img src="./LamThem_TicTacToe/assets/demo_img6_1.jpg" alt="Tic Tac Toe Demo" width="300"/>
+  <img src="./LamThem_TicTacToe/assets/demo_img7.jpg" alt="Tic Tac Toe Demo" width="300"/>
+</div>
 
 https://github.com/user-attachments/assets/831358b3-edac-458b-acb5-bd94efe85b77
 
@@ -82,7 +87,11 @@ An interactive **Math Quiz Game** built with **Java** and **Android Studio**.
 - Includes **animations**: blinking effect for correct answers, fade in/out transitions.  
 - Demonstrates **event handling** and **UI/UX design** in Android.
 
-<img src="./TH_Quizzapp_Total/assets/demo_main.jpg" alt="Math Quiz App Demo" width="300"/>
+<div style="display: flex; gap: 10px;">
+  <img src="./TH_Quizzapp_Total/assets/demo_main.jpg" alt="Math Quiz App Demo" width="300"/>
+  <img src="./TH_Quizzapp_Total/assets/demo_wrong_img.jpg" alt="Math Quiz App Demo" width="300"/>
+  <img src="./TH_Quizzapp_Total/assets/demo_correct_img.jpg" alt="Math Quiz App Demo" width="300"/>
+</div>
 
 https://github.com/user-attachments/assets/0a21d693-cf8e-418a-97e1-b31e465d7670
 
@@ -104,6 +113,8 @@ A modern Android application built with **Java** and **Android Studio** that cal
 
 <div style="display: flex; gap: 10px;">
   <img src="./TH_Bai2_BasicGUI_BMI/assets/demo_normalWeight.jpg" alt="normalWeight" width="300">
+  <img src="./TH_Bai2_BasicGUI_BMI/assets/demo_isAsia_true.jpg" alt="normalWeight" width="300">
+  <img src="./TH_Bai2_BasicGUI_BMI/assets/demo_overWeight_Asia.jpg" alt="normalWeight" width="300">
 </div>
 
 https://github.com/user-attachments/assets/f1f47c0e-b16e-4da3-9f29-ef4b71b01dd5

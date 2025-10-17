@@ -9,7 +9,8 @@ The core of this application is not just the content, but the architecture that 
 ## 🎥 Demo Video
 
 Watch a short demo of the `ViewPager2` implementation in action:
-[https://github.com/user-attachments/assets/25321032-edc7-45f7-89c3-0efb8d9a70ab](https://github.com/user-attachments/assets/25321032-edc7-45f7-89c3-0efb8d9a70ab)
+
+https://github.com/user-attachments/assets/25321032-edc7-45f7-89c3-0efb8d9a70ab
 
 -----
 

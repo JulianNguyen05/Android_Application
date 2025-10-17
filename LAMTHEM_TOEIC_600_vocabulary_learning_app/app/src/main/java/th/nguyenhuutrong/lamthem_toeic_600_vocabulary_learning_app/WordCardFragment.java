@@ -28,6 +28,15 @@ public class WordCardFragment extends Fragment {
         return fragment;
     }
 
+    public static WordCardFragment newInstance(Word word) {
+        return newInstance(
+                word.getWord(),
+                word.getType(),
+                word.getMeaning(),
+                word.getExample()
+        );
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

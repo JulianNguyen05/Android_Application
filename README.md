@@ -15,6 +15,46 @@ Each task is a small Android application built with **Java** to practice program
 
 ## 📌 Tasks
 
+-----
+
+### 🔹 [LamThem TOEIC 600 Vocabulary Learning](./LamThem_TOEIC_600_Vocabulary_Learning/README.md)
+
+A modern flashcard application for learning essential **TOEIC vocabulary**, built to demonstrate the power and efficiency of **`ViewPager2`** and **`FragmentStateAdapter`**.
+
+  - 💳 **Interactive Flashcards**: Swipe through words using a smooth, page-based interface.
+  - ✨ **Tap-to-Reveal**: Tap a card to reveal the definition, type, and example sentence, enhancing active recall.
+  - ⚙️ **Efficient Performance**: Leverages the `RecyclerView` engine for memory-efficient handling of hundreds of vocabulary cards.
+  - 🧠 **Modular Design**: Each flashcard is a self-contained `Fragment`, making the code clean and scalable.
+
+<div style="display: flex; gap: 10px;"\>
+  <img src="./LamThem_TOEIC_600_Vocabulary_Learning/assets/demo_word.jpg" alt="Word Demo" width="300"/>
+  <img src="./LamThem_TOEIC_600_Vocabulary_Learning/assets/demo_wordInfo.jpg" alt="Word Info Demo" width="300"/>
+</div>
+
+https://github.com/user-attachments/assets/25321032-edc7-45f7-89c3-0efb8d9a70ab
+
+> *(Click the title to see the detailed README with a full technical breakdown and code snippets)*
+
+-----
+
+### 🔹 [Android ViewPager2 & TabLayout Demo](./ViDu_ViewPager2_TabLayout_Fragment/README.md)
+
+An Android application demonstrating a modern, swipeable tab interface using **`ViewPager2`** and **`TabLayout`**. Each tab displays a unique country's information within a `Fragment`.
+
+  - 📑 **Swipeable Tabs**: Navigate between country profiles with smooth swipe gestures powered by ViewPager2.
+  - 🔄 **Synced Tabs & Pager**: Integrates `TabLayout` with `ViewPager2` using `TabLayoutMediator` for a perfectly synchronized UI.
+  - 📦 **Dynamic Content**: Each tab dynamically loads a unique `Fragment` instance with corresponding country data.
+  - 🧩 **Modular Fragments**: Demonstrates a clean, reusable Fragment-based architecture for scalable UIs.
+
+| Vietnam Tab | United Kingdom Tab | United States Tab |
+| :-----------: | :-----------: | :-----------: |
+|  <img src="./ViDu_ViewPager2_TabLayout_Fragment/assets/demo_vn.jpg" alt="Demo VN" width="300"/>|<img src="./ViDu_ViewPager2_TabLayout_Fragment/assets/demo_uk.jpg" alt="Demo UK" width="300"/>  |  <img src="./ViDu_ViewPager2_TabLayout_Fragment/assets/demo_us.jpg" alt="Demo US" width="300"/>|
+
+
+https://github.com/user-attachments/assets/3c4f976a-9b53-4c59-a9ea-7682568e5f2b
+
+> *(Click the title to see the detailed README with a full technical breakdown and code snippets)*
+
 ### 🔹 [Task 1 - Hello Android](./ViDu_HelloWorld/README.md)
 A simple Android application that displays a greeting message and allows switching between **English** and **Vietnamese** greetings with a button.
 
@@ -142,45 +182,9 @@ https://github.com/user-attachments/assets/11811c32-6f84-479f-91cd-6e31fd98a6bf
 
 > *(Click the title to see the detailed README with more screenshots and a video demo)*
 
------
-
-### 🔹 [LamThem TOEIC 600 Vocabulary Learning](./LamThem_TOEIC_600_Vocabulary_Learning/README.md)
-
-A modern flashcard application for learning essential **TOEIC vocabulary**, built to demonstrate the power and efficiency of **`ViewPager2`** and **`FragmentStateAdapter`**.
-
-  - 💳 **Interactive Flashcards**: Swipe through words using a smooth, page-based interface.
-  - ✨ **Tap-to-Reveal**: Tap a card to reveal the definition, type, and example sentence, enhancing active recall.
-  - ⚙️ **Efficient Performance**: Leverages the `RecyclerView` engine for memory-efficient handling of hundreds of vocabulary cards.
-  - 🧠 **Modular Design**: Each flashcard is a self-contained `Fragment`, making the code clean and scalable.
-
-<div style="display: flex; gap: 10px;"\>
-  <img src="./LamThem_TOEIC_600_Vocabulary_Learning/assets/demo_word.jpg" alt="Word Demo" width="300"/>
-  <img src="./LamThem_TOEIC_600_Vocabulary_Learning/assets/demo_wordInfo.jpg" alt="Word Info Demo" width="300"/>
-</div>
-
-https://github.com/user-attachments/assets/25321032-edc7-45f7-89c3-0efb8d9a70ab
-
-> *(Click the title to see the detailed README with a full technical breakdown and code snippets)*
-
------
-
-### 🔹 [Android ViewPager2 & TabLayout Demo](./ViDu_ViewPager2_TabLayout_Fragment/README.md)
-
-An Android application demonstrating a modern, swipeable tab interface using **`ViewPager2`** and **`TabLayout`**. Each tab displays a unique country's information within a `Fragment`.
-
-  - 📑 **Swipeable Tabs**: Navigate between country profiles with smooth swipe gestures powered by ViewPager2.
-  - 🔄 **Synced Tabs & Pager**: Integrates `TabLayout` with `ViewPager2` using `TabLayoutMediator` for a perfectly synchronized UI.
-  - 📦 **Dynamic Content**: Each tab dynamically loads a unique `Fragment` instance with corresponding country data.
-  - 🧩 **Modular Fragments**: Demonstrates a clean, reusable Fragment-based architecture for scalable UIs.
-
-| Vietnam Tab | United Kingdom Tab | United States Tab |
-| :-----------: | :-----------: | :-----------: |
-|  <img src="./ViDu_ViewPager2_TabLayout_Fragment/assets/demo_vn.jpg" alt="Demo VN" width="300"/>|<img src="./ViDu_ViewPager2_TabLayout_Fragment/assets/demo_uk.jpg" alt="Demo UK" width="300"/>  |  <img src="./ViDu_ViewPager2_TabLayout_Fragment/assets/demo_us.jpg" alt="Demo US" width="300"/>|
 
 
-https://github.com/user-attachments/assets/3c4f976a-9b53-4c59-a9ea-7682568e5f2b
 
-> *(Click the title to see the detailed README with a full technical breakdown and code snippets)*
 
 
 ## 🧑‍💻 Author

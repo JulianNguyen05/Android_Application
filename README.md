@@ -15,25 +15,25 @@ Each task is a small Android application built with **Java** to practice program
 
 ## 📌 Tasks
 
-### 🔹 [Task 1 - Hello Android](./Task1_HelloWorld/README.md)
+### 🔹 [Task 1 - Hello Android](./ViDu_HelloWorld/README.md)
 A simple Android application that displays a greeting message and allows switching between **English** and **Vietnamese** greetings with a button.
 
 <div style="display: flex; gap: 10px;">
-  <img src="./Task1_HelloWorld/images/display_1.png" alt="Hello Android Demo" width="300"/>
-  <img src="./Task1_HelloWorld/images/display_2.png" alt="Hello Android Demo" width="300"/>
+  <img src="./ViDu_HelloWorld/images/display_1.png" alt="Hello Android Demo" width="300"/>
+  <img src="./ViDu_HelloWorld/images/display_2.png" alt="Hello Android Demo" width="300"/>
 </div>
 
 > *(Click the title to see the detailed README with more screenshots and a video demo)*
 
 ---
 
-### 🔹 [Vi Du Layout 1](./ViDuLayOut1/README.md)
+### 🔹 [Vi Du Layout 1](./ViDu_LayOut1/README.md)
 - Display a screen with a **"Say Hi"** button
 - When the user presses the button, the application will display the text **"Xin chào"** on the screen.
 
 <div style="display: flex; gap: 10px;">
-  <img src="./ViDuLayOut1/image/after.png" alt="After" width="300">
-  <img src="./ViDuLayOut1/image/before.png" alt="Before" width="300">
+  <img src="./ViDu_LayOut1/image/after.png" alt="After" width="300">
+  <img src="./ViDu_LayOut1/image/before.png" alt="Before" width="300">
 </div>
 
 

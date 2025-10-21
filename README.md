@@ -144,12 +144,6 @@ https://github.com/user-attachments/assets/11811c32-6f84-479f-91cd-6e31fd98a6bf
 
 -----
 
-Yes, here is a summary of your TOEIC vocabulary app, formatted to fit perfectly into your main `README.md` file.
-
-You can paste this code at the very end of your main README, right after the "Currency Converter" section.
-
------
-
 ### 🔹 [LamThem TOEIC 600 Vocabulary Learning](./LamThem_TOEIC_600_Vocabulary_Learning/README.md)
 
 A modern flashcard application for learning essential **TOEIC vocabulary**, built to demonstrate the power and efficiency of **`ViewPager2`** and **`FragmentStateAdapter`**.
@@ -167,3 +161,29 @@ A modern flashcard application for learning essential **TOEIC vocabulary**, buil
 https://github.com/user-attachments/assets/25321032-edc7-45f7-89c3-0efb8d9a70ab
 
 > *(Click the title to see the detailed README with a full technical breakdown and code snippets)*
+
+-----
+
+### 🔹 [Android ViewPager2 & TabLayout Demo](./ViDu_ViewPager2_TabLayout_Fragment/README.md)
+
+An Android application demonstrating a modern, swipeable tab interface using **`ViewPager2`** and **`TabLayout`**. Each tab displays a unique country's information within a `Fragment`.
+
+  - 📑 **Swipeable Tabs**: Navigate between country profiles with smooth swipe gestures powered by ViewPager2.
+  - 🔄 **Synced Tabs & Pager**: Integrates `TabLayout` with `ViewPager2` using `TabLayoutMediator` for a perfectly synchronized UI.
+  - 📦 **Dynamic Content**: Each tab dynamically loads a unique `Fragment` instance with corresponding country data.
+  - 🧩 **Modular Fragments**: Demonstrates a clean, reusable Fragment-based architecture for scalable UIs.
+
+| Vietnam Tab | United Kingdom Tab | United States Tab |
+| :-----------: | :-----------: | :-----------: |
+|  <img src="./assets/demo_vn.jpg" alt="Demo VN" width="300"/>|<img src="./assets/demo_uk.jpg" alt="Demo UK" width="300"/>  |  <img src="./assets/demo_us.jpg" alt="Demo US" width="300"/>|
+
+
+https://github.com/user-attachments/assets/3c4f976a-9b53-4c59-a9ea-7682568e5f2b
+
+> *(Click the title to see the detailed README with a full technical breakdown and code snippets)*
+
+
+## 🧑‍💻 Author
+
+  * **Nguyễn Hữu Trọng (Julian)**
+    *Learning Android Development with Java*

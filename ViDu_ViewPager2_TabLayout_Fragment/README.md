@@ -65,14 +65,6 @@ The screenshots below illustrate the core functionality of the application, wher
 | :-----------: | :-----------: | :-----------: |
 |  <img src="./assets/demo_vn.jpg" alt="Demo VN" width="300"/>|<img src="./assets/demo_uk.jpg" alt="Demo UK" width="300"/>  |  <img src="./assets/demo_us.jpg" alt="Demo US" width="300"/>|
 
-## 📸 Screenshots
-
-<div style="display: flex; gap: 10px;">
-  <img src="./assets/demo_vn.jpg" alt="Demo VN" width="300"/>
-  <img src="./assets/demo_uk.jpg" alt="Demo UK" width="300"/>
-  <img src="./assets/demo_us.jpg" alt="Demo US" width="300"/>
-</div>
-
 -----
 
 ## 🚀 Getting Started

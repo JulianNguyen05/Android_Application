@@ -175,7 +175,7 @@ An Android application demonstrating a modern, swipeable tab interface using **`
 
 | Vietnam Tab | United Kingdom Tab | United States Tab |
 | :-----------: | :-----------: | :-----------: |
-|  <img src="./assets/demo_vn.jpg" alt="Demo VN" width="300"/>|<img src="./assets/demo_uk.jpg" alt="Demo UK" width="300"/>  |  <img src="./assets/demo_us.jpg" alt="Demo US" width="300"/>|
+|  <img src="./ViDu_ViewPager2_TabLayout_Fragment/assets/demo_vn.jpg" alt="Demo VN" width="300"/>|<img src="./ViDu_ViewPager2_TabLayout_Fragment/assets/demo_uk.jpg" alt="Demo UK" width="300"/>  |  <img src="./ViDu_ViewPager2_TabLayout_Fragment/assets/demo_us.jpg" alt="Demo US" width="300"/>|
 
 
 https://github.com/user-attachments/assets/3c4f976a-9b53-4c59-a9ea-7682568e5f2b

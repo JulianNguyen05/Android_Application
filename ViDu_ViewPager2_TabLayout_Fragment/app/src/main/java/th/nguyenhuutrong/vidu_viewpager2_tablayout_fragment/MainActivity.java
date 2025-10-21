@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayoutQG);
 
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> {
-            tab.setText("Quốc gia" + (position + 1));
+            tab.setText("Quốc gia " + (position + 1));
         });
         tabLayoutMediator.attach();
 

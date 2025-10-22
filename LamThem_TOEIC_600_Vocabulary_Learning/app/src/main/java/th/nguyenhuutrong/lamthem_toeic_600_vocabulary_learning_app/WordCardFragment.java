@@ -57,7 +57,7 @@ public class WordCardFragment extends Fragment {
             tvExample.setText("Example: " + args.getString(ARG_EXAMPLE));
         }
 
-        // Hiệu ứng lật mở chi tiết từ
+        // Hiệu ứng mở chi tiết từ
         cardContainer.setOnClickListener(v -> {
             boolean visible = tvMeaning.getVisibility() == View.VISIBLE;
             int newVisibility = visible ? View.GONE : View.VISIBLE;

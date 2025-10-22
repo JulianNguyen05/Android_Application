@@ -31,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
                     // 2.1 Lấy dữ liệu
                     EditText edtNoiDung = findViewById(R.id.edtNoiDung);
                     String noiDung = edtNoiDung.getText().toString();
-                    // 2.2 Gắn dữ liệu vào Intent
+                    // 2.2 Gắn dữ liệu vào Intent, dùng put??Extra(key, value)
                     iChuyen2.putExtra("dulieu", noiDung);
+                    iChuyen2.putExtra("copyright", "Nguyen Huu Trong");
                 // 3. Thực hiện chuyển màn hình
                 startActivity(iChuyen2);
             }

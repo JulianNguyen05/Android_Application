@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ViDu_Intent">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".SecondActivity"
             android:exported="false" />
         <activity

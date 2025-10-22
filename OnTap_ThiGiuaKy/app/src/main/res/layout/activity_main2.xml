@@ -2,125 +2,103 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/main2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity2">
-
+    android:orientation="vertical"
+    tools:context=".ChucNang2Activity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-        <View
-            android:id="@+id/header_background_cn2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background_title"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_title"
+        android:minHeight="100dp"
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/iv_logo_cn2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/logo_ntu"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.25" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_title_cn2"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Tính điểm trung bình môn học"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_logo_cn2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.795"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.33" />
+            app:layout_constraintStart_toEndOf="@+id/iv_logo_cn2"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo_cn2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
         android:orientation="vertical"
         android:padding="24dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:layout_gravity="center"
-            android:text="Điểm Giữa kỳ (50%)"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/tilGiuaKy"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
+            android:hint="Điểm Giữa kỳ (50%)"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="@color/teal"
+            app:boxStrokeWidthFocused="2dp"
             app:startIconDrawable="@drawable/background_icon"
-            android:background="@drawable/background_nhap"
             app:startIconTint="@null">
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtGiuaKy"
-                android:layout_gravity="center"
-                android:gravity="center|left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_italic"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:hint="Hint điểm số"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="start|center_vertical"
                 android:inputType="numberDecimal"
-                android:paddingStart="50dp"/>
+                android:textColor="@color/black"
+                android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Điểm Thi cuối kỳ (50%)"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/tilCuoiKy"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_nhap"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
+            android:hint="Điểm Thi cuối kỳ (50%)"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="@color/teal"
+            app:boxStrokeWidthFocused="2dp"
             app:startIconDrawable="@drawable/background_icon"
             app:startIconTint="@null">
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtCuoiKy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_italic"
-                android:hint="Hint điểm số"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="start|center_vertical"
                 android:inputType="numberDecimal"
-                android:gravity="center|left"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:paddingStart="50dp"/>
+                android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <FrameLayout
@@ -128,17 +106,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/background_button">
-
-            <Button
-                android:id="@+id/btnTinhTB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@android:color/transparent"
-                android:fontFamily="@font/poppins_medium"
-                android:text="Tính điểm TB"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
         </FrameLayout>
 
         <TextView

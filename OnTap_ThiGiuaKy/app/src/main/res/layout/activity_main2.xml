@@ -72,17 +72,23 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_nhap"
             android:layout_marginTop="8dp"
-            app:startIconDrawable="@android:drawable/btn_star_big_on">
+            app:startIconDrawable="@drawable/background_icon"
+            android:background="@drawable/background_nhap"
+            app:startIconTint="@null">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtGiuaKy"
+                android:layout_gravity="center"
+                android:gravity="center|left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_italic"
+                android:textSize="20sp"
+                android:textColor="@color/black"
                 android:hint="Hint điểm số"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:paddingStart="50dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -101,7 +107,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background_nhap"
             android:layout_marginTop="8dp"
-            app:startIconDrawable="@android:drawable/btn_star_big_on">
+            app:startIconDrawable="@drawable/background_icon"
+            app:startIconTint="@null">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtCuoiKy"
@@ -109,7 +116,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_italic"
                 android:hint="Hint điểm số"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:gravity="center|left"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingStart="50dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <FrameLayout

@@ -20,20 +20,22 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        Button nutChuyen2 = findViewById(R.id.btnChuyen2);
-        nutChuyen2.setOnClickListener(new View.OnClickListener() {
+        // Ánh xạ đúng ID từ layout
+        Button nutGui = findViewById(R.id.btnGui); // Sửa từ btnChuyen2
+        final EditText edtHoTen = findViewById(R.id.edtHoTen); // Sửa từ edtNoiDung
+
+        nutGui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Code chuyển màn hình sẽ được thêm vào đây
                 // 1. Tạo Intent
                 Intent iChuyen2 = new Intent(MainActivity.this, SecondActivity.class);
                 // 2. Gọi dữ liệu vào iChuyen2
-                    // 2.1 Lấy dữ liệu
-                    EditText edtNoiDung = findViewById(R.id.edtNoiDung);
-                    String noiDung = edtNoiDung.getText().toString();
-                    // 2.2 Gắn dữ liệu vào Intent, dùng put??Extra(key, value)
-                    iChuyen2.putExtra("dulieu", noiDung);
-                    iChuyen2.putExtra("copyright", "Nguyen Huu Trong");
+                // 2.1 Lấy dữ liệu
+                String noiDung = edtHoTen.getText().toString();
+                // 2.2 Gắn dữ liệu vào Intent, dùng putExtra(key, value)
+                iChuyen2.putExtra("dulieu", noiDung);
+                iChuyen2.putExtra("copyright", "Nguyen Huu Trong");
                 // 3. Thực hiện chuyển màn hình
                 startActivity(iChuyen2);
             }

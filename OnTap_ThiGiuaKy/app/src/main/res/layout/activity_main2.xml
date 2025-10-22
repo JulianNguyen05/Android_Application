@@ -7,22 +7,22 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".ChucNang2Activity">
+    tools:context=".MainActivity2">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_title"
-        android:minHeight="100dp"
+        android:minHeight="200dp"
         android:padding="16dp">
-
         <ImageView
             android:id="@+id/iv_logo_cn2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/logo_ntu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19999999" />
 
         <TextView
             android:id="@+id/tv_title_cn2"
@@ -33,12 +33,11 @@
             android:text="Tính điểm trung bình môn học"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_logo_cn2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_logo_cn2"
             app:layout_constraintTop_toTopOf="@+id/iv_logo_cn2" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
@@ -62,6 +61,7 @@
             app:boxCornerRadiusTopStart="16dp"
             app:boxStrokeColor="@color/teal"
             app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/hint_text_color_selector"
             app:startIconDrawable="@drawable/background_icon"
             app:startIconTint="@null">
             <com.google.android.material.textfield.TextInputEditText
@@ -72,7 +72,8 @@
                 android:gravity="start|center_vertical"
                 android:inputType="numberDecimal"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textCursorDrawable="@drawable/custom_cursor" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -88,8 +89,10 @@
             app:boxCornerRadiusTopStart="16dp"
             app:boxStrokeColor="@color/teal"
             app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/hint_text_color_selector"
             app:startIconDrawable="@drawable/background_icon"
             app:startIconTint="@null">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtCuoiKy"
                 android:layout_width="match_parent"
@@ -98,7 +101,8 @@
                 android:gravity="start|center_vertical"
                 android:inputType="numberDecimal"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textCursorDrawable="@drawable/custom_cursor" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <FrameLayout
@@ -106,6 +110,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/background_button">
+
+            <Button
+                android:id="@+id/btnTinhTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Tính điểm TB"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
         </FrameLayout>
 
         <TextView

@@ -40,11 +40,11 @@ tools:context=".MainActivity3">
         app:layout_constraintTop_toTopOf="@+id/iv_logo_cn2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/subjectsRecyclerView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:listitem="@layout/item_subject" />
+    <ListView
+        android:id="@+id/subjectsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
 
 </LinearLayout>

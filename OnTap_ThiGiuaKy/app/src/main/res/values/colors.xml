@@ -22,4 +22,15 @@
     <color name="light_gray">#ECEFF1</color>
     <color name="midnight_violet">#FF242760</color>
 
+    <color name="cosmic_blue1">#1FA1FF</color>
+    <color name="cosmic_blue2">#52B2F4</color>
+    <color name="cosmic_blue3">#86C8F7</color>
+    <color name="cosmic_blue4">#9FD9F9</color>
+    <color name="cosmic_blue5">#C8E8FC</color>
+    <color name="cosmic_blue6">#5D69FF</color>
+    <color name="cosmic_blue7">#7F84FF</color>
+    <color name="cosmic_blue8">#B9BCFF</color>
+    <color name="red">#FF5D69</color>
+    <color name="green">#69FF5D</color>
+
 </resources>

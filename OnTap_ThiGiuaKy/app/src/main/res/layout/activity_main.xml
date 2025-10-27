@@ -90,7 +90,7 @@
                 android:background="@drawable/background_button">
 
                 <Button
-                    android:id="@+id/btnChucNang2"
+                    android:id="@+id/btnCN2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -109,7 +109,7 @@
                 android:background="@drawable/background_button">
 
                 <Button
-                    android:id="@+id/btnChucNang3"
+                    android:id="@+id/btnCN3"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:fontFamily="@font/poppins_medium"
@@ -128,7 +128,7 @@
                 android:background="@drawable/background_button">
 
                 <Button
-                    android:id="@+id/btnChucNang4"
+                    android:id="@+id/btnCN4"
                     android:layout_width="match_parent"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_gravity="center"
@@ -143,10 +143,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/background_button">
 
                 <Button
-                    android:id="@+id/btnAboutMe"
+                    android:id="@+id/btnAbout"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="About Me" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_button">
+
+                <Button
+                    android:id="@+id/btnThem"
                     android:layout_width="match_parent"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_gravity="center"

@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnTap_ThiGiuaKy">
         <activity
-            android:name=".MainActivity4"
+            android:name=".ActivityChucNang4"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".ActivityChucNang2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

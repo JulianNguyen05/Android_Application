@@ -22,6 +22,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/logo_ntu"
+            android:contentDescription="@string/desc_logo_ntu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:text="Chương trình ôn tập giữa kỳ"
+            android:text="@string/main_title"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:fontFamily="@font/poppins_semibold"
@@ -61,25 +62,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chọn chức năng bạn muốn thực hiện:"
+                android:text="@string/main_subtitle"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginBottom="16dp" />
 
-            <!-- BUTTON CHỨC NĂNG -->
+            <!-- BUTTON CHỨC NĂNG (ĐÃ SỬA LỖI) -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCN2"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chức năng 2 - Tính điểm TB"
+                android:text="@string/btn_cn2"
                 android:textSize="17sp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/white"
                 app:icon="@drawable/ic_calculator"
                 app:cornerRadius="18dp"
-                app:backgroundTint="@drawable/bg_button_gradient"
+                android:background="@drawable/bg_button_gradient"
                 app:iconGravity="textStart"
                 android:layout_marginBottom="12dp" />
 
@@ -88,13 +89,13 @@
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chức năng 3"
+                android:text="@string/btn_cn3"
                 android:textSize="17sp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/white"
                 app:icon="@drawable/ic_task"
                 app:cornerRadius="18dp"
-                app:backgroundTint="@drawable/bg_button_gradient_alt"
+                android:background="@drawable/bg_button_gradient_alt"
                 app:iconGravity="textStart"
                 android:layout_marginBottom="12dp" />
 
@@ -103,13 +104,13 @@
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chức năng 4"
+                android:text="@string/btn_cn4"
                 android:textSize="17sp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/white"
                 app:icon="@drawable/ic_task"
                 app:cornerRadius="18dp"
-                app:backgroundTint="@drawable/bg_button_gradient_alt"
+                android:background="@drawable/bg_button_gradient_alt"
                 app:iconGravity="textStart"
                 android:layout_marginBottom="12dp" />
 
@@ -118,13 +119,13 @@
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Giới thiệu bản thân"
+                android:text="@string/btn_about"
                 android:textSize="17sp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/white"
                 app:icon="@drawable/ic_user"
                 app:cornerRadius="18dp"
-                app:backgroundTint="@drawable/bg_button_gradient_purple"
+                android:background="@drawable/bg_button_gradient_purple"
                 app:iconGravity="textStart"
                 android:layout_marginBottom="12dp" />
 
@@ -133,13 +134,13 @@
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Làm thêm"
+                android:text="@string/btn_bonus"
                 android:textSize="17sp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/white"
                 app:icon="@drawable/ic_bonus"
                 app:cornerRadius="18dp"
-                app:backgroundTint="@drawable/bg_button_gradient_green"
+                android:background="@drawable/bg_button_gradient_green"
                 app:iconGravity="textStart" />
 
         </LinearLayout>

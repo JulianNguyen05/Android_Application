@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="800dp"
+    android:height="800dp"
+    android:viewportWidth="800"
+    android:viewportHeight="800">
+    <group>
+        <path
+            android:fillColor="#FF000000"
+            android:fillType="evenOdd"
+            android:pathData="M550 425H425v125c0 13.75-11.18 25-25 25s-25-11.25-25-25V425H250c-13.82 0-25-11.25-25-25s11.18-25 25-25h125V250c0-13.75 11.18-25 25-25s25 11.25 25 25v125h125c13.83 0 25 11.25 25 25s-11.17 25-25 25ZM400 0C179.07 0 0 179 0 400s179.07 400 400 400c220.92 0 400-179 400-400S620.92 0 400 0Z"/>
+    </group>
+</vector>

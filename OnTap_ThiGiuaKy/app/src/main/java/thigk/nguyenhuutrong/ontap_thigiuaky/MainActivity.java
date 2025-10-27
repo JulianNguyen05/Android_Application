@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         btnThem = findViewById(R.id.btnThem);
 
         btnCN2.setOnClickListener(v -> startActivity(new Intent(this, ActivityChucNang2.class)));
-        btnCN3.setOnClickListener(v -> startActivity(new Intent(this, ActivityChucNang3.class)));
-        btnCN4.setOnClickListener(v -> startActivity(new Intent(this, ActivityChucNang4.class)));
-        btnAbout.setOnClickListener(v -> startActivity(new Intent(this, ActivityAboutMe.class)));
-        btnThem.setOnClickListener(v -> startActivity(new Intent(this, ActivityLamThem.class)));
+//        btnCN3.setOnClickListener(v -> startActivity(new Intent(this, ActivityChucNang3.class)));
+//        btnCN4.setOnClickListener(v -> startActivity(new Intent(this, ActivityChucNang4.class)));
+//        btnAbout.setOnClickListener(v -> startActivity(new Intent(this, ActivityAboutMe.class)));
+//        btnThem.setOnClickListener(v -> startActivity(new Intent(this, ActivityLamThem.class)));
 
     }
 }

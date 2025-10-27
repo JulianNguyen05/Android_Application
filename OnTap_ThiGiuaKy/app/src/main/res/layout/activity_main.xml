@@ -92,13 +92,13 @@
                 <Button
                     android:id="@+id/btnChucNang2"
                     android:layout_width="match_parent"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:background="@android:color/transparent"
-                    android:text="Chức năng 2" />
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Chức năng 2"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
             </FrameLayout>
 
             <FrameLayout

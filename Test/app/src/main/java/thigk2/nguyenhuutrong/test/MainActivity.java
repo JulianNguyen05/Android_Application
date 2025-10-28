@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
         btnCN3.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, ActivityChucNang3.class))
         );
-//
-//        btnCN4.setOnClickListener(v ->
-//                startActivity(new Intent(MainActivity.this, ActivityChucNang4.class))
-//        );
+
+        btnCN4.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, ActivityChucNang4.class))
+        );
 //
 //        btnAbout.setOnClickListener(v ->
 //                startActivity(new Intent(MainActivity.this, ActivityAboutMe.class))

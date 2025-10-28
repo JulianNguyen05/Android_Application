@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient_modern"
+    tools:context=".ActivityChucNang4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_header_card"
+        android:elevation="6dp"
+        android:padding="16dp">
+        <ImageView
+            android:id="@+id/iv_logo_cn2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logo_ntu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/tv_title_cn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Danh sách Hoạt động"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:letterSpacing="0.03"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo_cn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_logo_cn2"
+            app:layout_constraintTop_toTopOf="@id/iv_logo_cn2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/white"
+        android:clipToOutline="true"
+        android:background="@drawable/bg_card_rounded">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_sub_recycle_view" />
+    </LinearLayout>
+
+</LinearLayout>

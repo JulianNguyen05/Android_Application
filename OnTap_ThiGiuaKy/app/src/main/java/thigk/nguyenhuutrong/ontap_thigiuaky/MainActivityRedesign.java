@@ -2,63 +2,46 @@ package thigk.nguyenhuutrong.ontap_thigiuaky;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-// 1. Import lớp Binding được tạo tự động từ file activity_main_redesign.xml
-import thigk.nguyenhuutrong.ontap_thigiuaky.databinding.ActivityMainRedesignBinding;
-
-// 2. Tên lớp khớp với tools:context trong file XML
 public class MainActivityRedesign extends AppCompatActivity {
 
-    // 3. Khai báo biến binding
-    private ActivityMainRedesignBinding binding;
+    // Khai báo các nút
+    private Button btnCN2, btnCN3, btnCN4, btnAbout, btnThem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_redesign);
 
-        // 4. Khởi tạo binding
-        binding = ActivityMainRedesignBinding.inflate(getLayoutInflater());
+        // Ánh xạ view
+        btnCN2 = findViewById(R.id.btnCN2);
+        btnCN3 = findViewById(R.id.btnCN3);
+        btnCN4 = findViewById(R.id.btnCN4);
+        btnAbout = findViewById(R.id.btnAbout);
+        btnThem = findViewById(R.id.btnThem);
 
-        // 5. Set layout bằng view gốc của binding
-        setContentView(binding.getRoot());
+        // Xử lý sự kiện nhấn nút
+        btnCN2.setOnClickListener(v ->
+                startActivity(new Intent(MainActivityRedesign.this, ActivityChucNang2.class))
+        );
 
-        // 6. Gọi hàm gán sự kiện click
-        setupButtonListeners();
-    }
+        btnCN3.setOnClickListener(v ->
+                startActivity(new Intent(MainActivityRedesign.this, ActivityChucNang3.class))
+        );
 
-    private void setupButtonListeners() {
+        btnCN4.setOnClickListener(v ->
+                startActivity(new Intent(MainActivityRedesign.this, ActivityChucNang4.class))
+        );
 
-        // Gán sự kiện cho Nút Chức năng 2
-        binding.btnCN2.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivityRedesign.this, ActivityChucNang2.class);
-            startActivity(intent);
-        });
+        btnAbout.setOnClickListener(v ->
+                startActivity(new Intent(MainActivityRedesign.this, ActivityAboutMe.class))
+        );
 
-        // Gán sự kiện cho Nút Chức năng 3
-        binding.btnCN3.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivityRedesign.this, ActivityChucNang3.class);
-            startActivity(intent);
-        });
-
-        // Gán sự kiện cho Nút Chức năng 4
-        binding.btnCN4.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivityRedesign.this, ActivityChucNang4.class);
-            startActivity(intent);
-        });
-
-        // Gán sự kiện cho Nút About Me
-        binding.btnAbout.setOnClickListener(v -> {
-            // Giả sử Activity của bạn tên là AboutMeActivity
-            // Intent intent = new Intent(MainActivity_Redesign.this, AboutMeActivity.class);
-            // startActivity(intent);
-        });
-
-        // Gán sự kiện cho Nút Làm thêm
-        binding.btnThem.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivityRedesign.this, ActivityLamThem.class);
-            startActivity(intent);
-        });
+        btnThem.setOnClickListener(v ->
+                startActivity(new Intent(MainActivityRedesign.this, ActivityLamThem.class))
+        );
     }
 }

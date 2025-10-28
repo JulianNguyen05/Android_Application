@@ -2,21 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_redesign"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg_gradient_modern"
-    tools:context=".MainActivityRedesign">
+    tools:context=".MainActivity">
 
-    <!-- HEADER -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:background="@drawable/bg_header_card"
         android:elevation="8dp"
         android:padding="20dp">
-
         <ImageView
             android:id="@+id/iv_logo"
             android:layout_width="100dp"
@@ -27,7 +25,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.2" />
-
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="0dp"
@@ -44,13 +41,15 @@
             app:layout_constraintTop_toTopOf="@id/iv_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- NỘI DUNG CHÍNH -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
         <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -69,7 +68,6 @@
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Nhóm 4 nút 2x2 -->
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,57 +77,117 @@
                 android:useDefaultMargins="true"
                 android:layout_marginBottom="20dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnCN2"
-                    style="@style/MyModernButton"
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="80dp"
                     android:layout_columnWeight="1"
-                    android:text="Chức năng 2"
-                    app:icon="@drawable/ic_calculator"
-                    app:backgroundTint="@drawable/bg_button_gradient_blue" />
+                    android:layout_margin="4dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/bg_button_gradient_blue"
+                    android:foreground="?attr/selectableItemBackground">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnCN3"
-                    style="@style/MyModernButton"
-                    android:layout_width="0dp"
-                    android:layout_height="80dp"
-                    android:layout_columnWeight="1"
-                    android:text="Chức năng 3"
-                    app:icon="@drawable/ic_task"
-                    app:backgroundTint="@drawable/bg_button_gradient_purple" />
+                    <Button
+                        android:id="@+id/btnCN2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Chức năng 2"
+                        android:drawableStart="@drawable/ic_calculator"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/white"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical|start" />
+                </FrameLayout>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnCN4"
-                    style="@style/MyModernButton"
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="80dp"
                     android:layout_columnWeight="1"
-                    android:text="Chức năng 4"
-                    app:icon="@drawable/ic_task"
-                    app:backgroundTint="@drawable/bg_button_gradient_green" />
+                    android:layout_margin="4dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/bg_button_gradient_purple"
+                    android:foreground="?attr/selectableItemBackground">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnAbout"
-                    style="@style/MyModernButton"
+                    <Button
+                        android:id="@+id/btnCN3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Chức năng 3"
+                        android:drawableStart="@drawable/ic_task"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/white"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical|start" />
+                </FrameLayout>
+
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="80dp"
                     android:layout_columnWeight="1"
-                    android:text="About Me"
-                    app:icon="@drawable/ic_user"
-                    app:backgroundTint="@drawable/bg_button_gradient_orange" />
+                    android:layout_margin="4dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/bg_button_gradient_green"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <Button
+                        android:id="@+id/btnCN4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Chức năng 4"
+                        android:drawableStart="@drawable/ic_task"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/white"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical|start" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/bg_button_gradient_orange"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <Button
+                        android:id="@+id/btnAbout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="About Me"
+                        android:drawableStart="@drawable/ic_user"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/white"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical|start" />
+                </FrameLayout>
             </GridLayout>
 
-            <!-- Nút làm thêm riêng -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnThem"
-                style="@style/MyModernButton"
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Làm thêm"
-                app:icon="@drawable/ic_bonus"
-                app:backgroundTint="@drawable/bg_button_gradient_orange"
-                android:layout_marginTop="8dp" />
+                android:minHeight="60dp"
+                android:layout_margin="4dp"
+                android:elevation="4dp"
+                android:background="@drawable/bg_button_gradient_orange"
+                android:foreground="?attr/selectableItemBackground">
+
+                <Button
+                    android:id="@+id/btnThem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Làm thêm"
+                    android:drawableStart="@drawable/ic_bonus"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:gravity="center_vertical|start" />
+            </FrameLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

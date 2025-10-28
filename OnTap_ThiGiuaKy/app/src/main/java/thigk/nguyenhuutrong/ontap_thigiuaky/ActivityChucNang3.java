@@ -30,6 +30,13 @@ public class ActivityChucNang3 extends Activity {
                 "Khai phá dữ liệu lớn",
                 "Kinh tế chính trị Mác -Lê nin",
                 "Triết học Mác - Lê nin",
+                "Triết học Mác - Lê nin",
+                "Triết học Mác - Lê nin",
+                "Triết học Mác - Lê nin",
+                "Triết học Mác - Lê nin",
+                "Triết học Mác - Lê nin",
+                "Triết học Mác - Lê nin",
+                "Triết học Mác - Lê nin",
                 "Tư tưởng Hồ Chí Minh"
         };
 

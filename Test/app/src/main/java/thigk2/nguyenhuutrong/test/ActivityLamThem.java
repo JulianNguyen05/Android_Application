@@ -160,13 +160,11 @@ public class ActivityLamThem extends AppCompatActivity {
         } else{
             imageView.setImageResource(R.drawable.img_o);
             if (checkResults()){
-                // LỖI 2 ĐÃ SỬA: Thay "MainActivity.this" thành "ActivityLamThem.this"
                 ResultDialog resultDialog = new ResultDialog(ActivityLamThem.this, binding.playerTwoName.getText().toString()
                         + " is a Winner!", ActivityLamThem.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             }else if (totalSelectedBoxes == 9){
-                // LỖI 2 ĐÃ SỬA: Thay "MainActivity.this" thành "ActivityLamThem.this"
                 ResultDialog resultDialog = new ResultDialog(ActivityLamThem.this, "Match Draw", ActivityLamThem.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();

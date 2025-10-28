@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
         <activity
+            android:name=".ResultDialog"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlayers"
+            android:exported="false" />
+        <activity
             android:name=".ActivityLamThem"
             android:exported="false" />
         <activity

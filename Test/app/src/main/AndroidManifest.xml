@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
         <activity
+            android:name=".ActivityLamThem"
+            android:exported="false" />
+        <activity
             android:name=".ActivityAboutMe"
             android:exported="false" />
         <activity

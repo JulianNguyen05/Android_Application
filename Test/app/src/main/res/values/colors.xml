@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_teal_blue">#0081B0</color>
+    <color name="light_grayish_blue">#F5F7FA</color>
+    <color name="pure_white">#FFFFFF</color>
+    <color name="dark_charcoal">#333333</color>
+    <color name="bright_green">#4CAF50</color>
+    <color name="dark_red">#D32F2F</color>
+    <color name="amber_yellow">#FFC107</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="smoke">#E0E0E0</color>
+    <color name="neon_pink">#D96990</color>
+    <color name="neon_pink_dark">#C2185B</color>
+    <color name="pastel_pink">#F2BDB2</color>
+    <color name="light_pink">#F2C9E0</color>
+    <color name="teal">#89C2D9</color>
+    <color name="baby_blue">#B8EBF2</color>
+    <color name="comic_blue">#0081B0</color>
+    <color name="comic_blue_dark">#005270</color>
+    <color name="charcoal_gray">#263238</color>
+    <color name="light_gray">#ECEFF1</color>
+    <color name="midnight_violet">#FF242760</color>
+
+    <color name="cosmic_blue1">#1FA1FF</color>
+    <color name="cosmic_blue2">#52B2F4</color>
+    <color name="cosmic_blue3">#86C8F7</color>
+    <color name="cosmic_blue4">#9FD9F9</color>
+    <color name="cosmic_blue5">#C8E8FC</color>
+    <color name="cosmic_blue6">#5D69FF</color>
+    <color name="cosmic_blue7">#7F84FF</color>
+    <color name="cosmic_blue8">#B9BCFF</color>
+    <color name="red">#FF5D69</color>
+    <color name="green">#69FF5D</color>
+
+    <color name="cosmic_blue">#1E3A8A</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="light_gray_hint">#9E9E9E</color>
+
+    <color name="button_primary">#FF6200EE</color> <color name="button_secondary">#FF03DAC5</color> <color name="button_tertiary">#FF0091EA</color> <color name="button_accent">#FFFFAB00</color> <color name="button_success">#FF00C853</color>
+</resources>

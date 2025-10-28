@@ -9,14 +9,12 @@
     android:background="@drawable/bg_gradient_modern"
     tools:context=".ActivityChucNang3">
 
-    <!-- Header hiện đại với gradient nhẹ và logo -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/bg_header_card"
         android:elevation="6dp"
         android:padding="16dp">
-
         <ImageView
             android:id="@+id/iv_logo_cn2"
             android:layout_width="90dp"
@@ -26,14 +24,13 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.2" />
-
         <TextView
             android:id="@+id/tv_title_cn2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Tính điểm trung bình môn học"
+            android:text="Danh sách Môn học"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24sp"
@@ -44,33 +41,26 @@
             app:layout_constraintTop_toTopOf="@id/iv_logo_cn2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Nội dung chính -->
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/white"
+        android:clipToOutline="true"
+        android:background="@drawable/bg_card_rounded">
 
-        <LinearLayout
+        <ListView
+            android:id="@+id/lvMonHoc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="4dp"
-            android:orientation="vertical"
-            android:padding="24dp"
-            android:layout_margin="16dp"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/white"
-            android:clipToOutline="true"
-            android:background="@drawable/bg_card_rounded">
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="10dp"
+            android:background="@android:color/transparent" />
 
-            <ListView
-                android:id="@+id/lvMonHoc"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:divider="@null"
-                android:dividerHeight="10dp"
-                android:background="@android:color/transparent" />
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </LinearLayout>

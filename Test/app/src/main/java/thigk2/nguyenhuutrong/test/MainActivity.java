@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
         btnThem = findViewById(R.id.btnThem);
 
         // Gọi sự kiện click cho từng nút
-//        btnCN2.setOnClickListener(v ->
-//                startActivity(new Intent(MainActivity.this, ActivityChucNang2.class))
-//        );
-//
+        btnCN2.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, ActivityChucNang2.class))
+        );
+
         btnCN3.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, ActivityChucNang3.class))
         );
@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         btnCN4.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, ActivityChucNang4.class))
         );
-//
-//        btnAbout.setOnClickListener(v ->
-//                startActivity(new Intent(MainActivity.this, ActivityAboutMe.class))
-//        );
+
+        btnAbout.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, ActivityAboutMe.class))
+        );
 //
 //        btnThem.setOnClickListener(v ->
 //                startActivity(new Intent(MainActivity.this, AddPlayers.class))

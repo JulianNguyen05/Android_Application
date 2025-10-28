@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient_modern"
+    tools:context=".ActivityChucNang2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_header_card"
+        android:elevation="6dp"
+        android:padding="16dp">
+        <ImageView
+            android:id="@+id/iv_logo_cn2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logo_ntu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+        <TextView
+            android:id="@+id/tv_title_cn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Quiz"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo_cn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_logo_cn2"
+            app:layout_constraintTop_toTopOf="@id/iv_logo_cn2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:clipToOutline="true"
+            android:background="@drawable/bg_card_rounded">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mốc thời gian Chiến dịch HỒ CHÍ MINH - Toàn thắng"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tháng"
+                app:startIconDrawable="@drawable/ic_star">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtThang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Năm"
+                app:startIconDrawable="@drawable/ic_star">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKiemTra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Kiểm tra Đúng/Sai"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                android:paddingVertical="14dp"
+                app:cornerRadius="18dp"
+                app:icon="@drawable/ic_star"
+                app:iconGravity="textStart"
+                android:background="@drawable/bg_button_gradient"
+                app:rippleColor="@color/teal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="@drawable/bg_result_card">
+                <TextView
+                    android:id="@+id/tvKetQua"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Hiện kết quả ở đây"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/poppins_medium" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

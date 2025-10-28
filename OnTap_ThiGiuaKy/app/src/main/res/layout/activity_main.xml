@@ -75,7 +75,7 @@
             style="@style/MyModernButton"
             android:text="@string/btn_cn2"
             app:icon="@drawable/ic_calculator"
-            app:backgroundTint="@color/button_primary" />
+            app:backgroundTint="@color/button_tertiary" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCN3"

@@ -15,6 +15,9 @@
             android:name=".ActivityChucNang4"
             android:exported="false" />
         <activity
+            android:name=".MainActivityRedesign"
+            android:exported="false" />
+        <activity
             android:name=".ActivityLamThem"
             android:exported="false" />
         <activity

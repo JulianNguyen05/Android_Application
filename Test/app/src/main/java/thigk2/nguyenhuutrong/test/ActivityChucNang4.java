@@ -73,7 +73,7 @@ public class ActivityChucNang4 extends AppCompatActivity {
 
         try {
             // 1. Mở file "activities.json" từ thư mục assets
-            InputStream is = getAssets().open("recycle.json");
+            InputStream is = getAssets().open("recycle_zed.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);

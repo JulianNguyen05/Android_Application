@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         );
 
         btnThem.setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, ActivityLamThem.class))
+                startActivity(new Intent(MainActivity.this, AddPlayers.class))
         );
     }
 }

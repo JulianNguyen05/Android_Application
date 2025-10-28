@@ -2,10 +2,19 @@ package thigk.nguyenhuutrong.ontap_thigiuaky;
 
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 
 public class Item3Activity extends AppCompatActivity {
 
@@ -23,48 +32,63 @@ public class Item3Activity extends AppCompatActivity {
         tvGiangVien = findViewById(R.id.tvGiangVien);
         btnBack = findViewById(R.id.btnBack3);
 
-        // Lấy dữ liệu từ intent
+        // Lấy dữ liệu tên môn từ intent
         String tenMon = getIntent().getStringExtra("tenMon");
         tvTenMon.setText(tenMon);
 
-        // Gán mô tả mẫu theo môn học
-        switch (tenMon) {
-            case "Lập trình Android":
-                tvMoTa.setText("Học cách phát triển ứng dụng di động trên Android với Java/Kotlin.");
-                tvTinChi.setText("3 tín chỉ");
-                tvGiangVien.setText("GV: Nguyễn Văn A");
-                break;
+        // --- XÓA SWITCH CASE VÀ THAY BẰNG CODE ĐỌC JSON ---
 
-            case "Cơ sở dữ liệu":
-                tvMoTa.setText("Học về thiết kế và quản trị hệ thống cơ sở dữ liệu, SQL và truy vấn nâng cao.");
-                tvTinChi.setText("3 tín chỉ");
-                tvGiangVien.setText("GV: Trần Thị B");
-                break;
+        // Tìm chi tiết môn học từ file list.json
+        findMonHocDetails(tenMon);
 
-            case "Trí tuệ nhân tạo":
-                tvMoTa.setText("Khám phá nền tảng AI, Machine Learning và các thuật toán học máy cơ bản.");
-                tvTinChi.setText("4 tín chỉ");
-                tvGiangVien.setText("GV: Lê Minh C");
-                break;
-
-            case "Mạng máy tính":
-                tvMoTa.setText("Học về cấu trúc mạng, mô hình OSI và giao thức TCP/IP.");
-                tvTinChi.setText("3 tín chỉ");
-                tvGiangVien.setText("GV: Phạm Thị D");
-                break;
-
-            case "Phân tích thiết kế hệ thống":
-                tvMoTa.setText("Rèn luyện kỹ năng mô hình hóa hệ thống thông tin, sử dụng UML.");
-                tvTinChi.setText("3 tín chỉ");
-                tvGiangVien.setText("GV: Vũ Văn E");
-                break;
-
-            default:
-                tvMoTa.setText("Môn học khác trong chương trình đào tạo CNTT.");
-                tvTinChi.setText("2 tín chỉ");
-                tvGiangVien.setText("GV: Nguyễn Thị F");
-        }
+        // ----------------------------------------------------
 
         btnBack.setOnClickListener(v -> finish());
+    }
+
+    /**
+     * Tải file list.json, tìm môn học và cập nhật UI
+     * @param tenMonCanTim Tên môn học được gửi từ ActivityChucNang3
+     */
+    private void findMonHocDetails(String tenMonCanTim) {
+        String jsonString;
+        try {
+            // 1. Đọc file list.json (giống hệt ActivityChucNang3)
+            InputStream is = getAssets().open("list.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            jsonString = new String(buffer, StandardCharsets.UTF_8);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Lỗi đọc file JSON", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        try {
+            // 2. Duyệt mảng JSON
+            JSONArray jsonArray = new JSONArray(jsonString);
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject monHocObject = jsonArray.getJSONObject(i);
+
+                // 3. So sánh tên môn học
+                if (monHocObject.getString("tenMon").equals(tenMonCanTim)) {
+
+                    // 4. Tìm thấy! Lấy dữ liệu và gán vào TextView
+                    tvMoTa.setText(monHocObject.getString("moTa"));
+                    tvTinChi.setText(monHocObject.getString("tinChi"));
+                    tvGiangVien.setText(monHocObject.getString("giangVien"));
+
+                    // Dừng vòng lặp vì đã tìm thấy
+                    return;
+                }
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Lỗi phân tích JSON", Toast.LENGTH_SHORT).show();
+        }
     }
 }

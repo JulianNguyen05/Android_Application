@@ -1,0 +1,98 @@
+[
+  {
+    "tenMon": "Lập trình Android",
+    "moTa": "Học cách phát triển ứng dụng di động trên Android với Java/Kotlin.",
+    "tinChi": "3 tín chỉ",
+    "giangVien": "GV: Nguyễn Văn A"
+  },
+  {
+    "tenMon": "Cơ sở dữ liệu",
+    "moTa": "Học về thiết kế và quản trị hệ thống cơ sở dữ liệu, SQL và truy vấn nâng cao.",
+    "tinChi": "3 tín chỉ",
+    "giangVien": "GV: Trần Thị B"
+  },
+  {
+    "tenMon": "Trí tuệ nhân tạo",
+    "moTa": "Khám phá nền tảng AI, Machine Learning và các thuật toán học máy cơ bản.",
+    "tinChi": "4 tín chỉ",
+    "giangVien": "GV: Lê Minh C"
+  },
+  {
+    "tenMon": "Mạng máy tính",
+    "moTa": "Học về cấu trúc mạng, mô hình OSI và giao thức TCP/IP.",
+    "tinChi": "3 tín chỉ",
+    "giangVien": "GV: Phạm Thị D"
+  },
+  {
+    "tenMon": "Phân tích thiết kế hệ thống",
+    "moTa": "Rèn luyện kỹ năng mô hình hóa hệ thống thông tin, sử dụng UML.",
+    "tinChi": "3 tín chỉ",
+    "giangVien": "GV: Vũ Văn E"
+  },
+  {
+    "tenMon": "An toàn thông tin",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Lập trình Web",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Cấu trúc dữ liệu và giải thuật",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Công nghệ phần mềm",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Hệ điều hành",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Lập trình hướng đối tượng",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Học máy",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Kiến trúc máy tính",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Quản lý dự án phần mềm",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Điện toán đám mây",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  },
+  {
+    "tenMon": "Phát triển game",
+    "moTa": "Môn học khác trong chương trình đào tạo CNTT.",
+    "tinChi": "2 tín chỉ",
+    "giangVien": "GV: Nguyễn Thị F"
+  }
+]

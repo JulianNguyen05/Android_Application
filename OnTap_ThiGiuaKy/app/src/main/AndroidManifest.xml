@@ -15,10 +15,16 @@
             android:name=".ActivityChucNang4"
             android:exported="false" />
         <activity
+            android:name=".ActivityAboutMe"
+            android:exported="false" />
+        <activity
             android:name=".ActivityChucNang3"
             android:exported="false" />
         <activity
             android:name=".Item4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Item3Activity"
             android:exported="false" />
         <activity android:name=".ActivityChucNang2"
             android:exported="false"

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient_modern"
+    android:padding="20dp"
+    tools:context=".Item3Activity">
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_header_card"
+        android:elevation="8dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgMonHoc"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_book"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:id="@+id/tvTenMon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Tên môn học"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:letterSpacing="0.02"
+            app:layout_constraintStart_toEndOf="@id/imgMonHoc"
+            app:layout_constraintTop_toTopOf="@id/imgMonHoc"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Thông tin chi tiết -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_rounded"
+            android:elevation="6dp">
+
+            <TextView
+                android:id="@+id/tvMoTa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mô tả chi tiết môn học"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:fontFamily="@font/poppins_regular"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvTinChi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số tín chỉ"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvGiangVien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giảng viên"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginBottom="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quay lại"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_semibold"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@drawable/bg_button_gradient_purple"
+                app:rippleColor="@color/teal"
+                app:icon="@drawable/ic_back"
+                app:iconGravity="textStart" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,72 +1,52 @@
 package thigk.nguyenhuutrong.ontap_thigiuaky;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-public class ActivityChucNang3 extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
 
-    // 1. Khai báo
-    ListView lvMonHoc;
-    String[] dsMonHoc;
-    ArrayAdapter<String> adapter;
+import java.util.ArrayList;
+
+public class ActivityChucNang3 extends AppCompatActivity {
+
+    private ListView lvMonHoc;
+    private ArrayList<String> dsMonHoc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chucnang3);
 
-        // 2. Ánh xạ
         lvMonHoc = findViewById(R.id.lvMonHoc);
 
-        // 3. Chuẩn bị dữ liệu
-        dsMonHoc = new String[] {
-                "Tin học đại cương",
-                "Lập trình Java",
-                "Phát triển Ứng dụng web",
-                "Khai phá dữ liệu lớn",
-                "Kinh tế chính trị Mác -Lê nin",
-                "Triết học Mác - Lê nin",
-                "Triết học Mác - Lê nin",
-                "Triết học Mác - Lê nin",
-                "Triết học Mác - Lê nin",
-                "Triết học Mác - Lê nin",
-                "Triết học Mác - Lê nin",
-                "Triết học Mác - Lê nin",
-                "Triết học Mác - Lê nin",
-                "Tư tưởng Hồ Chí Minh"
-        };
+        // 1️⃣ Danh sách dữ liệu mẫu
+        dsMonHoc = new ArrayList<>();
+        dsMonHoc.add("Lập trình Android");
+        dsMonHoc.add("Cơ sở dữ liệu");
+        dsMonHoc.add("Trí tuệ nhân tạo");
+        dsMonHoc.add("Mạng máy tính");
+        dsMonHoc.add("Phân tích thiết kế hệ thống");
+        dsMonHoc.add("An toàn thông tin");
 
-        // 4. Tạo Adapter
-        // - this: context (Activity hiện tại)
-        // - R.layout.list_item_monhoc: Layout của 1 hàng (file ta tạo ở bước 2)
-        // - R.id.tv_item_name: ID của TextView bên trong file layout 1 hàng
-        // - dsMonHoc: Mảng dữ liệu
-        adapter = new ArrayAdapter<>(
+        // 2️⃣ Adapter đơn giản
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
-                R.layout.item_sub_list_view,
-                R.id.tv_item_name,
+                android.R.layout.simple_list_item_1,
                 dsMonHoc
         );
-
-        // 5. Gán Adapter cho ListView
         lvMonHoc.setAdapter(adapter);
 
-        // 6. (Tùy chọn) Thêm sự kiện khi nhấn vào 1 item
-        lvMonHoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Lấy tên môn học được nhấn
-                String monHocDuocChon = dsMonHoc[position];
+        // 3️⃣ Sự kiện click vào 1 môn học
+        lvMonHoc.setOnItemClickListener((AdapterView<?> parent, android.view.View view, int position, long id) -> {
+            String monHoc = dsMonHoc.get(position);
 
-                // Hiển thị thông báo
-                Toast.makeText(ActivityChucNang3.this,
-                        "Bạn đã chọn: " + monHocDuocChon,
-                        Toast.LENGTH_SHORT).show();
-            }
+            // Mở sang Item3Activity
+            Intent intent = new Intent(ActivityChucNang3.this, Item3Activity.class);
+            intent.putExtra("tenMon", monHoc);
+            startActivity(intent);
         });
     }
 }

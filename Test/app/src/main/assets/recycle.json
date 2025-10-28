@@ -1,0 +1,27 @@
+[
+  {
+    "imageName": "img_event1",
+    "title": "Tiêu đề hoạt động 1",
+    "description": "Ngày 30/4 - Kỷ niệm chiến thắng"
+  },
+  {
+    "imageName": "img_event2",
+    "title": "Tiêu đề hoạt động 2",
+    "description": "Ngày 1/5 - Quốc tế Lao động"
+  },
+  {
+    "imageName": "img_event3",
+    "title": "Tiêu đề hoạt động 3",
+    "description": "Ngày 19/5 - Sinh nhật Bác Hồ"
+  },
+  {
+    "imageName": "img_event4",
+    "title": "Tiêu đề hoạt động 4",
+    "description": "Ngày 2/9 - Quốc khánh Việt Nam"
+  },
+  {
+    "imageName": "ic_event_placeholder",
+    "title": "Hoạt động sắp diễn ra",
+    "description": "Nội dung đang được cập nhật..."
+  }
+]

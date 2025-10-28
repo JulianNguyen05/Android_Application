@@ -17,6 +17,9 @@
         <activity
             android:name=".ActivityChucNang3"
             android:exported="false" />
+        <activity
+            android:name=".Item4Activity"
+            android:exported="false" />
         <activity android:name=".ActivityChucNang2"
             android:exported="false"
             android:label="Tính điểm trung bình" />

@@ -1,0 +1,26 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable bg_card_rounded
+drawable bg_gradient_modern
+drawable bg_header_card
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable logo_ntu
+font poppins_medium
+font poppins_semibold
+id iv_logo
+id main
+id tv_title
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string desc_logo_ntu
+string main_subtitle
+string main_title
+style Base.Theme.OnThiV2
+style Theme.OnThiV2
+xml backup_rules
+xml data_extraction_rules

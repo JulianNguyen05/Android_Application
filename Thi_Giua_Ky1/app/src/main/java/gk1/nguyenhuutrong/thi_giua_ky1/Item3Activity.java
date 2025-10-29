@@ -54,7 +54,7 @@ public class Item3Activity extends AppCompatActivity {
             jsonString = new String(buffer, StandardCharsets.UTF_8);
 
         } catch (IOException e) {
-            e.printStackTrace;
+            e.printStackTrace();
             Toast.makeText(this, "Lỗi đọc file JSON", Toast.LENGTH_SHORT).show();
             return;
         }

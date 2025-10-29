@@ -5,9 +5,9 @@
     <string name="desc_logo_ntu">Logo trường Đại học Nha Trang</string>
     <string name="main_title">Chương trình ôn tập giữa kỳ</string>
     <string name="main_subtitle">Chọn chức năng bạn muốn thực hiện:</string>
-    <string name="btn_cn2">Chức năng 2</string>
-    <string name="btn_cn3">Chức năng 3</string>
-    <string name="btn_cn4">Chức năng 4</string>
-    <string name="btn_about">Giới thiệu bản thân</string>
+    <string name="btn_cn2">BMI</string>
+    <string name="btn_cn3">Món ăn</string>
+    <string name="btn_cn4">Bài thuốc</string>
+    <string name="btn_about">Giới thiệu</string>
     <string name="btn_bonus">Làm thêm</string>
 </resources>

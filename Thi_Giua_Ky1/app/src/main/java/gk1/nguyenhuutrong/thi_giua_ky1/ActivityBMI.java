@@ -16,20 +16,19 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
-public class ActivityBMI extends AppCompatActivity { // Đổi tên class
+public class ActivityBMI extends AppCompatActivity {
 
-    // Sử dụng TextInputEditText và SwitchMaterial sẽ tường minh hơn,
-    // nhưng dùng EditText và Switch (lớp cha) vẫn hoạt động
+
     EditText edtWeight, edtHeight;
-    SwitchMaterial switchAsia; // Đổi từ Switch sang SwitchMaterial
-    MaterialButton btnCaculate; // Đổi từ Button sang MaterialButton
+    SwitchMaterial switchAsia;
+    MaterialButton btnCaculate;
     TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        // THAY ĐỔI QUAN TRỌNG: Load layout mới
+
         setContentView(R.layout.activity_bmi);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -38,19 +37,17 @@ public class ActivityBMI extends AppCompatActivity { // Đổi tên class
             return insets;
         });
 
-        // Ánh xạ ID (các ID này đã được giữ lại trong file XML mới)
+
         edtHeight = findViewById(R.id.edtHeight);
         edtWeight = findViewById(R.id.edtWeight);
         switchAsia = findViewById(R.id.switchAsian);
         btnCaculate = findViewById(R.id.btnCalculate);
         tvResult = findViewById(R.id.tvResult);
 
-        // Logic sự kiện không thay đổi
+
         btnCaculate.setOnClickListener(v -> CaculateBMI());
     }
 
-    // Toàn bộ logic bên dưới được giữ nguyên
-    // vì nó chỉ phụ thuộc vào các biến đã được ánh xạ ở trên.
 
     public void CaculateBMI(){
         try{
@@ -79,8 +76,6 @@ public class ActivityBMI extends AppCompatActivity { // Đổi tên class
             String resultText = String.format("BMI: %.1f\n%s", bmi, resultCategory);
             tvResult.setText(resultText);
 
-            // Thay vì setTextColor cho TextView, ta có thể set cho
-            // LinearLayout chứa nó nếu muốn, nhưng set cho text vẫn ổn
             tvResult.setTextColor(color);
 
         } catch (NumberFormatException e){
@@ -108,7 +103,6 @@ public class ActivityBMI extends AppCompatActivity { // Đổi tên class
         double overWeight = isAsian ? 28 : 30;
 
         if(bmi < underWeight){
-            // Bạn cần đảm bảo đã định nghĩa các màu này trong res/values/colors.xml
             return ContextCompat.getColor(this, R.color.under_weight);
         }else if(bmi < normalWeight){
             return ContextCompat.getColor(this, R.color.normal_weight);

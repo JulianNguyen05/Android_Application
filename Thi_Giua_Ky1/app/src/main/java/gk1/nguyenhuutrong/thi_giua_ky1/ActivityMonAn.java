@@ -30,15 +30,13 @@ public class ActivityMonAn extends AppCompatActivity {
 
         lvMonAn = findViewById(R.id.lvMonAn);
 
-        // 1️⃣ Tải danh sách
         dsMonAn = loadMonAnFromAssets();
 
         if (dsMonAn.isEmpty()) {
-            Toast.makeText(this, "Không thể tải dữ liệu món ăn", Toast.LENGTH_SHORT).show(); // Sửa text
+            Toast.makeText(this, "Không thể tải dữ liệu món ăn", Toast.LENGTH_SHORT).show();
             dsMonAn.add("Lỗi tải file JSON");
         }
 
-        // 2️⃣ Adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
                 R.layout.item_sub_list_view,
@@ -47,9 +45,8 @@ public class ActivityMonAn extends AppCompatActivity {
         );
         lvMonAn.setAdapter(adapter);
 
-        // 3️⃣ Sự kiện click
         lvMonAn.setOnItemClickListener((AdapterView<?> parent, android.view.View view, int position, long id) -> {
-            String monAn = dsMonAn.get(position); // Sửa tên biến
+            String monAn = dsMonAn.get(position);
 
             Toast.makeText(ActivityMonAn.this, "Bạn đã chọn: " + monAn, Toast.LENGTH_LONG).show();
 
@@ -62,8 +59,8 @@ public class ActivityMonAn extends AppCompatActivity {
     /**
      * Hàm đọc file JSON từ assets
      */
-    private ArrayList<String> loadMonAnFromAssets() { // Sửa tên hàm
-        ArrayList<String> monAnList = new ArrayList<>(); // Sửa tên
+    private ArrayList<String> loadMonAnFromAssets() {
+        ArrayList<String> monAnList = new ArrayList<>();
         String jsonString;
 
         try {
@@ -83,9 +80,9 @@ public class ActivityMonAn extends AppCompatActivity {
             JSONArray jsonArray = new JSONArray(jsonString);
 
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject monAnObject = jsonArray.getJSONObject(i); // Sửa tên
+                JSONObject monAnObject = jsonArray.getJSONObject(i);
 
-                // Sửa key JSON để lấy tên món ăn
+
                 String tenMonAn = monAnObject.getString("tenMonAn");
                 monAnList.add(tenMonAn);
             }

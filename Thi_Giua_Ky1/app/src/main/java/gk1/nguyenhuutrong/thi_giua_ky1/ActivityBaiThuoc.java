@@ -19,11 +19,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-// Đã đổi tên class từ ActivityChucNang4 sang ActivityBaiThuoc
 public class ActivityBaiThuoc extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    // Đã đổi tên Adapter và Model
     private BaiThuocAdapter adapter;
     private List<BaiThuocModel> baiThuocList;
 
@@ -43,18 +41,15 @@ public class ActivityBaiThuoc extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Đã đổi sang BaiThuocAdapter và BaiThuocModel
         adapter = new BaiThuocAdapter(baiThuocList, new BaiThuocAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(@NonNull BaiThuocModel item) {
-                // Đã đổi tên Activity đích sang BaiThuocDetailActivity
                 Intent intent = new Intent(ActivityBaiThuoc.this, ChiTietBaiActivity.class);
                 intent.putExtra("title", item.getTitle());
                 intent.putExtra("desc", item.getDescription());
                 intent.putExtra("image", item.getImageResId());
                 startActivity(intent);
 
-                // Đã đổi context
                 Toast.makeText(ActivityBaiThuoc.this, "Đang mở: " + item.getTitle(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -65,15 +60,11 @@ public class ActivityBaiThuoc extends AppCompatActivity {
     /**
      * Hàm đọc file JSON và phân tích thành List<BaiThuocModel>
      */
-    // Đã đổi tên hàm và kiểu trả về
     private List<BaiThuocModel> loadBaiThuocFromAssets() {
-        // Đã đổi kiểu List
         List<BaiThuocModel> models = new ArrayList<>();
         String jsonString;
 
         try {
-            // !!! LƯU Ý: Bạn nên đổi tên file JSON này cho phù hợp
-            // (ví dụ: "bai_thuoc.json")
             InputStream is = getAssets().open("recycle.json");
             int size = is.available();
             byte[] buffer = new byte[size];
@@ -98,7 +89,6 @@ public class ActivityBaiThuoc extends AppCompatActivity {
 
                 int imageResId = getDrawableIdByName(imageName);
 
-                // Đã đổi sang BaiThuocModel
                 models.add(new BaiThuocModel(imageResId, title, description));
             }
         } catch (JSONException e) {

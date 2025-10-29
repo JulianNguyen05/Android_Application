@@ -66,23 +66,19 @@ public class ChiTietMonActivity extends AppCompatActivity {
 
                 if (monAnObject.getString("tenMonAn").equals(tenMonAnCanTim)) {
 
-                    // Gán dữ liệu text
                     tvMoTa.setText(monAnObject.getString("moTa"));
                     tvGiaTien.setText(monAnObject.getString("giaTien"));
                     tvNhaHang.setText(monAnObject.getString("nhaHang"));
 
-                    // === PHẦN CODE TẢI ẢNH TỪ DRAWABLE ===
                     try {
                         String hinhAnhName = monAnObject.getString("hinhAnh");
 
-                        // Lấy ID của ảnh từ tên tệp (đã lưu trong JSON)
                         int imageResId = getResources().getIdentifier(
                                 hinhAnhName,
                                 "drawable",
                                 getPackageName()
                         );
 
-                        // Nếu tìm thấy ảnh (ID != 0)
                         if (imageResId != 0) {
                             imgMonAn.setImageResource(imageResId);
                         } else {
@@ -95,9 +91,7 @@ public class ChiTietMonActivity extends AppCompatActivity {
                         // Trường hợp JSON không có key "hinhAnh"
                         // imgMonAn.setImageResource(R.drawable.placeholder_image);
                     }
-                    // ======================================
-
-                    return; // Dừng tìm kiếm
+                    return;
                 }
             }
 

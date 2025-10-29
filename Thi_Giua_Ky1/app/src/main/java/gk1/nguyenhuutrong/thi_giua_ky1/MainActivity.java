@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Khai báo các nút chức năng
     private Button btnCN2, btnCN3, btnCN4, btnAbout, btnThem;
 
     @Override
@@ -16,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Ánh xạ các nút từ layout
         btnCN2 = findViewById(R.id.btnCN2);
         btnCN3 = findViewById(R.id.btnCN3);
         btnCN4 = findViewById(R.id.btnCN4);

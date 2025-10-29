@@ -11,19 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-// Đã đổi tên class từ Activity4Adapter sang BaiThuocAdapter
 public class BaiThuocAdapter extends RecyclerView.Adapter<BaiThuocAdapter.ViewHolder> {
 
     public interface OnItemClickListener {
-        // Đã đổi tham số sang BaiThuocModel
+
         void onItemClick(@NonNull BaiThuocModel item);
     }
 
-    // Đã đổi List sang BaiThuocModel
     private List<BaiThuocModel> list;
     private OnItemClickListener listener;
 
-    // Đã đổi tên constructor và tham số List
     public BaiThuocAdapter(List<BaiThuocModel> list, OnItemClickListener listener) {
         this.list = list;
         this.listener = listener;
@@ -39,7 +36,6 @@ public class BaiThuocAdapter extends RecyclerView.Adapter<BaiThuocAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // Đã đổi sang BaiThuocModel
         BaiThuocModel item = list.get(position);
         holder.imageView.setImageResource(item.getImageResId());
         holder.title.setText(item.getTitle());

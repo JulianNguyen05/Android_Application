@@ -13,7 +13,7 @@ import gk1.nguyenhuutrong.thi_giua_ky1.databinding.ActivityLamThemBinding;
 
 public class ActivityLamThem extends AppCompatActivity {
 
-    // LỖI 1 ĐÃ SỬA: Khai báo đúng lớp Binding
+
     ActivityLamThemBinding binding;
     private final List<int[]> combinationList = new ArrayList<>();
 
@@ -25,7 +25,6 @@ public class ActivityLamThem extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // LỖI 1 ĐÃ SỬA: Inflate đúng lớp Binding
         binding = ActivityLamThemBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -142,14 +141,12 @@ public class ActivityLamThem extends AppCompatActivity {
             imageView.setImageResource(R.drawable.img_x);
 
             if (checkResults()){
-                // LỖI 2 ĐÃ SỬA: Thay "MainActivity.this" thành "ActivityLamThem.this"
                 ResultDialog resultDialog = new ResultDialog(ActivityLamThem.this, binding.playerOneName.getText().toString()
                         + " is a Winner!", ActivityLamThem.this);
 
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if (totalSelectedBoxes == 9){
-                // LỖI 2 ĐÃ SỬA: Thay "MainActivity.this" thành "ActivityLamThem.this"
                 ResultDialog resultDialog = new ResultDialog(ActivityLamThem.this, "Match Draw", ActivityLamThem.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();

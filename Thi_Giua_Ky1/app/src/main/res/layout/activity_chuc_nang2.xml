@@ -9,7 +9,6 @@
     android:background="@drawable/bg_gradient_modern"
     tools:context=".ActivityChucNang2">
 
-    <!-- Header hiện đại với gradient nhẹ và logo -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -33,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Tính điểm trung bình môn học"
+            android:text="Tính chỉ số cơ thể"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24sp"
@@ -44,7 +43,6 @@
             app:layout_constraintTop_toTopOf="@id/iv_logo_cn2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Nội dung chính -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -62,12 +60,11 @@
             android:clipToOutline="true"
             android:background="@drawable/bg_card_rounded">
 
-            <!-- Giữa kỳ -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Điểm Giữa kỳ (50%)"
+                android:hint="Chiều cao (m)"
                 app:startIconDrawable="@drawable/ic_star"
                 app:boxStrokeColor="@color/teal"
                 app:boxCornerRadiusTopStart="20dp"
@@ -76,7 +73,7 @@
                 app:boxCornerRadiusBottomEnd="20dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtGiuaKy"
+                    android:id="@+id/edtHeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
@@ -85,13 +82,12 @@
                     android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Cuối kỳ -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:hint="Điểm Cuối kỳ (50%)"
+                android:hint="Cân nặng (kg)"
                 app:startIconDrawable="@drawable/ic_star"
                 app:boxStrokeColor="@color/teal"
                 app:boxCornerRadiusTopStart="20dp"
@@ -100,7 +96,7 @@
                 app:boxCornerRadiusBottomEnd="20dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtCuoiKy"
+                    android:id="@+id/edtWeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
@@ -109,13 +105,23 @@
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Nút tính -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchAsian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Sử dụng thang đo Châu Á"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                app:useMaterialThemeColors="true"/>
+
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnTinhTB"
+                android:id="@+id/btnCalculate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
-                android:text="Tính điểm trung bình"
+                android:text="TÍNH BMI"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/white"
@@ -128,7 +134,6 @@
                 android:background="@drawable/bg_button_gradient"
                 app:rippleColor="@color/teal" />
 
-            <!-- Kết quả -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -145,11 +150,11 @@
                     app:tint="@color/teal" />
 
                 <TextView
-                    android:id="@+id/tvKetQua"
+                    android:id="@+id/tvResult"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:hint="Kết quả sẽ hiển thị ở đây"
+                    android:hint="Chỉ số BMI của bạn sẽ ở đây"
                     android:textColor="@color/black"
                     android:textSize="17sp"
                     android:fontFamily="@font/poppins_medium" />

@@ -7,7 +7,9 @@
     android:orientation="vertical"
     android:background="@drawable/bg_gradient_modern"
     android:padding="20dp"
-    tools:context=".MonAnDetailActivity"> <androidx.constraintlayout.widget.ConstraintLayout
+    tools:context=".ChiTietMonActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:background="@drawable/bg_header_card"

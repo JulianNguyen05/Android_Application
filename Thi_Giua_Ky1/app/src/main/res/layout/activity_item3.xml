@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient_modern"
+    android:padding="20dp"
+    tools:context=".MonAnDetailActivity"> <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/bg_header_card"
+    android:elevation="8dp"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgMonAn" android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/tvTenMonAn" android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Tên món ăn" android:textColor="@color/white"
+        android:textSize="22sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:letterSpacing="0.02"
+        app:layout_constraintStart_toEndOf="@id/imgMonAn"
+        app:layout_constraintTop_toTopOf="@id/imgMonAn"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_rounded"
+            android:elevation="6dp">
+
+            <TextView
+                android:id="@+id/tvMoTa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mô tả chi tiết món ăn" android:textColor="@color/black"
+                android:textSize="17sp"
+                android:fontFamily="@font/poppins_regular"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvGiaTien" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giá tiền" android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvNhaHang" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhà hàng" android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginBottom="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Quay lại"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                android:paddingVertical="14dp"
+                app:cornerRadius="18dp"
+                app:iconSize="50dp"
+                app:iconGravity="textStart"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_gradient_purple"
+                app:rippleColor="@color/teal" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

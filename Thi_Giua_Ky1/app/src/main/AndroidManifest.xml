@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thi_Giua_Ky1">
         <activity
+            android:name=".ResultDialog"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlayers"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLamThem"
+            android:exported="false" />
+        <activity
             android:name=".ActivityGioiThieu"
             android:exported="false" />
         <activity

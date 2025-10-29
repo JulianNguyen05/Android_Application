@@ -74,7 +74,7 @@ public class ActivityBaiThuoc extends AppCompatActivity {
         try {
             // !!! LƯU Ý: Bạn nên đổi tên file JSON này cho phù hợp
             // (ví dụ: "bai_thuoc.json")
-            InputStream is = getAssets().open("recycle_zed.json");
+            InputStream is = getAssets().open("recycle.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);

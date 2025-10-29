@@ -10,6 +10,7 @@
         android:id="@+id/item_image"
         android:layout_width="90dp"
         android:layout_height="90dp"
+        android:layout_marginStart="10dp"
         android:layout_gravity="center"
         android:padding="8dp"
         android:scaleType="centerCrop"

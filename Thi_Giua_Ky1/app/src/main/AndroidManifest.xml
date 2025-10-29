@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thi_Giua_Ky1">
         <activity
-            android:name=".Item3Activity"
+            android:name=".ChiTietMonActivity"
             android:exported="false" />
         <activity
-            android:name=".ActivityChucNang3"
+            android:name=".ActivityMonAn"
             android:exported="false" />
         <activity
-            android:name=".ActivityChucNang2"
+            android:name=".ActivityBMI"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

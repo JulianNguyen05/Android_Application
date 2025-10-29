@@ -1,8 +1,6 @@
 package gk1.nguyenhuutrong.thi_giua_ky1;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,9 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 // Import các component mới của Material Design
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.switchmaterial.SwitchMaterial;
-import com.google.android.material.textfield.TextInputEditText;
 
-public class ActivityChucNang2 extends AppCompatActivity { // Đổi tên class
+public class ActivityBMI extends AppCompatActivity { // Đổi tên class
 
     // Sử dụng TextInputEditText và SwitchMaterial sẽ tường minh hơn,
     // nhưng dùng EditText và Switch (lớp cha) vẫn hoạt động
@@ -33,7 +30,7 @@ public class ActivityChucNang2 extends AppCompatActivity { // Đổi tên class
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         // THAY ĐỔI QUAN TRỌNG: Load layout mới
-        setContentView(R.layout.activity_chuc_nang2);
+        setContentView(R.layout.activity_bmi);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

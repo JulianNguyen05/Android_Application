@@ -18,7 +18,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-public class ActivityChucNang3 extends AppCompatActivity {
+public class ActivityMonAn extends AppCompatActivity {
 
     private ListView lvMonAn;
     private ArrayList<String> dsMonAn;
@@ -26,7 +26,7 @@ public class ActivityChucNang3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chuc_nang3);
+        setContentView(R.layout.activity_mon_an);
 
         lvMonAn = findViewById(R.id.lvMonAn);
 
@@ -51,7 +51,7 @@ public class ActivityChucNang3 extends AppCompatActivity {
         lvMonAn.setOnItemClickListener((AdapterView<?> parent, android.view.View view, int position, long id) -> {
             String monAn = dsMonAn.get(position); // Sửa tên biến
 
-            Intent intent = new Intent(ActivityChucNang3.this, Item3Activity.class);
+            Intent intent = new Intent(ActivityMonAn.this, ChiTietMonActivity.class);
             intent.putExtra("tenMonAn", monAn);
             startActivity(intent);
         });

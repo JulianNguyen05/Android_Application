@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Gọi sự kiện click cho từng nút
         btnCN2.setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, ActivityChucNang2.class))
+                startActivity(new Intent(MainActivity.this, ActivityBMI.class))
         );
 
         btnCN3.setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, ActivityChucNang3.class))
+                startActivity(new Intent(MainActivity.this, ActivityMonAn.class))
         );
 //
 //        btnCN4.setOnClickListener(v ->

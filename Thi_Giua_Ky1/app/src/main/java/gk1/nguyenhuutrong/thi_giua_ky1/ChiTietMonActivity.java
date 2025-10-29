@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public class Item3Activity extends AppCompatActivity {
+public class ChiTietMonActivity extends AppCompatActivity {
 
     private TextView tvTenMonAn, tvMoTa, tvGiaTien, tvNhaHang;
     private ImageView imgMonAn;
@@ -26,7 +26,7 @@ public class Item3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_item3);
+        setContentView(R.layout.activity_chi_tiet_mon);
 
         tvTenMonAn = findViewById(R.id.tvTenMonAn);
         tvMoTa = findViewById(R.id.tvMoTa);

@@ -1,27 +1,27 @@
 [
   {
-    "imageName": "img_event1",
-    "title": "Tiêu đề hoạt động 1",
-    "description": "Ngày 30/4 - Kỷ niệm chiến thắng"
+    "imageName": "thuoc_camthao",
+    "title": "Bài thuốc trị ho (Cam thảo)",
+    "description": "Thời gian sắc: 20 phút (Uống 3 lần/ngày)"
   },
   {
-    "imageName": "img_event2",
-    "title": "Tiêu đề hoạt động 2",
-    "description": "Ngày 1/5 - Quốc tế Lao động"
+    "imageName": "thuoc_nhansam",
+    "title": "Bài thuốc bổ khí huyết (Nhân sâm)",
+    "description": "Thời gian hầm: 1 tiếng (Uống 1 lần/ngày)"
   },
   {
-    "imageName": "img_event3",
-    "title": "Tiêu đề hoạt động 3",
-    "description": "Ngày 19/5 - Sinh nhật Bác Hồ"
+    "imageName": "thuoc_tamsen",
+    "title": "Bài thuốc an thần (Tâm sen)",
+    "description": "Thời gian hãm: 15 phút (Uống trước khi ngủ)"
   },
   {
-    "imageName": "img_event4",
-    "title": "Tiêu đề hoạt động 4",
-    "description": "Ngày 2/9 - Quốc khánh Việt Nam"
+    "imageName": "thuoc_gung",
+    "title": "Bài thuốc giải cảm (Gừng tươi)",
+    "description": "Thời gian đun: 5 phút (Uống khi còn ấm)"
   },
   {
-    "imageName": "ic_event_placeholder",
-    "title": "Hoạt động sắp diễn ra",
-    "description": "Nội dung đang được cập nhật..."
+    "imageName": "ic_thuoc_placeholder",
+    "title": "Bài thuốc mới (Đang cập nhật)",
+    "description": "Thời gian: Đang cập nhật..."
   }
 ]

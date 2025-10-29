@@ -51,6 +51,8 @@ public class ActivityMonAn extends AppCompatActivity {
         lvMonAn.setOnItemClickListener((AdapterView<?> parent, android.view.View view, int position, long id) -> {
             String monAn = dsMonAn.get(position); // Sửa tên biến
 
+            Toast.makeText(ActivityMonAn.this, "Bạn đã chọn: " + monAn, Toast.LENGTH_LONG).show();
+
             Intent intent = new Intent(ActivityMonAn.this, ChiTietMonActivity.class);
             intent.putExtra("tenMonAn", monAn);
             startActivity(intent);

@@ -1,6 +1,7 @@
 package gk1.nguyenhuutrong.thi_giua_ky1;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,9 +17,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
+// Sửa tên class để khớp với XML và Intent
 public class Item3Activity extends AppCompatActivity {
 
-    private TextView tvTenMon, tvMoTa, tvTinChi, tvGiangVien;
+    // Sửa lại toàn bộ biến và ID
+    private TextView tvTenMonAn, tvMoTa, tvGiaTien, tvNhaHang;
+    private ImageView imgMonAn;
     private MaterialButton btnBack;
 
     @Override
@@ -26,34 +30,30 @@ public class Item3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item3);
 
-        tvTenMon = findViewById(R.id.tvTenMon);
+        // Sửa ánh xạ ID
+        tvTenMonAn = findViewById(R.id.tvTenMonAn);
         tvMoTa = findViewById(R.id.tvMoTa);
-        tvTinChi = findViewById(R.id.tvTinChi);
-        tvGiangVien = findViewById(R.id.tvGiangVien);
+        tvGiaTien = findViewById(R.id.tvGiaTien);
+        tvNhaHang = findViewById(R.id.tvNhaHang);
+        imgMonAn = findViewById(R.id.imgMonAn); // Thêm
         btnBack = findViewById(R.id.btnBack3);
 
-        // Lấy dữ liệu tên môn từ intent
-        String tenMon = getIntent().getStringExtra("tenMon");
-        tvTenMon.setText(tenMon);
+        // Lấy dữ liệu tên món từ intent (sửa key)
+        String tenMonAn = getIntent().getStringExtra("tenMonAn");
+        tvTenMonAn.setText(tenMonAn);
 
-        // --- XÓA SWITCH CASE VÀ THAY BẰNG CODE ĐỌC JSON ---
-
-        // Tìm chi tiết môn học từ file list.json
-        findMonHocDetails(tenMon);
-
-        // ----------------------------------------------------
+        // Tìm chi tiết món ăn
+        findMonAnDetails(tenMonAn); // Sửa tên hàm
 
         btnBack.setOnClickListener(v -> finish());
     }
 
     /**
-     * Tải file list.json, tìm môn học và cập nhật UI
-     * @param tenMonCanTim Tên môn học được gửi từ ActivityChucNang3
+     * Tải file list.json, tìm món ăn và cập nhật UI
      */
-    private void findMonHocDetails(String tenMonCanTim) {
+    private void findMonAnDetails(String tenMonAnCanTim) { // Sửa tên hàm
         String jsonString;
         try {
-            // 1. Đọc file list.json (giống hệt ActivityChucNang3)
             InputStream is = getAssets().open("list.json");
             int size = is.available();
             byte[] buffer = new byte[size];
@@ -68,20 +68,20 @@ public class Item3Activity extends AppCompatActivity {
         }
 
         try {
-            // 2. Duyệt mảng JSON
             JSONArray jsonArray = new JSONArray(jsonString);
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject monHocObject = jsonArray.getJSONObject(i);
+                JSONObject monAnObject = jsonArray.getJSONObject(i); // Sửa tên
 
-                // 3. So sánh tên môn học
-                if (monHocObject.getString("tenMon").equals(tenMonCanTim)) {
+                // So sánh bằng key "tenMonAn"
+                if (monAnObject.getString("tenMonAn").equals(tenMonAnCanTim)) {
 
-                    // 4. Tìm thấy! Lấy dữ liệu và gán vào TextView
-                    tvMoTa.setText(monHocObject.getString("moTa"));
-                    tvTinChi.setText(monHocObject.getString("tinChi"));
-                    tvGiangVien.setText(monHocObject.getString("giangVien"));
+                    // Gán dữ liệu bằng các key mới
+                    tvMoTa.setText(monAnObject.getString("moTa"));
+                    tvGiaTien.setText(monAnObject.getString("giaTien"));
+                    tvNhaHang.setText(monAnObject.getString("nhaHang"));
 
-                    // Dừng vòng lặp vì đã tìm thấy
+                    // (Bạn có thể thêm code load ảnh cho imgMonAn ở đây)
+
                     return;
                 }
             }

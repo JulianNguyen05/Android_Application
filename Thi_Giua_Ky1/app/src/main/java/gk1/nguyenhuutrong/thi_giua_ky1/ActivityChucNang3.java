@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject; // Thêm import này
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,17 +28,17 @@ public class ActivityChucNang3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chuc_nang3);
 
-        lvMonAn = findViewById(R.id.lvMonHoc);
+        lvMonAn = findViewById(R.id.lvMonAn);
 
-        // 1️⃣ Tải danh sách dữ liệu từ file assets/list.json
-        dsMonAn = loadMonHocFromAssets();
+        // 1️⃣ Tải danh sách
+        dsMonAn = loadMonAnFromAssets();
 
         if (dsMonAn.isEmpty()) {
-            Toast.makeText(this, "Không thể tải dữ liệu môn học", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Không thể tải dữ liệu món ăn", Toast.LENGTH_SHORT).show(); // Sửa text
             dsMonAn.add("Lỗi tải file JSON");
         }
 
-        // 2️⃣ Adapter (Đã đúng)
+        // 2️⃣ Adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
                 R.layout.item_sub_list_view,
@@ -47,27 +47,25 @@ public class ActivityChucNang3 extends AppCompatActivity {
         );
         lvMonAn.setAdapter(adapter);
 
-        // 3️⃣ Sự kiện click vào 1 môn học (Không đổi)
+        // 3️⃣ Sự kiện click
         lvMonAn.setOnItemClickListener((AdapterView<?> parent, android.view.View view, int position, long id) -> {
-            String monHoc = dsMonAn.get(position);
+            String monAn = dsMonAn.get(position); // Sửa tên biến
 
             Intent intent = new Intent(ActivityChucNang3.this, Item3Activity.class);
-            intent.putExtra("tenMon", monHoc);
+            intent.putExtra("tenMonAn", monAn);
             startActivity(intent);
         });
     }
 
     /**
-     * Hàm đọc file JSON từ thư mục assets và phân tích thành ArrayList<String>
-     * (ĐÃ SỬA ĐỂ ĐỌC OBJECT)
-     * @return ArrayList chứa tên các môn học
+     * Hàm đọc file JSON từ assets
      */
-    private ArrayList<String> loadMonHocFromAssets() {
-        ArrayList<String> monHocList = new ArrayList<>();
+    private ArrayList<String> loadMonAnFromAssets() { // Sửa tên hàm
+        ArrayList<String> monAnList = new ArrayList<>(); // Sửa tên
         String jsonString;
 
         try {
-            InputStream is = getAssets().open("list.json"); // Đọc file list.json
+            InputStream is = getAssets().open("list.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -76,25 +74,23 @@ public class ActivityChucNang3 extends AppCompatActivity {
 
         } catch (IOException e) {
             e.printStackTrace();
-            return monHocList;
+            return monAnList;
         }
 
         try {
-            // Phân tích Mảng các Đối tượng (JSONArray of JSONObjects)
             JSONArray jsonArray = new JSONArray(jsonString);
 
             for (int i = 0; i < jsonArray.length(); i++) {
-                // Lấy từng đối tượng môn học
-                JSONObject monHocObject = jsonArray.getJSONObject(i);
+                JSONObject monAnObject = jsonArray.getJSONObject(i); // Sửa tên
 
-                // Chỉ lấy ra "tenMon" để hiển thị lên ListView
-                String tenMon = monHocObject.getString("tenMon");
-                monHocList.add(tenMon);
+                // Sửa key JSON để lấy tên món ăn
+                String tenMonAn = monAnObject.getString("tenMonAn");
+                monAnList.add(tenMonAn);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        return monHocList;
+        return monAnList;
     }
 }

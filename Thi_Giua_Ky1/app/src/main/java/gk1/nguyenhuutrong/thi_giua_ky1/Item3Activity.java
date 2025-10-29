@@ -17,10 +17,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-// Sửa tên class để khớp với XML và Intent
 public class Item3Activity extends AppCompatActivity {
 
-    // Sửa lại toàn bộ biến và ID
     private TextView tvTenMonAn, tvMoTa, tvGiaTien, tvNhaHang;
     private ImageView imgMonAn;
     private MaterialButton btnBack;
@@ -30,28 +28,22 @@ public class Item3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item3);
 
-        // Sửa ánh xạ ID
         tvTenMonAn = findViewById(R.id.tvTenMonAn);
         tvMoTa = findViewById(R.id.tvMoTa);
         tvGiaTien = findViewById(R.id.tvGiaTien);
         tvNhaHang = findViewById(R.id.tvNhaHang);
-        imgMonAn = findViewById(R.id.imgMonAn); // Thêm
+        imgMonAn = findViewById(R.id.imgMonAn);
         btnBack = findViewById(R.id.btnBack3);
 
-        // Lấy dữ liệu tên món từ intent (sửa key)
         String tenMonAn = getIntent().getStringExtra("tenMonAn");
         tvTenMonAn.setText(tenMonAn);
 
-        // Tìm chi tiết món ăn
-        findMonAnDetails(tenMonAn); // Sửa tên hàm
+        findMonAnDetails(tenMonAn);
 
         btnBack.setOnClickListener(v -> finish());
     }
 
-    /**
-     * Tải file list.json, tìm món ăn và cập nhật UI
-     */
-    private void findMonAnDetails(String tenMonAnCanTim) { // Sửa tên hàm
+    private void findMonAnDetails(String tenMonAnCanTim) {
         String jsonString;
         try {
             InputStream is = getAssets().open("list.json");
@@ -62,7 +54,7 @@ public class Item3Activity extends AppCompatActivity {
             jsonString = new String(buffer, StandardCharsets.UTF_8);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace;
             Toast.makeText(this, "Lỗi đọc file JSON", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -70,19 +62,42 @@ public class Item3Activity extends AppCompatActivity {
         try {
             JSONArray jsonArray = new JSONArray(jsonString);
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject monAnObject = jsonArray.getJSONObject(i); // Sửa tên
+                JSONObject monAnObject = jsonArray.getJSONObject(i);
 
-                // So sánh bằng key "tenMonAn"
                 if (monAnObject.getString("tenMonAn").equals(tenMonAnCanTim)) {
 
-                    // Gán dữ liệu bằng các key mới
+                    // Gán dữ liệu text
                     tvMoTa.setText(monAnObject.getString("moTa"));
                     tvGiaTien.setText(monAnObject.getString("giaTien"));
                     tvNhaHang.setText(monAnObject.getString("nhaHang"));
 
-                    // (Bạn có thể thêm code load ảnh cho imgMonAn ở đây)
+                    // === PHẦN CODE TẢI ẢNH TỪ DRAWABLE ===
+                    try {
+                        String hinhAnhName = monAnObject.getString("hinhAnh");
 
-                    return;
+                        // Lấy ID của ảnh từ tên tệp (đã lưu trong JSON)
+                        int imageResId = getResources().getIdentifier(
+                                hinhAnhName,
+                                "drawable",
+                                getPackageName()
+                        );
+
+                        // Nếu tìm thấy ảnh (ID != 0)
+                        if (imageResId != 0) {
+                            imgMonAn.setImageResource(imageResId);
+                        } else {
+                            // Nếu không tìm thấy, đặt ảnh mặc định
+                            // (Bạn cần thêm 1 ảnh tên là 'placeholder_image' vào drawable)
+                            // imgMonAn.setImageResource(R.drawable.placeholder_image);
+                        }
+
+                    } catch (JSONException e) {
+                        // Trường hợp JSON không có key "hinhAnh"
+                        // imgMonAn.setImageResource(R.drawable.placeholder_image);
+                    }
+                    // ======================================
+
+                    return; // Dừng tìm kiếm
                 }
             }
 

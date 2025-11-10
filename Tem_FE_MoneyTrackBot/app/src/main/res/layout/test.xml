@@ -9,14 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/white"
+        android:elevation="8dp"
 
         app:itemIconSize="24dp"
-
         app:labelVisibilityMode="labeled"
 
         app:itemIconTint="@color/bottom_nav_colors"
         app:itemTextColor="@color/bottom_nav_colors"
+        app:itemRippleColor="@android:color/transparent"
 
         app:itemTextAppearanceInactive="@style/BottomNav.Text.Inactive"
         app:itemTextAppearanceActive="@style/BottomNav.Text.Active"

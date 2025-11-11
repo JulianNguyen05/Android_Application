@@ -63,4 +63,5 @@
 
     <color name="button_primary">#FF6200EE</color> <color name="button_secondary">#FF03DAC5</color> <color name="button_tertiary">#FF0091EA</color> <color name="button_accent">#FFFFAB00</color> <color name="button_success">#FF00C853</color>
 
+    <color name="button_selected">#464356</color>
 </resources>

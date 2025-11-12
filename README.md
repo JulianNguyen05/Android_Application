@@ -24,7 +24,7 @@ This is a sample Android application built to demonstrate the static implementat
 ## Preview
 
 <div style="display: flex; gap: 10px;">
-  <img src="./assets/demo.png" alt="Demo" width="300"/>
+  <img src="./ViDu_Fragment_Statically/assets/demo.png" alt="Demo" width="300"/>
 </div>
 
 > *(Click the title to see the detailed README with a full technical breakdown and code snippets)*

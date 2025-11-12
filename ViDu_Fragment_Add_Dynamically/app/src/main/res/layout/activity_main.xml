@@ -22,8 +22,8 @@
 
     <FrameLayout
         android:id="@+id/frameFooter"
-        android:layout_width="409dp"
-        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#4CAF50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

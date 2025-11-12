@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="#009DD9"
+    tools:context=".FooterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            android:text="ONE"
+            android:textColor="#009DD9"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="TWO"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp"
+            android:textSize="18sp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#009DD9" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            app:strokeColor="@color/black"
+            app:cornerRadius="20dp"
+            app:strokeWidth="5dp"
+            android:text="THREE"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#009DD9" />
+
+    </LinearLayout>
+
+</FrameLayout>

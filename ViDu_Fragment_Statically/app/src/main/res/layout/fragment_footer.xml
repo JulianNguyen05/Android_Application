@@ -24,7 +24,7 @@
             android:backgroundTint="#FFFFFF"
             android:text="ONE"
             android:textColor="#009DD9"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:cornerRadius="20dp"
             app:strokeColor="@color/black"
             app:strokeWidth="5dp" />
@@ -39,7 +39,7 @@
             app:cornerRadius="20dp"
             app:strokeColor="@color/black"
             app:strokeWidth="5dp"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:backgroundTint="#FFFFFF"
             android:textColor="#009DD9" />
 
@@ -47,7 +47,7 @@
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:layout_weight="1"
             app:strokeColor="@color/black"
             app:cornerRadius="20dp"

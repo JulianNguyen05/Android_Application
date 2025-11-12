@@ -17,6 +17,20 @@ Each task is a small Android application built with **Java** to practice program
 
 -----
 
+### 🔹 [ViDu Fragment Statically](./ViDu_Fragment_Statically/README.md)
+
+This is a sample Android application built to demonstrate the static implementation of Fragments within an Activity. It showcases how to build a composite user interface by combining multiple, independent fragment layouts into a single screen, a common pattern for creating reusable UI components.
+
+## Preview
+
+<div style="display: flex; gap: 10px;">
+  <img src="./assets/demo.png" alt="Demo" width="300"/>
+</div>
+
+> *(Click the title to see the detailed README with a full technical breakdown and code snippets)*
+
+-----
+
 ### 🔹 [LamThem TOEIC 600 Vocabulary Learning](./LamThem_TOEIC_600_Vocabulary_Learning/README.md)
 
 A modern flashcard application for learning essential **TOEIC vocabulary**, built to demonstrate the power and efficiency of **`ViewPager2`** and **`FragmentStateAdapter`**.

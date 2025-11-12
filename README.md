@@ -17,6 +17,27 @@ Each task is a small Android application built with **Java** to practice program
 
 -----
 
+### 🔹 [ViDu Fragment Replacement Dynamically](./ViDu_Fragment_Replacing_Dynamically/README.md)
+
+This project is a sample Android application designed to demonstrate a core concept: **dynamic fragment replacement**. It illustrates how to build a modern, flexible user interface where one fragment (acting as a controller or navigation) can change the content of another fragment container at runtime.
+
+This pattern is the foundation for most modern Android navigation, such as Bottom Navigation Bars, tabbed layouts, and master-detail flows.
+
+## Preview
+
+https://github.com/user-attachments/assets/1a1bc71f-129d-4d7b-9e2e-4e15016f8890
+
+<div style="display: flex; gap: 10px;">
+  <img src="./ViDu_Fragment_Replacing_Dynamically/assets/demo1.jpg" alt="Demo" width="300"/>
+  <img src="./ViDu_Fragment_Replacing_Dynamically/assets/demo2.jpg" alt="Demo1" width="300"/>
+  <img src="./ViDu_Fragment_Replacing_Dynamically/assets/demo3.jpg" alt="Demo2" width="300"/>
+  <img src="./ViDu_Fragment_Replacing_Dynamically/assets/demo4.jpg" alt="Demo3" width="300"/> 
+</div>
+
+> *(Click the title to see the detailed README with a full technical breakdown and code snippets)*
+
+-----
+
 ### 🔹 [ViDu Fragment Statically](./ViDu_Fragment_Statically/README.md)
 
 This is a sample Android application built to demonstrate the static implementation of Fragments within an Activity. It showcases how to build a composite user interface by combining multiple, independent fragment layouts into a single screen, a common pattern for creating reusable UI components.

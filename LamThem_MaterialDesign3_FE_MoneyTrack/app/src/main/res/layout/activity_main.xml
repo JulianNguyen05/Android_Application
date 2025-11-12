@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
+    android:background="@color/white"
     android:padding="16dp"
     tools:context=".HomeFragment">
 
@@ -13,26 +14,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- PHẦN 1: HAI NÚT BO TRÒN TRÊN CÙNG -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_milestones"
-            style="@style/Widget.Material3.Button.ElevatedButton"
+        <!-- CardView bọc button để tạo bóng -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_milestones"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_button_gradient_yellow"
-            android:fontFamily="sans-serif-medium"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:text="Những cột mốc"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:backgroundTint="@null"
-            app:cornerRadius="16dp"
-            app:icon="@drawable/ic_trophy"
-            app:iconTint="@android:color/white"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:clipToPadding="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_milestones"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@drawable/bg_button_gradient_yellow"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Những cột mốc"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="12dp"
+                app:backgroundTint="@null"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_trophy"
+                app:iconTint="@color/yellow" />
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

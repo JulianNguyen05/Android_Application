@@ -1,0 +1,25 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Khi nhấn -->
+    <item android:state_pressed="true">
+        <shape>
+            <gradient
+                android:startColor="@color/teal"
+                android:endColor="@color/white"
+                android:angle="0" />
+            <corners android:radius="18dp" />
+        </shape>
+    </item>
+
+    <!-- Trạng thái bình thường -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/teal"
+                android:endColor="@color/white"
+                android:angle="0" />
+            <corners android:radius="18dp" />
+        </shape>
+    </item>
+
+</selector>

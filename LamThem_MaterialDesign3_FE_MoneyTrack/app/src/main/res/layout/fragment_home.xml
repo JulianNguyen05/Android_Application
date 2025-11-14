@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
+    android:background="@color/off_white"
     android:padding="16dp"
     tools:context=".HomeFragment">
 
@@ -32,7 +33,7 @@
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="18dp"
-                app:cardElevation="8dp"
+                app:cardElevation="4dp"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -46,10 +47,10 @@
                     android:fontFamily="@font/poppins_medium"
                     android:insetTop="0dp"
                     android:insetBottom="0dp"
-                    android:padding="12dp"
+                    android:padding="10dp"
                     android:text="Những cột mốc"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     app:backgroundTint="@null"
                     app:cornerRadius="16dp"
                     app:icon="@drawable/ic_trophy"
@@ -65,7 +66,7 @@
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="18dp"
-                app:cardElevation="8dp"
+                app:cardElevation="4dp"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -79,10 +80,10 @@
                     android:fontFamily="@font/poppins_medium"
                     android:insetTop="0dp"
                     android:insetBottom="0dp"
-                    android:padding="12dp"
+                    android:padding="10dp"
                     android:text="Phân tích thêm"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     app:backgroundTint="@null"
                     app:cornerRadius="16dp"
                     app:icon="@drawable/ic_chart"
@@ -112,18 +113,32 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_greeting"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_greeting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="Xin chào!"
-                android:textAppearance="?attr/textAppearanceHeadlineMedium"
-                android:textColor="?attr/colorOnSurface"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/img_bot"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_greeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="Xin chào! 👋"
+                    android:textAppearance="?attr/textAppearanceHeadlineMedium"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

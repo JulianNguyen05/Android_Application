@@ -6,4 +6,15 @@
     </style>
 
     <style name="Theme.LamThem_MaterialDesign3_FE_MoneyTrack" parent="Base.Theme.LamThem_MaterialDesign3_FE_MoneyTrack" />
+
+    <style name="BottomNav.Text.Inactive" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="BottomNav.Text.Active" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
 </resources>

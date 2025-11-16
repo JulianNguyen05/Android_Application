@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        // Mặc định mở HomeFragment
+        // Hiển thị HomeFragment mặc định
         replaceFragment(new HomeFragment());
+        bottomNavigationView.setSelectedItemId(R.id.nav_home);
 
         // Bắt sự kiện chọn bottom nav
         bottomNavigationView.setOnItemSelectedListener(item -> {

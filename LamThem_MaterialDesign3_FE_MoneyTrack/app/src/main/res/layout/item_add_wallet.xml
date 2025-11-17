@@ -1,35 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_add_wallet"
-    android:layout_width="160dp"
-    android:layout_height="wrap_content"
+    android:layout_width="180dp"
+    android:layout_height="110dp"
     android:clickable="true"
     android:focusable="true"
     app:cardCornerRadius="18dp"
     app:strokeWidth="2dp"
-    app:strokeColor="?attr/colorOutline"
-    app:rippleColor="?attr/colorPrimary">
+    app:strokeColor="@color/dark_charcoal"
+    app:rippleColor="@color/cosmic_blue8">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/light_gray"
         android:padding="18dp"
         android:gravity="center">
 
         <ImageView
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:src="@android:drawable/ic_input_add"/>
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
             android:text="Ví mới"
             android:textAppearance="?attr/textAppearanceLabelLarge"
-            android:textColor="?attr/colorOnSurfaceVariant"/>
-    </LinearLayout>
+            android:textColor="@color/light_gray_hint"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

@@ -55,6 +55,7 @@
     <color name="light_gray_hint">#9E9E9E</color>
 
     <color name="off_white">#F5F5F5</color>
+    <color name="holo_blue_light">#ff33b5e5</color>
 
     <color name="under_weight">#2196F3</color>
     <color name="normal_weight">#4CAF50</color>

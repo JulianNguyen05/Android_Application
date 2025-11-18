@@ -10,7 +10,7 @@
     android:focusable="true"
     app:cardCornerRadius="18dp"
     app:cardElevation="2dp"
-    app:strokeColor="@color/button_secondary"
+    app:strokeColor="@color/holo_blue_light"
     app:strokeWidth="2dp"
     app:rippleColor="@color/cosmic_blue8">
 

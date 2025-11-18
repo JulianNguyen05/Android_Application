@@ -1,6 +1,6 @@
 # 💸 LamThem_MaterialDesign3_FE_MoneyTrack
 
-**MoneyTrack** là module giao diện người dùng (UI) dành cho ứng dụng quản lý tài chính cá nhân, được thiết kế và xây dựng dựa trên ngôn ngữ thiết kế mới nhất của Google: **Material Design 3**. Dự án tập trung vào sự tối giản, tính tương tác cao và trải nghiệm mượt mà trên các thiết bị Android hiện đại.
+**MoneyTrack** là module giao diện người dùng (UI) dành cho ứng dụng quản lý tài chính cá nhân, được thiết kế và xây dựng dựa **Material Design 3** của Google. Dự án tập trung vào sự tối giản, tính tương tác cao và trải nghiệm mượt mà trên các thiết bị Android hiện đại.
 
 -----
 

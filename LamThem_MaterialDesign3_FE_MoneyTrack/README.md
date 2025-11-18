@@ -8,12 +8,11 @@
 
 https://github.com/user-attachments/assets/705fdddd-02e6-4751-b57f-689163d893b3
 
-<p align="center">
+<div style="display: flex; gap: 10px;">
   <img src="./assets/demo1.jpg" alt="Demo Img1" width="300"/>
   <img src="./assets/demo2.jpg" alt="Demo Img2" width="300"/>
   <img src="./assets/demo3.jpg" alt="Demo Img3" width="300"/>
-
-</p>
+</div>
 -----
 
 ## ✨ Điểm nổi bật về Thiết kế (Material Design 3)

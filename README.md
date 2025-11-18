@@ -17,6 +17,24 @@ Each task is a small Android application built with **Java** to practice program
 
 -----
 
+### 🔹 [LamThem_MaterialDesign3_FE_MoneyTrack](./LamThem_MaterialDesign3_FE_MoneyTrack/README.md)
+
+**MoneyTrack** là module giao diện người dùng (UI) dành cho ứng dụng quản lý tài chính cá nhân, được thiết kế và xây dựng dựa **Material Design 3** của Google. Dự án tập trung vào sự tối giản, tính tương tác cao và trải nghiệm mượt mà trên các thiết bị Android hiện đại.
+
+## Preview
+
+https://github.com/user-attachments/assets/705fdddd-02e6-4751-b57f-689163d893b3
+
+<div style="display: flex; gap: 10px;">
+  <img src="./LamThem_MaterialDesign3_FE_MoneyTrack/assets/demo1.jpg" alt="Demo Img1" width="300"/>
+  <img src="./LamThem_MaterialDesign3_FE_MoneyTrack/assets/demo2.jpg" alt="Demo Img2" width="300"/>
+  <img src="./LamThem_MaterialDesign3_FE_MoneyTrack/assets/demo3.jpg" alt="Demo Img3" width="300"/>
+</div>
+
+> *(Click the title to see the detailed README with a full technical breakdown and code snippets)*
+
+-----
+
 ### 🔹 [ViDu Fragment Replacement Dynamically](./ViDu_Fragment_Replacing_Dynamically/README.md)
 
 This project is a sample Android application designed to demonstrate a core concept: **dynamic fragment replacement**. It illustrates how to build a modern, flexible user interface where one fragment (acting as a controller or navigation) can change the content of another fragment container at runtime.

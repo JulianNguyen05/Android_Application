@@ -221,44 +221,173 @@
 
         </LinearLayout>
 
+        <!--PHẦN 5: THẺ-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/design_green_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            tools:cardBackgroundColor="#E0F7FA">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Thay đổi ròng"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_info"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_info"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_info_outline"
+                    android:tint="@color/black"
+                    android:contentDescription="Thông tin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_net_change"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="-35.000₫"
+                    android:textAppearance="?attr/textAppearanceDisplaySmall"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_expense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_net_change"
+                    app:layout_constraintEnd_toStartOf="@+id/card_income">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chi phí"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/red_material3"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="▼"
+                                android:textColor="@color/red_material3"
+                                android:textSize="18sp"
+                                android:layout_marginEnd="4dp" />
+
+                            <TextView
+                                android:id="@+id/tv_expense_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="35.000₫"
+                                android:textAppearance="?attr/textAppearanceTitleLarge"
+                                android:textColor="@color/red_material3"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_income"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_net_change"
+                    app:layout_constraintStart_toEndOf="@+id/card_expense">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thu nhập"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/green_material3"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="▲"
+                                android:textColor="@color/green_material3"
+                                android:textSize="18sp"
+                                android:layout_marginEnd="4dp" />
+
+                            <TextView
+                                android:id="@+id/tv_income_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0₫"
+                                android:textAppearance="?attr/textAppearanceTitleLarge"
+                                android:textColor="@color/green_material3"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
 
 
 
-
-        <!--        &lt;!&ndash; PHẦN 4: CHỌN THỜI GIAN &ndash;&gt;-->
-        <!--        <com.google.android.material.button.MaterialButton-->
-        <!--            android:id="@+id/btn_time_range"-->
-        <!--            style="@style/Widget.Material3.Button.OutlinedButton"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="24dp"-->
-        <!--            android:fontFamily="sans-serif"-->
-        <!--            android:paddingVertical="12dp"-->
-        <!--            android:text="Phạm vi tùy chỉnh"-->
-        <!--            android:textAlignment="textStart"-->
-        <!--            android:textColor="?attr/colorOnSurface"-->
-        <!--            app:cornerRadius="16dp"-->
-        <!--            app:icon="@android:drawable/ic_menu_edit"-->
-        <!--            app:iconGravity="end"-->
-        <!--            app:iconTint="?attr/colorOnSurfaceVariant"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/card_spending"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:strokeColor="?attr/colorOutline" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/tv_date_range"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="5 thg 10, 2025 - 1 thg 11, 2025"-->
-        <!--            android:textAppearance="?attr/textAppearanceBodyMedium"-->
-        <!--            android:textColor="?attr/colorOnSurfaceVariant"-->
-        <!--            android:layout_marginTop="8dp"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/btn_time_range"-->
-        <!--            app:layout_constraintStart_toStartOf="parent" />-->
 
         <!--        &lt;!&ndash; PHẦN 5: THẺ THAY ĐỔI RÒNG &ndash;&gt;-->
         <!--        <com.google.android.material.card.MaterialCardView-->

@@ -1,6 +1,7 @@
 package ht.nguyenhuutrong.vidu_firebase_quanlychitieu;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
-
+                //  Xu ly du lieu
+                Toast.makeText(getBaseContext(), "Value is: " + value, Toast.LENGTH_LONG).show();
             }
 
             @Override

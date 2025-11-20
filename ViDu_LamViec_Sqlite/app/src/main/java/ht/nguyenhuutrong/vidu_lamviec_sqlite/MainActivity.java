@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 ContentValues row = new ContentValues();
                 row.put("BookName", tenSach);
                 row.put("Price", giaBan);
-                row.put("Page", 0); // Mặc định 0 trang nếu không nhập
-                row.put("Description", ""); // Mặc định rỗng
+                row.put("Page", 0);
+                row.put("Description", "");
 
                 // db.insert trả về ID của dòng vừa thêm (rất quan trọng)
                 long newID = db.insert("BOOKS", null, row);
@@ -99,8 +99,6 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<BOOKS> getListBooks() {
         ArrayList<BOOKS> dsKetQua = new ArrayList<>();
-        // Không mở DB ở đây nữa vì đã mở ở onCreate
-        // Không đóng DB ở đây vì nút bấm cần dùng DB tiếp
 
         Cursor resultSet = db.rawQuery("SELECT * FROM BOOKS", null);
 
@@ -115,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
             dsKetQua.add(b);
         }
         resultSet.close();
-        // db.close(); // TUYỆT ĐỐI KHÔNG ĐÓNG DB Ở ĐÂY
         return dsKetQua;
     }
 

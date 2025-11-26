@@ -1,5 +1,6 @@
 package ht.nguyenhuutrong.lamthem_materialdesign3_fe_moneytrack;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,11 +12,16 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
@@ -24,6 +30,7 @@ public class HomeFragment extends Fragment {
     private MaterialCardView selectedCard = null;
     private MaterialCardView cardDateRangePicker;
     private TextView tvSelectedDate;
+    private PieChart pieChart;
 
     @Nullable
     @Override
@@ -43,7 +50,47 @@ public class HomeFragment extends Fragment {
         addWallet("Ăn uống", "-35.000đ", true);
         addAddWalletButton();
 
+        pieChart = view.findViewById(R.id.pieChart);
+        setupPieChart();
+        loadPieChartData();
+
         return view;
+    }
+    private void setupPieChart() {
+        pieChart.setDrawHoleEnabled(true); // Tạo lỗ rỗng ở giữa
+        pieChart.setHoleColor(Color.WHITE); // Màu lỗ rỗng trùng màu nền
+        pieChart.setHoleRadius(50f); // Độ rộng của lỗ (50% bán kính)
+        pieChart.setTransparentCircleRadius(0f); // Bỏ vòng mờ bao quanh lỗ
+
+        pieChart.getDescription().setEnabled(false); // Tắt dòng mô tả góc phải dưới
+        pieChart.getLegend().setEnabled(false); // Tắt chú thích màu (Legend)
+
+        // Tắt các label chữ nằm trên biểu đồ để giao diện sạch như hình
+        pieChart.setDrawEntryLabels(false);
+
+        // Tắt tương tác xoay (nếu muốn cố định giống hình)
+        pieChart.setRotationEnabled(false);
+    }
+
+    private void loadPieChartData() {
+        ArrayList<PieEntry> entries = new ArrayList<>();
+        // Dữ liệu mẫu: 100% là màu xanh
+        entries.add(new PieEntry(1.0f, "Thức ăn"));
+
+        PieDataSet dataSet = new PieDataSet(entries, "Danh mục");
+
+        // Set màu cho biểu đồ (Màu Teal)
+        dataSet.setColor(Color.parseColor("#00BCD4")); // Màu teal_main
+
+        // Tắt hiển thị text giá trị trên biểu đồ
+        dataSet.setDrawValues(false);
+
+        PieData data = new PieData(dataSet);
+        pieChart.setData(data);
+        pieChart.invalidate(); // Vẽ lại biểu đồ
+
+        // Animation nhẹ khi mở
+        pieChart.animateY(1000);
     }
 
     private void setupDateRangePicker() {

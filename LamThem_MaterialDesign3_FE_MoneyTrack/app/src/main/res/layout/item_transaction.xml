@@ -1,38 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="14dp"
+    app:cardBackgroundColor="@android:color/white">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvMoney" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvDescription"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="cà phê"
-        android:textSize="14sp"
-        android:textColor="#777"
-        app:layout_constraintStart_toStartOf="@+id/tvTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        <!-- ─────────────  Dòng ngày + số tiền nhỏ ───────────── -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvMoney"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-15.000đ"
-        android:textColor="#FF3366"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvTitle"/>
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Th 2, 6 thg 10, 2025"
+                android:textSize="13sp"
+                android:textColor="@color/light_gray_hint"
+                android:fontFamily="@font/poppins_regular" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tvAmountSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-15.000đ"
+                android:textColor="@color/light_gray_hint"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+
+        <!-- ─────────────  Dòng icon + category + note + amount ───────────── -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Icon category -->
+            <ImageView
+                android:id="@+id/imgCategory"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/bg_circle_light"
+                android:padding="8dp"
+                android:src="@mipmap/ic_food" />
+
+            <!-- Texts -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thức ăn &amp; Đồ uống"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cà phê"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular"/>
+            </LinearLayout>
+
+            <!-- Số tiền lớn -->
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15.000đ"
+                android:textColor="@color/obese"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_triangle_down"
+                app:drawableTint="@color/obese"
+                android:drawablePadding="6dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

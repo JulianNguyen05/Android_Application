@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/off_white"
     android:padding="16dp">
 
     <!-- PHẦN 1: Tiêu đề + search + calendar -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -17,8 +18,8 @@
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/poppins_medium"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
             android:text="Giao dịch"
             android:textColor="@color/black"
             android:textSize="22sp"
@@ -29,19 +30,20 @@
 
         <ImageButton
             android:id="@+id/btnSearch"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
             android:background="@null"
             android:padding="5dp"
             android:src="@drawable/ic_search"
-            app:layout_constraintTop_toTopOf="@+id/tvTitle"
             app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
-            app:layout_constraintEnd_toStartOf="@+id/btnCalendar"/>
+            app:layout_constraintEnd_toStartOf="@+id/btnCalendar"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle" />
 
         <ImageButton
             android:id="@+id/btnCalendar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:padding="8dp"
             android:src="@drawable/ic_calender"
             android:background="@drawable/bg_calendar_button"

@@ -80,7 +80,7 @@ public class HomeFragment extends Fragment {
         PieDataSet dataSet = new PieDataSet(entries, "Danh mục");
 
         // Set màu cho biểu đồ (Màu Teal)
-        dataSet.setColor(Color.parseColor("#00BCD4")); // Màu teal_main
+        dataSet.setColor(Color.parseColor("#89C2D9")); // Màu teal_main
 
         // Tắt hiển thị text giá trị trên biểu đồ
         dataSet.setDrawValues(false);

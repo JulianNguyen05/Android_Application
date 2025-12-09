@@ -34,8 +34,7 @@
                     style="@style/Widget.Material3.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ăn uống"
-                    app:chipIcon="@drawable/ic_wallet" />
+                    android:text="Ăn uống"/>
             </com.google.android.material.chip.ChipGroup>
 
             <com.google.android.material.card.MaterialCardView
@@ -95,7 +94,6 @@
                 android:text="5 thg 10, 2025 - 1 thg 11, 2025"
                 android:textSize="12sp"
                 android:textColor="?attr/colorOnSurfaceVariant"
-                app:drawableEndCompat="@drawable/ic_info_outline"
                 android:drawablePadding="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardDateRangePicker" />
@@ -106,7 +104,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_summary_bar_rounded_gray"
                 android:orientation="horizontal"
                 android:paddingVertical="12dp"
                 android:weightSum="3"
@@ -159,8 +156,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/summaryContainer"
-                tools:itemCount="3"
-                tools:listitem="@layout/item_transaction_group_header" />
+                tools:itemCount="3" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

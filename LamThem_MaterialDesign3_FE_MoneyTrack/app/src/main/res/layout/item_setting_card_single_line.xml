@@ -24,7 +24,7 @@
             android:id="@+id/icon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            tools:src="@drawable/ic_crown"
+            tools:src="@drawable/ic_trophy"
             app:tint="?attr/colorOnSurfaceVariant"/>
 
         <TextView

@@ -1,14 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:background="?attr/colorSurfaceContainerLowest"
+    android:fillViewport="true">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
 
-</FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end|top"
+                style="@style/Widget.Material3.CardView.Outlined"
+                app:strokeColor="#FFB74D"
+                app:cardCornerRadius="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_wb_sunny"
+                    app:tint="#FFB74D"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/logo"
+                tools:src="@tools:sample/avatars"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="24dp">
+
+            <include
+                layout="@layout/item_setting_card_double_line"
+                android:id="@+id/itemWallet"
+                app:iconRes="@drawable/ic_account_balance_wallet"
+                app:titleText="Cài đặt ví và danh mục"
+                app:subtitleText="Thể loại, Tiền tệ, Số dư ban đầu"/>
+
+            <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+
+            <include
+                layout="@layout/item_setting_card_double_line"
+                android:id="@+id/itemAccount"
+                app:iconRes="@drawable/ic_settings"
+                app:titleText="Cài đặt tài khoản"
+                app:subtitleText="Ngôn ngữ, Cài đặt Rolly, Xuất/Nhập CSV"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="24dp">
+
+            <include
+                layout="@layout/item_setting_card_single_line"
+                android:id="@+id/itemPremium"
+                app:iconRes="@drawable/ic_crown"
+                app:iconTint="#FFC107"
+                app:titleText="Tận hưởng Rolly Premium"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <include
+                layout="@layout/item_setting_card_single_line"
+                android:id="@+id/itemFeatureRequest"
+                app:iconRes="@drawable/ic_list_alt"
+                app:titleText="Yêu cầu tính năng"/>
+
+            <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+
+            <include
+                layout="@layout/item_setting_card_single_line"
+                android:id="@+id/itemContact"
+                app:iconRes="@drawable/ic_help_outline"
+                app:titleText="Liên hệ với chúng tôi"/>
+
+            <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+
+            <include
+                layout="@layout/item_setting_card_single_line"
+                android:id="@+id/itemTerms"
+                app:iconRes="@drawable/ic_policy"
+                app:titleText="Điều khoản dịch vụ"/>
+
+            <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+
+            <include
+                layout="@layout/item_setting_card_single_line"
+                android:id="@+id/itemPrivacy"
+                app:iconRes="@drawable/ic_security"
+                app:titleText="Chính sách bảo mật"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

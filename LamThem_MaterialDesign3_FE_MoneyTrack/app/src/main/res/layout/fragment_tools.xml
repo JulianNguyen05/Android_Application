@@ -15,7 +15,7 @@
         android:orientation="vertical"
         android:paddingHorizontal="16dp"
         android:paddingTop="24dp"
-        android:paddingBottom="80dp">
+        android:paddingBottom="90dp">
 
         <TextView
             android:layout_width="match_parent"
